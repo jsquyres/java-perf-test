@@ -1,0 +1,30 @@
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version FT CLASS=A np=16
+ No input file inputft.data. Using compiled defaults
+ Size                : 256x256x128
+ Iterations          : 6
+ Number of processes : 16
+ Processor array     : 1x16
+ Layout type         : 1D
+ T = 1 Checksum = ( 504.67350081928225, 511.4047905510392)
+ T = 2 Checksum = ( 505.9412319734487, 509.88096664326326)
+ T = 3 Checksum = ( 506.9376896287179, 509.81440422132266)
+ T = 4 Checksum = ( 507.78928684736997, 510.13361307590395)
+ T = 5 Checksum = ( 508.5233095391158, 510.4914655194272)
+ T = 6 Checksum = ( 509.1487099959263, 510.79178428027546)
+FT.A: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) FT ***** 
+* Class             = A                                        * 
+* Size              = 256 X 256 X 128                          * 
+* Iterations        = 6                                        * 
+* Time in seconds   = 0.782                                    * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 9125.887                                 * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 

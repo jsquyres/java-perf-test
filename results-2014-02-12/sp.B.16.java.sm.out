@@ -1,0 +1,12 @@
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version SP CLASS=B np=16
+ No input file inputsp.data. Using compiled defaults
+ Unofficial NAS Parallel Benchmarks -- SP Benchmark
+ Size: 102x102x102
+ Iterations: 400    dt: 0.001
+ Number of processes: 16
+ Time step 1
+ Time step 20
+ Time step 40
+ Time step 60
+mpirun: Forwarding signal 18 to job

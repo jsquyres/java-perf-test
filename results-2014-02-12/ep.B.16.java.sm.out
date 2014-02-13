@@ -1,0 +1,34 @@
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version EP CLASS=B np=16
+EP Benchmark Results
+CPU Time = 6.953
+N = 2^30
+No. Gaussian Pairs = 8.43345606E8
+Sums = 40338.15542441772 -26606.691928103955
+Counts:
+0 3.9305847E8
+1 3.75280898E8
+2 7.0460742E7
+3 4438852.0
+4 105691.0
+5 948.0
+6 5.0
+7 0.0
+8 0.0
+9 0.0
+EP.B: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) EP ***** 
+* Class             = B                                        * 
+* Size              = 2147483647                               * 
+* Iterations        = 1                                        * 
+* Time in seconds   = 6.953                                    * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 308.857                                  * 
+* Operation type    = Random numbers generated                 * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 

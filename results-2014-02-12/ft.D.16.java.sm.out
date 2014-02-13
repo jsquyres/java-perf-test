@@ -1,0 +1,8 @@
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version FT CLASS=D np=16
+ No input file inputft.data. Using compiled defaults
+ Size                : 2048x1024x1024
+ Iterations          : 25
+ Number of processes : 16
+ Processor array     : 1x16
+ Layout type         : 1D
