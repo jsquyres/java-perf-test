@@ -37,7 +37,7 @@ close(DEBUG);
 
 # Run the Java tests
 my @benchmarks = qw/BT CG EP FT IS LU MG SP/;
-my @classes = qw/A B C D E/;
+my @classes = qw/A B C D/;
 chdir($java_npb_dir);
 foreach my $class (@classes) {
     foreach my $benchmark (@benchmarks) {
