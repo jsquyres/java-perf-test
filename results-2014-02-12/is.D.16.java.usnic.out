@@ -1,0 +1,91 @@
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)	at NPB_MPJ.IS.main(IS.java:232)
+
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C	at NPB_MPJ.IS.build(IS.java:186)
+
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.main(IS.java:232)	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+
+Exception in thread "main" Exception in thread "main" 	at NPB_MPJ.IS.main(IS.java:232)
+NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and CNPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+Exception in thread "main" 
+	at NPB_MPJ.IS.build(IS.java:186)NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.main(IS.java:232)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)
+	at NPB_MPJ.IS.main(IS.java:232)
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C	at NPB_MPJ.IS.build(IS.java:186)
+
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.main(IS.java:232)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+Exception in thread "main" NPB_MPJ.exceptions.BadClassException: Especified class (D) not valid for this benchmark
+Valid classes are S, W, A, B and C
+	at NPB_MPJ.IS.build(IS.java:186)
+	at NPB_MPJ.IS.runBenchmark(IS.java:295)
+	at NPB_MPJ.IS.main(IS.java:232)
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[40209,1],4]
+  Exit code:    1
+--------------------------------------------------------------------------

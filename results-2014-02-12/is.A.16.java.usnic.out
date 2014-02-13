@@ -1,0 +1,31 @@
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version IS CLASS=A np=16
+ Size:  8388608 Iterations:   10
+
+   iteration
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+IS.A: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) IS ***** 
+* Class             = A                                        * 
+* Size              = 8388608                                  * 
+* Iterations        = 10                                       * 
+* Time in seconds   = 0.207                                    * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 405.247                                  * 
+* Operation type    = keys ranked                              * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 

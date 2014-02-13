@@ -1,0 +1,128 @@
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BTException in thread "main" 
+java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BTException in thread "main" 
+java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+
+Exception in thread "main" 	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)java.lang.NoClassDefFoundError: NPB_MPJ/BT
+
+
+	at java.security.AccessController.doPrivileged(Native Method)	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)	at java.security.AccessController.doPrivileged(Native Method)
+
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/BT
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.BT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.BT. Program will exit.
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[44136,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------

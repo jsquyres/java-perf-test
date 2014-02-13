@@ -1,0 +1,45 @@
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version FT CLASS=B np=16
+ No input file inputft.data. Using compiled defaults
+ Size                : 512x256x256
+ Iterations          : 20
+ Number of processes : 16
+ Processor array     : 1x16
+ Layout type         : 1D
+ T = 1 Checksum = ( 517.764357157935, 507.7803458597215)
+ T = 2 Checksum = ( 515.4521291263093, 508.82494315993017)
+ T = 3 Checksum = ( 514.6409228649659, 509.6208912658865)
+ T = 4 Checksum = ( 514.2378756213305, 510.1023387619052)
+ T = 5 Checksum = ( 513.9626667737232, 510.39766106176637)
+ T = 6 Checksum = ( 513.7423460082034, 510.59480198023897)
+ T = 7 Checksum = ( 513.5547056878081, 510.7404165783016)
+ T = 8 Checksum = ( 513.3910925466553, 510.857657366147)
+ T = 9 Checksum = ( 513.2470705389688, 510.95772785234453)
+ T = 10 Checksum = ( 513.1197729984102, 511.04603044830174)
+ T = 11 Checksum = ( 513.0070319283151, 511.1252433799863)
+ T = 12 Checksum = ( 512.9070537031704, 511.19680777185073)
+ T = 13 Checksum = ( 512.8182883502627, 511.26162330638215)
+ T = 14 Checksum = ( 512.7393733383085, 511.3203605551141)
+[mpi012][[43697,1],9][btl_usnic_component.c:921:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac55b680 vend_err 1, byte_len 0
+ T = 15 Checksum = ( 512.6691062020507, 511.3735928093328)
+ T = 16 Checksum = ( 512.6064276004538, 511.421846054849)
+ T = 17 Checksum = ( 512.5504076570361, 511.4656139760308)
+ T = 18 Checksum = ( 512.500233172057, 511.50535959659476)
+ T = 19 Checksum = ( 512.4551951845995, 511.54151304072315)
+ T = 20 Checksum = ( 512.4146770029361, 511.57446922113644)
+FT.B: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) FT ***** 
+* Class             = B                                        * 
+* Size              = 512 X 256 X 256                          * 
+* Iterations        = 20                                       * 
+* Time in seconds   = 8.183                                    * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 11249.370                                * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 

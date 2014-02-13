@@ -1,0 +1,32 @@
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version IS CLASS=C np=16
+ Size:  134217728 Iterations:   10
+
+   iteration
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+[mpi003][[46028,1],0][btl_usnic_component.c:921:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac53bb80 vend_err 1, byte_len 0
+        10
+IS.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) IS ***** 
+* Class             = C                                        * 
+* Size              = 134217728                                * 
+* Iterations        = 10                                       * 
+* Time in seconds   = 2.146                                    * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 625.432                                  * 
+* Operation type    = keys ranked                              * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 

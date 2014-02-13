@@ -1,0 +1,32 @@
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=C np=16
+ No input file mg.input. Using compiled defaults
+ Size                : 512x512x512
+ Iterations          : 20
+ Number of processes : 16
+   iter 1
+   iter 5
+   iter 10
+   iter 15
+   iter 20
+ Initialization time: 4.337
+ Benchmark completed 
+ Verification successful 
+ L2 Norm is 5.706732285739966E-7
+ Error is   5.937078558045338E-15
+MG.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) MG ***** 
+* Class             = C                                        * 
+* Size              = 512 X 512 X 512                          * 
+* Iterations        = 20                                       * 
+* Time in seconds   = 10.338                                   * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 15060.221                                * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 

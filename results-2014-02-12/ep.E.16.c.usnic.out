@@ -1,0 +1,50 @@
+
+ NAS Parallel Benchmarks 3.3 -- EP Benchmark
+
+ Number of random numbers generated:   2199023255552
+ Number of active processes:                      16
+
+srun: error: mpi023: task 13: Exited with exit code 1
+srun: Terminating job step 644854.25
+srun: error: mpi006: task 2: Exited with exit code 1
+srun: error: mpi010: task 6: Exited with exit code 1
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: mpi013: task 9: Exited with exit code 1
+srun: error: mpi022: task 12: Exited with exit code 1
+srun: error: mpi020: task 10: Exited with exit code 1
+srun: error: mpi012: task 8: Exited with exit code 1
+srun: error: mpi005: task 1: Exited with exit code 1
+srun: error: mpi007: task 3: Exited with exit code 1
+srun: error: mpi009: task 5: Exited with exit code 1
+srun: error: mpi024: task 14: Exited with exit code 1
+srun: error: mpi004: task 0: Exited with exit code 1
+srun: error: mpi008: task 4: Exited with exit code 1
+srun: error: mpi011: task 7: Exited with exit code 1
+srun: error: mpi021: task 11: Exited with exit code 1
+slurmd[mpi006]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi022]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi023]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi023]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi024]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi020]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi024]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi020]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi010]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi012]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi010]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi012]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi009]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi009]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi007]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi008]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi007]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi008]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi011]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi011]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi005]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi005]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi021]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi021]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi013]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi004]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***
+slurmd[mpi004]: *** STEP 644854.25 KILLED AT 2014-02-12T18:02:28 WITH SIGNAL 9 ***

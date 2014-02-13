@@ -1,0 +1,60 @@
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version SP CLASS=B np=16
+ No input file inputsp.data. Using compiled defaults
+ Unofficial NAS Parallel Benchmarks -- SP Benchmark
+ Size: 102x102x102
+ Iterations: 400    dt: 0.001
+ Number of processes: 16
+ Time step 1
+ Time step 20
+ Time step 40
+ Time step 60
+ Time step 80
+ Time step 100
+ Time step 120
+ Time step 140
+ Time step 160
+ Time step 180
+ Time step 200
+ Time step 220
+[mpi023][[46793,1],14][btl_usnic_component.c:921:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac570380 vend_err 1, byte_len 0
+ Time step 240
+ Time step 260
+ Time step 280
+ Time step 300
+ Time step 320
+ Time step 340
+ Time step 360
+ Time step 380
+ Time step 400
+ Verification being performed for class B
+ Accuracy setting for epsilon 1.0E-8
+ Comparison of RMS-norms of residual
+0 69.03293579998392 69.03293579998 5.6816298712257427E-14
+1 30.951344880842733 30.95134488084 8.826875954875921E-14
+2 41.03336647017475 41.03336647017 1.1567233895683345E-13
+3 38.647690096038595 38.64769009604 3.6402553769938047E-14
+4 56.4348227259566 56.43482272596 6.018259848933553E-14
+ Comparison of RMS-norms of solution error
+0 0.009810006190188488 0.009810006190188 4.96898052151118E-14
+1 0.0010228279056703992 0.00102282790567 3.9029365321008327E-13
+2 0.0017205979116917387 0.001720597911692 1.5186158357710476E-13
+3 0.0016944794282311786 0.001694479428231 1.054462598062613E-13
+4 0.018474562639811523 0.01847456263981 8.244239615316277E-14
+ Verification successful
+SP.B: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) SP ***** 
+* Class             = B                                        * 
+* Size              = 102 X 102 X 102                          * 
+* Iterations        = 400                                      * 
+* Time in seconds   = 580.836                                  * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 611.208                                  * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 

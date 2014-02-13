@@ -1,0 +1,44 @@
+ Unofficial NAS Parallel Benchmarks -- CG Benchmark
+ Size: 14000
+ Iterations: 15
+ Number of active processes: 16
+ Number of nonzeroes per row: 11
+ Eigenvalue shift: 20.0
+ Iteration "-1"  is the warm up iteration
+   iteration            ||r||                 zeta
+    -1        2.667789925557102E-13          19.99975812770398
+    0        2.667789925557102E-13          19.99975812770398
+    1        2.64028938701237E-15          17.114049574550574
+    2        2.636462996741738E-15          17.129666894614335
+    3        2.6233845216830423E-15          17.13021135811925
+    4        2.6766729195431987E-15          17.13023388563527
+    5        2.6341234467333058E-15          17.13023498794819
+    6        2.601868159495877E-15          17.13023504989157
+    7        2.60760018694727E-15          17.13023505375096
+    8        2.5882472324257945E-15          17.130235054010054
+    9        2.57107717470687E-15          17.130235054028425
+    10        2.5556814995437914E-15          17.130235054029782
+    11        2.586778092578905E-15          17.130235054029885
+    12        2.529933125205234E-15          17.130235054029892
+    13        2.5376913365533166E-15          17.130235054029896
+    14        2.4928830494494656E-15          17.1302350540299
+
+ Benchmark completed 
+CG.A: Verification Successful
+Zeta is: 17.1302350540299
+Error is: 5.2470766332253096E-14
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) CG ***** 
+* Class             = A                                        * 
+* Size              = 14000                                    * 
+* Iterations        = 15                                       * 
+* Time in seconds   = 0.915                                    * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 1635.475                                 * 
+* Operation type    = Floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
