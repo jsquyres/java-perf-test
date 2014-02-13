@@ -43,7 +43,9 @@ closedir($dh);
 chdir("$c_npb_dir/bin");
 foreach my $bin (@cbins) {
     my ($benchmark, $class, $size) = split(/\./, $bin);
+    print "### Running $bin at " . localtime() . "\n";
     system("mpirun --mca btl sm,self --bind-to core -np 16 $bin |& tee $results_dir/$benchmark.$class.$size.c.sm.out");
+    print "### Completed $bin at " . localtime() . "\n";
 }
 
 system("$pushover C NPB shmem done");

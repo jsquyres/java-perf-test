@@ -41,7 +41,9 @@ my @classes = qw/A B C D E/;
 chdir($java_npb_dir);
 foreach my $class (@classes) {
     foreach my $benchmark (@benchmarks) {
+        print "### Running $benchmark at " . localtime . "\n";
         system("mpirun --bind-to core -np 16 java NPB_MPJ.$benchmark class=$class |& tee $results_dir/" . lc($benchmark) . ".$class.16.java.sm.out");
+        print "### Completed $benchmark at " . localtime . "\n";
     }
 }
 

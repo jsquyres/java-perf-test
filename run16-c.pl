@@ -43,8 +43,13 @@ closedir($dh);
 chdir("$c_npb_dir/bin");
 foreach my $bin (@cbins) {
     my ($benchmark, $class, $size) = split(/\./, $bin);
+    print "### Running $bin / TCP at " . localtime() . "\n";
     system("mpirun --mca btl tcp,self --bind-to core --map-by node -np 16 $bin |& tee $results_dir/$benchmark.$class.$size.c.tcp.out");
+    print "### Completed $bin / TCP at " . localtime() . "\n";
+
+    print "### Running $bin / usNIC at " . localtime() . "\n";
     system("mpirun --mca btl usnic,self --bind-to core --map-by node -np 16 $bin |& tee $results_dir/$benchmark.$class.$size.c.usnic.out");
+    print "### Completed $bin / usNIC at " . localtime() . "\n";
 }
 
 system("$pushover C NPB shmem done");

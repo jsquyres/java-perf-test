@@ -41,8 +41,13 @@ my @classes = qw/A B C D E/;
 chdir($java_npb_dir);
 foreach my $class (@classes) {
     foreach my $benchmark (@benchmarks) {
+        print "### Running $benchmark / TCP at " . localtime() . "\n";
         system("mpirun --mca btl tcp,self --bind-to core --map-by node -np 16 java NPB_MPJ.$benchmark class=$class |& tee $results_dir/" . lc($benchmark) . ".$class.16.java.tcp.out");
+        print "### Completed $benchmark / TCP at " . localtime() . "\n";
+
+        print "### Running $benchmark / usNIC at " . localtime() . "\n";
         system("mpirun --mca btl usnic,self --bind-to core --map-by node -np 16 java NPB_MPJ.$benchmark class=$class |& tee $results_dir/" . lc($benchmark) . ".$class.16.java.usnic.out");
+        print "### Completed $benchmark / usNIC at " . localtime() . "\n";
     }
 }
 
