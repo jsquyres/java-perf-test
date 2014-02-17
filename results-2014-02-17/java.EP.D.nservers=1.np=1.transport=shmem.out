@@ -1,0 +1,11 @@
+Running Java benchmark EP, class D, on 1 servers (np=1), sm,self
+
+Servers:
+mpi020
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 1 java NPB_MPJ.EP class=D
+
+Start: Mon Feb 17 08:34:52 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version EP CLASS=D np=1

@@ -1,0 +1,40 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.2, class tcp,self, on 2 servers (np=2), tcp,self
+
+Servers:
+mpi026
+mpi028
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 2 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.2
+
+Start: Mon Feb 17 08:11:00 PST 2014
+===============================================================================
+
+
+ NAS Parallel Benchmarks 3.3 -- CG Benchmark
+
+ Size:    1500000
+ Iterations:   100
+ Number of active processes:     2
+ Number of nonzeroes per row:       21
+ Eigenvalue shift: .500E+03
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x30DF63299F
+#3  0x2AAAAFA42660
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x3544A3299F
+#3  0x2AAAAFA42660
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 14388 on node mpi026 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 08:11:53 PST 2014

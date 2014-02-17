@@ -1,0 +1,3 @@
+java version "1.6.0_28"
+OpenJDK Runtime Environment (IcedTea6 1.13.0pre) (rhel-1.66.1.13.0.el6-x86_64)
+OpenJDK 64-Bit Server VM (build 23.25-b01, mixed mode)

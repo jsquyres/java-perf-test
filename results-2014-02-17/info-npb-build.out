@@ -1,0 +1,3658 @@
+Removing old binaries...
+Building...
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 1 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.1 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 1 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.1 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 1 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.1 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 1 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+is.c: In function ‘main’:
+is.c:1127:13: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+             strcpy( t_recs[T_TOTAL],  "total" );
+             ^
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.1 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 1 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.1 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 1 C 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+x_solve.f: In function ‘x_solve’:
+x_solve.f:315:0: warning: iteration 1 invokes undefined behavior [-Waggressive-loop-optimizations]
+                          out_buffer(p+2+m) = rhs(i,j,k,m,c)
+ ^
+x_solve.f:314:0: note: containing loop
+                       do    m = 1, 3
+ ^
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+y_solve.f: In function ‘y_solve’:
+y_solve.f:307:0: warning: iteration 1 invokes undefined behavior [-Waggressive-loop-optimizations]
+                          out_buffer(p+2+m) = rhs(i,j,k,m,c)
+ ^
+y_solve.f:306:0: note: containing loop
+                       do    m = 1, 3
+ ^
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+z_solve.f: In function ‘z_solve’:
+z_solve.f:306:0: warning: iteration 1 invokes undefined behavior [-Waggressive-loop-optimizations]
+                          out_buffer(p+2+m) = rhs(i,j,k,m,c)
+ ^
+z_solve.f:305:0: note: containing loop
+                       do    m = 1, 3
+ ^
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.C.1 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 1 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.1 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 1 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.1 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 1 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:87:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:214:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:248:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:355:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:676:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:753:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:814:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:909:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:956:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1003:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1053:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1102:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1239:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1264:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1289:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1357:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1385:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1415:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1438:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1513:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1543:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1588:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1622:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1650:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1684:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+Fatal Error: Error count reached limit of 25.
+make[1]: *** [ft.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make: *** [ft] Error 2
+cd IS; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 1 D 
+setparams: IS class D size cannot be run on less than 4 processors
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 1 D 
+setparams: IS class D size cannot be run on less than 4 processors
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 1 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h:21.24:
+    Included at mg.f:55:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:409:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:581:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:655:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:726:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:794:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:892:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1058:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1110:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1142:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1185:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1226:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1267:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1402:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1502:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1643:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1746:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1921:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+mg.f:73.37:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.40:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                        1
+Error: The module or main program array 'r' at (1) must have constant shape
+mg.f:73.25:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.28:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                            1
+Error: The module or main program array 'u' at (1) must have constant shape
+mg.f:584.37:
+
+      double precision u(nr),v(nv),r(nr)                                
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:584.25:
+
+      double precision u(nr),v(nv),r(nr)                                
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+make[1]: *** [mg.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 1 D 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+x_solve.f: In function ‘x_solve’:
+x_solve.f:315:0: warning: iteration 1 invokes undefined behavior [-Waggressive-loop-optimizations]
+                          out_buffer(p+2+m) = rhs(i,j,k,m,c)
+ ^
+x_solve.f:314:0: note: containing loop
+                       do    m = 1, 3
+ ^
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+y_solve.f: In function ‘y_solve’:
+y_solve.f:307:0: warning: iteration 1 invokes undefined behavior [-Waggressive-loop-optimizations]
+                          out_buffer(p+2+m) = rhs(i,j,k,m,c)
+ ^
+y_solve.f:306:0: note: containing loop
+                       do    m = 1, 3
+ ^
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+z_solve.f: In function ‘z_solve’:
+z_solve.f:306:0: warning: iteration 1 invokes undefined behavior [-Waggressive-loop-optimizations]
+                          out_buffer(p+2+m) = rhs(i,j,k,m,c)
+ ^
+z_solve.f:305:0: note: containing loop
+                       do    m = 1, 3
+ ^
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.D.1 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 1 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:139.36:
+
+      parameter( nz = na*(nonzer+1)/num_procs*(nonzer+1)+nonzer         
+                                    1
+Error: Arithmetic overflow at (1)
+cg.f:181.52:
+
+      double precision         v(na+1), aelt(nz), a(nz),                
+                                                    1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:174.51:
+
+      common / main_flt_mem /  v,       aelt,     a,                    
+                                                   1
+Error: The module or main program array 'a' at (1) must have constant shape
+cg.f:171.58:
+
+     >                         iv(2*na+1), arow(nz), acol(nz)           
+                                                          1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:169.57:
+
+     >                         iv,         arow,     acol               
+                                                         1
+Error: The module or main program array 'acol' at (1) must have constant shape
+cg.f:181.45:
+
+      double precision         v(na+1), aelt(nz), a(nz),                
+                                             1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:174.44:
+
+      common / main_flt_mem /  v,       aelt,     a,                    
+                                            1
+Error: The module or main program array 'aelt' at (1) must have constant shape
+cg.f:171.48:
+
+     >                         iv(2*na+1), arow(nz), acol(nz)           
+                                                1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:169.47:
+
+     >                         iv,         arow,     acol               
+                                               1
+Error: The module or main program array 'arow' at (1) must have constant shape
+cg.f:170.38:
+
+      integer                  colidx(nz), rowstr(na+1),                
+                                      1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:168.37:
+
+      common / main_int_mem /  colidx,     rowstr,                      
+                                     1
+Error: The module or main program array 'colidx' at (1) must have constant shape
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+make[1]: *** [cg.o] Error 1
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make: *** [cg] Error 2
+cd EP; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 1 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.1 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 1 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:87:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:214:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:248:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:355:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:676:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:753:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:814:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:909:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:956:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1003:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1053:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1102:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1239:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1264:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1289:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1357:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1385:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1415:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1438:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1513:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1543:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1588:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1622:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1650:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1684:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+Fatal Error: Error count reached limit of 25.
+make[1]: *** [ft.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make: *** [ft] Error 2
+cd IS; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 1 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 1 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 1 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h:19.45:
+    Included at mg.f:55:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:55:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:55:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:55:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:409:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:409:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:409:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:409:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:581:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:581:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:581:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:581:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:655:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:655:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:655:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:655:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:726:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:726:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:726:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:726:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:794:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:794:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:794:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:794:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:892:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+Fatal Error: Error count reached limit of 25.
+make[1]: *** [mg.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 1 E 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+x_solve.f: In function ‘x_solve’:
+x_solve.f:315:0: warning: iteration 1 invokes undefined behavior [-Waggressive-loop-optimizations]
+                          out_buffer(p+2+m) = rhs(i,j,k,m,c)
+ ^
+x_solve.f:314:0: note: containing loop
+                       do    m = 1, 3
+ ^
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+y_solve.f: In function ‘y_solve’:
+y_solve.f:307:0: warning: iteration 1 invokes undefined behavior [-Waggressive-loop-optimizations]
+                          out_buffer(p+2+m) = rhs(i,j,k,m,c)
+ ^
+y_solve.f:306:0: note: containing loop
+                       do    m = 1, 3
+ ^
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+z_solve.f: In function ‘z_solve’:
+z_solve.f:306:0: warning: iteration 1 invokes undefined behavior [-Waggressive-loop-optimizations]
+                          out_buffer(p+2+m) = rhs(i,j,k,m,c)
+ ^
+z_solve.f:305:0: note: containing loop
+                       do    m = 1, 3
+ ^
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.E.1 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 2 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.2 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 2 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.2 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 2 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.2 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 2 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+is.c: In function ‘main’:
+is.c:1127:13: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+             strcpy( t_recs[T_TOTAL],  "total" );
+             ^
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.2 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 2 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.2 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 2 C 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 2 C 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 2 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.2 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 2 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.2 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 2 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.2 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 2 D 
+setparams: IS class D size cannot be run on less than 4 processors
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 2 D 
+setparams: IS class D size cannot be run on less than 4 processors
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 2 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h:21.24:
+    Included at mg.f:55:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:409:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:581:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:655:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:726:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:794:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:892:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1058:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1110:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1142:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1185:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1226:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1267:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1402:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1502:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1643:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1746:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1921:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+mg.f:73.37:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.40:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                        1
+Error: The module or main program array 'r' at (1) must have constant shape
+mg.f:73.25:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.28:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                            1
+Error: The module or main program array 'u' at (1) must have constant shape
+mg.f:584.37:
+
+      double precision u(nr),v(nv),r(nr)                                
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:584.25:
+
+      double precision u(nr),v(nv),r(nr)                                
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+make[1]: *** [mg.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 2 D 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 2 D 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 2 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:139.36:
+
+      parameter( nz = na*(nonzer+1)/num_procs*(nonzer+1)+nonzer         
+                                    1
+Error: Arithmetic overflow at (1)
+cg.f:181.52:
+
+      double precision         v(na+1), aelt(nz), a(nz),                
+                                                    1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:174.51:
+
+      common / main_flt_mem /  v,       aelt,     a,                    
+                                                   1
+Error: The module or main program array 'a' at (1) must have constant shape
+cg.f:171.58:
+
+     >                         iv(2*na+1), arow(nz), acol(nz)           
+                                                          1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:169.57:
+
+     >                         iv,         arow,     acol               
+                                                         1
+Error: The module or main program array 'acol' at (1) must have constant shape
+cg.f:181.45:
+
+      double precision         v(na+1), aelt(nz), a(nz),                
+                                             1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:174.44:
+
+      common / main_flt_mem /  v,       aelt,     a,                    
+                                            1
+Error: The module or main program array 'aelt' at (1) must have constant shape
+cg.f:171.48:
+
+     >                         iv(2*na+1), arow(nz), acol(nz)           
+                                                1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:169.47:
+
+     >                         iv,         arow,     acol               
+                                               1
+Error: The module or main program array 'arow' at (1) must have constant shape
+cg.f:170.38:
+
+      integer                  colidx(nz), rowstr(na+1),                
+                                      1
+Error: Variable 'nz' cannot appear in the expression at (1)
+cg.f:168.37:
+
+      common / main_int_mem /  colidx,     rowstr,                      
+                                     1
+Error: The module or main program array 'colidx' at (1) must have constant shape
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+make[1]: *** [cg.o] Error 1
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make: *** [cg] Error 2
+cd EP; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 2 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.2 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 2 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:87:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:214:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:248:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:355:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:676:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:753:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:814:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:909:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:956:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1003:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1053:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1102:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1239:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1264:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1289:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1357:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1385:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1415:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1438:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1513:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1543:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1588:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1622:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1650:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1684:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+Fatal Error: Error count reached limit of 25.
+make[1]: *** [ft.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make: *** [ft] Error 2
+cd IS; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 2 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 2 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 2 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h:19.45:
+    Included at mg.f:55:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:55:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:55:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:55:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:409:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:409:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:409:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:409:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:581:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:581:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:581:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:581:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:655:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:655:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:655:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:655:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:726:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:726:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:726:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:726:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:794:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:794:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:794:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:794:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:892:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+Fatal Error: Error count reached limit of 25.
+make[1]: *** [mg.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 2 E 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 2 E 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 4 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.4 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 4 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.4 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 4 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.4 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 4 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+is.c: In function ‘main’:
+is.c:1127:13: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+             strcpy( t_recs[T_TOTAL],  "total" );
+             ^
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.4 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 4 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.4 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 4 C 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.C.4 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 4 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.4 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 4 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.4 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 4 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.4 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 4 D 
+mpicc  -c  -O2 -mcmodel=large is.c
+is.c: In function ‘main’:
+is.c:1127:13: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+             strcpy( t_recs[T_TOTAL],  "total" );
+             ^
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.D.4 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 4 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h:21.24:
+    Included at mg.f:55:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:409:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:581:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:655:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:726:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:794:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:892:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1058:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1110:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1142:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1185:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1226:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1267:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1402:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1502:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1643:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1746:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1921:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+mg.f:73.37:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.40:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                        1
+Error: The module or main program array 'r' at (1) must have constant shape
+mg.f:73.25:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.28:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                            1
+Error: The module or main program array 'u' at (1) must have constant shape
+mg.f:584.37:
+
+      double precision u(nr),v(nv),r(nr)                                
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:584.25:
+
+      double precision u(nr),v(nv),r(nr)                                
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+make[1]: *** [mg.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 4 D 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.D.4 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 4 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.E.4 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 4 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.4 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 4 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:87:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:214:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:248:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:355:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:676:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:753:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:814:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:909:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:956:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1003:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1053:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1102:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1239:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1264:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1289:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1357:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1385:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1415:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1438:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1513:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1543:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1588:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1622:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1650:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1684:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+Fatal Error: Error count reached limit of 25.
+make[1]: *** [ft.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make: *** [ft] Error 2
+cd IS; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 4 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 4 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 4 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h:19.45:
+    Included at mg.f:55:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:55:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:55:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:55:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:409:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:409:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:409:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:409:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:581:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:581:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:581:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:581:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:655:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:655:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:655:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:655:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:726:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:726:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:726:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:726:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:794:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+globals.h:20.25:
+    Included at mg.f:794:
+
+      parameter( nm2=2*nm*nm, maxlevel=(lt_default+1) )                 
+                         1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:21.26:
+    Included at mg.f:794:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                          1
+Error: Parameter 'nv' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:48.19:
+    Included at mg.f:794:
+
+      parameter( m=nm+1 )                                               
+                   1
+Error: Parameter 'nm' at (1) has not been declared or is a variable, which does not reduce to a constant expression
+globals.h:19.45:
+    Included at mg.f:892:
+
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+                                             1
+Error: Arithmetic overflow at (1)
+Fatal Error: Error count reached limit of 25.
+make[1]: *** [mg.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 4 E 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.E.4 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 8 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.8 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 8 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.8 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 8 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.8 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 8 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+is.c: In function ‘main’:
+is.c:1127:13: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+             strcpy( t_recs[T_TOTAL],  "total" );
+             ^
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.8 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 8 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.8 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 8 C 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 8 C 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 8 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.8 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 8 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.8 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 8 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.8 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 8 D 
+mpicc  -c  -O2 -mcmodel=large is.c
+is.c: In function ‘main’:
+is.c:1127:13: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+             strcpy( t_recs[T_TOTAL],  "total" );
+             ^
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.D.8 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 8 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.D.8 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 8 D 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 8 D 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 8 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.E.8 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 8 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.8 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 8 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:87:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:214:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:248:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:355:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:676:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:753:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:814:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:909:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:956:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1003:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1053:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1102:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1239:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1264:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1289:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1357:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1385:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1415:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1438:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1513:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1543:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1588:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1622:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1650:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+npbparams.h:12.28:
+    Included at global.h:1:
+    Included at ft.f:1684:
+
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)                         
+                            1
+Error: Arithmetic overflow at (1)
+Fatal Error: Error count reached limit of 25.
+make[1]: *** [ft.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make: *** [ft] Error 2
+cd IS; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 8 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 8 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 8 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h:21.24:
+    Included at mg.f:55:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:409:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:581:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:655:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:726:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:794:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:892:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1058:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1110:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1142:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1185:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1226:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1267:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1402:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1502:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1643:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1746:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1921:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+mg.f:73.37:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.40:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                        1
+Error: The module or main program array 'r' at (1) must have constant shape
+mg.f:73.25:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.28:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                            1
+Error: The module or main program array 'u' at (1) must have constant shape
+mg.f:584.37:
+
+      double precision u(nr),v(nv),r(nr)                                
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:584.25:
+
+      double precision u(nr),v(nv),r(nr)                                
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+make[1]: *** [mg.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 8 E 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 8 E 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 16 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.16 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 16 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.16 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 16 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.16 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 16 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+is.c: In function ‘main’:
+is.c:1127:13: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+             strcpy( t_recs[T_TOTAL],  "total" );
+             ^
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.16 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 16 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.16 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 16 C 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.C.16 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 16 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.16 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 16 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.16 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 16 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.16 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 16 D 
+mpicc  -c  -O2 -mcmodel=large is.c
+is.c: In function ‘main’:
+is.c:1127:13: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+             strcpy( t_recs[T_TOTAL],  "total" );
+             ^
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.D.16 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 16 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.D.16 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 16 D 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.D.16 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 16 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f:1593.22:
+
+     >             v, iv(1), iv(n+1), nnza )                            
+                      1
+Warning: Type mismatch in argument 'mark' at (1); passed INTEGER(4) to LOGICAL(4)
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.E.16 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 16 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.16 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 16 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.E.16 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 16 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 16 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 16 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h:21.24:
+    Included at mg.f:55:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:409:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:581:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:655:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:726:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:794:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:892:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1058:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1110:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1142:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1185:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1226:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1267:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1402:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1502:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1643:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1746:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+globals.h:21.24:
+    Included at mg.f:1921:
+
+      parameter( nr = (8*(nv+nm**2+5*nm+14*lt_default-7*lm))/7 )        
+                        1
+Error: Arithmetic overflow at (1)
+mg.f:73.37:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.40:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                                        1
+Error: The module or main program array 'r' at (1) must have constant shape
+mg.f:73.25:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:73.28:
+
+      double precision u(nr),v(nv),r(nr),a(0:3),c(0:3)                  
+                            1
+Error: The module or main program array 'u' at (1) must have constant shape
+mg.f:584.37:
+
+      double precision u(nr),v(nv),r(nr)                                
+                                     1
+Error: Variable 'nr' cannot appear in the expression at (1)
+mg.f:584.25:
+
+      double precision u(nr),v(nv),r(nr)                                
+                         1
+Error: Variable 'nr' cannot appear in the expression at (1)
+make[1]: *** [mg.o] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 16 E 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.E.16 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f `find . -name \*.class` */*~
+/usr/bin/javac -cp /home/jsquyres/bogus/lib/mpi.jar:. NPB_MPJ/Benchmark.java NPB_MPJ/CGbuf.java NPB_MPJ/CG.java NPB_MPJ/DT.java NPB_MPJ/EP.java NPB_MPJ/EPopt.java NPB_MPJ/FT.java NPB_MPJ/FTopt.java NPB_MPJ/IS.java NPB_MPJ/MG.java NPB_MPJ/MGopt.java NPB_MPJ/SP.java NPB_MPJ/SPopt2.java NPB_MPJ/SPopt3.java NPB_MPJ/SPopt.java

@@ -1,0 +1,16 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.2, class tcp,self, on 2 servers (np=2), tcp,self
+
+Servers:
+mpi006
+mpi021
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 2 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.2
+
+Start: Mon Feb 17 08:13:28 PST 2014
+===============================================================================
+
+ NAS Parallel Benchmarks 3.3 -- EP Benchmark
+
+ Number of random numbers generated:    137438953472
+ Number of active processes:                       2
+

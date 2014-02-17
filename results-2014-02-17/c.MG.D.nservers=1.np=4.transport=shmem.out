@@ -1,0 +1,24 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.4, class sm,self, on 1 servers (np=4), sm,self
+
+Servers:
+mpi030
+mpi030
+mpi030
+mpi030
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 4 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.4
+
+Start: Mon Feb 17 08:09:41 PST 2014
+===============================================================================
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.4
+Node: mpi030
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+4 total processes failed to start
+===============================================================================
+End: Mon Feb 17 08:09:42 PST 2014

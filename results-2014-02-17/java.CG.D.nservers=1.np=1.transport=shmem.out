@@ -1,0 +1,27 @@
+Running Java benchmark CG, class D, on 1 servers (np=1), sm,self
+
+Servers:
+mpi022
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 1 java NPB_MPJ.CG class=D
+
+Start: Mon Feb 17 08:27:52 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks -- CG Benchmark
+ Size: 1500000
+ Iterations: 100
+ Number of active processes: 1
+ Number of nonzeroes per row: 21
+ Eigenvalue shift: 500.0
+ Iteration "-1"  is the warm up iteration
+   iteration            ||r||                 zeta
+    -1        1.9317697696036197E-12          499.9996989885352
+    0        1.9317697696036197E-12          499.9996989885352
+    1        1.2463103503937535E-15          49.17929212226295
+    2        1.2660962210519808E-15          49.76214177814086
+    3        1.2951130735516377E-15          50.24761084481048
+    4        1.3264049529479329E-15          50.650411331874864
+    5        1.3569864298978138E-15          50.98356793302264
+    6        1.3838823973543184E-15          51.25841790936414
+    7        1.4107937389497397E-15          51.484699391977415
+    8        1.4310455651153041E-15          51.670689446280676

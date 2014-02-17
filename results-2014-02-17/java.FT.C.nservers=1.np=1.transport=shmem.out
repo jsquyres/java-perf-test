@@ -1,0 +1,23 @@
+Running Java benchmark FT, class C, on 1 servers (np=1), sm,self
+
+Servers:
+mpi008
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 1 java NPB_MPJ.FT class=C
+
+Start: Mon Feb 17 08:41:52 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version FT CLASS=C np=1
+ No input file inputft.data. Using compiled defaults
+ Size                : 512x512x512
+ Iterations          : 20
+ Number of processes : 1
+ Processor array     : 1x1
+ Layout type         : 0D
+ T = 1 Checksum = ( 519.5078707456652, 514.9019699238075)
+ T = 2 Checksum = ( 515.5422171134105, 512.7578201996745)
+ T = 3 Checksum = ( 514.4678022222143, 512.2251847514312)
+ T = 4 Checksum = ( 514.015059432843, 512.1090289018035)
+ T = 5 Checksum = ( 513.7550426810105, 512.1143685823704)
+ T = 6 Checksum = ( 513.5811056727712, 512.1496764568179)

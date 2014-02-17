@@ -1,0 +1,9 @@
+Running Java benchmark IS, class C, on 1 servers (np=1), sm,self
+
+Servers:
+mpi007
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 1 java NPB_MPJ.IS class=C
+
+Start: Mon Feb 17 08:45:22 PST 2014
+===============================================================================

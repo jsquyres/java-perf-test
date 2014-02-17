@@ -1,0 +1,15 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.4, class tcp,self, on 4 servers (np=4), tcp,self
+
+Servers:
+mpi023
+mpi030
+mpi029
+mpi031
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 4 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.4
+
+Start: Mon Feb 17 08:18:18 PST 2014
+===============================================================================
+[mpi031][[2503,1],3][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:679:mca_btl_tcp_endpoint_complete_connect] connect() to 10.4.0.30 failed: No route to host (113)
+[mpi029][[2503,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:679:mca_btl_tcp_endpoint_complete_connect] connect() to 10.4.0.31 failed: No route to host (113)
+[mpi030][[2503,1],2][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:679:mca_btl_tcp_endpoint_complete_connect] connect() to 10.4.0.31 failed: No route to host (113)
