@@ -1,0 +1,28 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.8, class tcp,self, on 8 servers (np=8), tcp,self
+
+Servers:
+mpi001
+mpi022
+mpi019
+mpi012
+mpi027
+mpi004
+mpi015
+mpi006
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 8 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.8
+
+Start: Mon Feb 17 11:49:48 PST 2014
+===============================================================================
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.8
+Node: mpi001
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+5 total processes failed to start
+===============================================================================
+End: Mon Feb 17 11:49:50 PST 2014

@@ -1,0 +1,37 @@
+Running Java benchmark FT, class C, on 1 servers (np=16), sm,self
+
+Servers:
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 16 java NPB_MPJ.FT class=C
+
+Start: Mon Feb 17 09:03:22 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version FT CLASS=C np=16
+ No input file inputft.data. Using compiled defaults
+ Size                : 512x512x512
+ Iterations          : 20
+ Number of processes : 16
+ Processor array     : 1x16
+ Layout type         : 1D
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 26216 on node mpi021 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 09:03:36 PST 2014

@@ -1,0 +1,25 @@
+Running Java benchmark SPopt, class D, on 1 servers (np=4), sm,self
+
+Servers:
+mpi005
+mpi005
+mpi005
+mpi005
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 4 java NPB_MPJ.SPopt class=D
+
+Start: Mon Feb 17 08:57:22 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version SP CLASS=D np=4
+ No input file inputsp.data. Using compiled defaults
+ Unofficial NAS Parallel Benchmarks -- SP Benchmark
+ Size: 408x408x408
+ Iterations: 500    dt: 3.0E-4
+ Number of processes: 4
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 23859 on node mpi005 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+2 total processes killed (some possibly by mpirun during cleanup)
+===============================================================================
+End: Mon Feb 17 08:58:12 PST 2014

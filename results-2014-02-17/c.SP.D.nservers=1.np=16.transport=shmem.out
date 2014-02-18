@@ -54,3 +54,55 @@ Start: Mon Feb 17 08:10:36 PST 2014
  Time step  400
  Time step  420
  Time step  440
+ Time step  460
+ Time step  480
+ Time step  500
+ Verification being performed for class D
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.1044696216887E+05 0.1044696216887E+05 0.2012787752563E-12
+           2 0.3204427762578E+04 0.3204427762578E+04 0.1392158551456E-12
+           3 0.4648680733032E+04 0.4648680733032E+04 0.4402029729528E-13
+           4 0.4238923283697E+04 0.4238923283697E+04 0.2445960661777E-13
+           5 0.7588412036136E+04 0.7588412036136E+04 0.2325150127638E-13
+ Comparison of RMS-norms of solution error
+           1 0.5089471423669E+01 0.5089471423669E+01 0.8359167929656E-13
+           2 0.5323514855895E+00 0.5323514855894E+00 0.1030240713159E-12
+           3 0.1187051008970E+01 0.1187051008971E+01 0.4315373978799E-12
+           4 0.1083734951938E+01 0.1083734951938E+01 0.8605308327626E-14
+           5 0.1164108338568E+02 0.1164108338568E+02 0.2807725429162E-13
+ Verification Successful
+
+
+ SP Benchmark Completed.
+ Class           =                        D
+ Size            =            408x 408x 408
+ Iterations      =                      500
+ Time in seconds =                  2266.32
+ Total processes =                       16
+ Compiled procs  =                       16
+ Mop/s total     =                 13032.56
+ Mop/s/process   =                   814.53
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              17 Feb 2014
+
+ Compile options:
+    MPIF77       = mpifort
+    FLINK        = $(MPIF77)
+    FMPI_LIB     = (none)
+    FMPI_INC     = (none)
+    FFLAGS       = -O2 -mcmodel=large
+    FLINKFLAGS   = -O2 -mcmodel=large
+    RAND         = (none)
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team 
+ Internet: npb@nas.nasa.gov
+
+
+===============================================================================
+End: Mon Feb 17 08:48:33 PST 2014

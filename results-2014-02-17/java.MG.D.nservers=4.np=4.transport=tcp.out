@@ -1,0 +1,37 @@
+Running Java benchmark MG, class D, on 4 servers (np=4), tcp,self
+
+Servers:
+mpi002
+mpi003
+mpi025
+mpi026
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 4 java NPB_MPJ.MG class=D
+
+Start: Mon Feb 17 11:57:52 PST 2014
+===============================================================================
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[2519,1],3]
+  Exit code:    1
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 11:57:54 PST 2014

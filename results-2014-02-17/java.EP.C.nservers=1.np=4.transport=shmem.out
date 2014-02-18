@@ -1,0 +1,19 @@
+Running Java benchmark EP, class C, on 1 servers (np=4), sm,self
+
+Servers:
+mpi024
+mpi024
+mpi024
+mpi024
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 4 java NPB_MPJ.EP class=C
+
+Start: Mon Feb 17 08:55:52 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version EP CLASS=C np=4
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 23079 on node mpi024 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 08:55:57 PST 2014

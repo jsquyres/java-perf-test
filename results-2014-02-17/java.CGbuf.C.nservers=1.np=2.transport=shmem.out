@@ -1,0 +1,23 @@
+Running Java benchmark CGbuf, class C, on 1 servers (np=2), sm,self
+
+Servers:
+mpi021
+mpi021
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 2 java NPB_MPJ.CGbuf class=C
+
+Start: Mon Feb 17 08:52:22 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks -- CG Benchmark
+ Size: 150000
+ Iterations: 75
+ Number of active processes: 2
+ Number of nonzeroes per row: 15
+ Eigenvalue shift: 110.0
+ Iteration "-1"  is the warm up iteration
+   iteration            ||r||                 zeta
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 22706 on node mpi021 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 08:52:29 PST 2014

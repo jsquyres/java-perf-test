@@ -1,0 +1,36 @@
+Running Java benchmark SPopt3, class C, on 1 servers (np=16), sm,self
+
+Servers:
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 16 java NPB_MPJ.SPopt3 class=C
+
+Start: Mon Feb 17 09:07:52 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version SP CLASS=C np=16
+ No input file inputsp.data. Using compiled defaults
+ Unofficial NAS Parallel Benchmarks -- SP Benchmark
+ Size: 162x162x162
+ Iterations: 400    dt: 6.7E-4
+ Number of processes: 16
+--------------------------------------------------------------------------
+mpirun noticed that process rank 13 with PID 27499 on node mpi021 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 09:08:06 PST 2014

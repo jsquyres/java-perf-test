@@ -1,0 +1,105 @@
+Running Java benchmark CGbuf, class D, on 4 servers (np=4), tcp,self
+
+Servers:
+mpi001
+mpi004
+mpi006
+mpi012
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 4 java NPB_MPJ.CGbuf class=D
+
+Start: Mon Feb 17 11:05:22 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks -- CG Benchmark
+ Size: 1500000
+ Iterations: 100
+ Number of active processes: 4
+ Number of nonzeroes per row: 21
+ Eigenvalue shift: 500.0
+ Iteration "-1"  is the warm up iteration
+   iteration            ||r||                 zeta
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab70219660, pid=28844, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.28844
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid28844.log
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+[mpi012:28844] *** Process received signal ***
+[mpi012:28844] Signal: Aborted (6)
+[mpi012:28844] Signal code:  (-6)
+[mpi012:28844] [ 0] /lib64/libpthread.so.0[0x3b9140f710]
+[mpi012:28844] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3b91032925]
+[mpi012:28844] [ 2] /lib64/libc.so.6(abort+0x175)[0x3b91034105]
+[mpi012:28844] [ 3] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi012:28844] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi012:28844] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi012:28844] [ 6] /lib64/libpthread.so.0[0x3b9140f710]
+[mpi012:28844] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi012:28844] [ 8] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi012:28844] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi012:28844] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi012:28844] [11] /lib64/libpthread.so.0[0x3b9140f710]
+[mpi012:28844] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab70219660]
+[mpi012:28844] *** End of error message ***
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab70219660, pid=28681, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.28681
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid28681.log
+[mpi004:28681] *** Process received signal ***
+[mpi004:28681] Signal: Aborted (6)
+[mpi004:28681] Signal code:  (-6)
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+[mpi004:28681] [ 0] /lib64/libpthread.so.0[0x334020f710]
+[mpi004:28681] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x333fe32925]
+[mpi004:28681] [ 2] /lib64/libc.so.6(abort+0x175)[0x333fe34105]
+[mpi004:28681] [ 3] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi004:28681] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi004:28681] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi004:28681] [ 6] /lib64/libpthread.so.0[0x334020f710]
+[mpi004:28681] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi004:28681] [ 8] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi004:28681] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi004:28681] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi004:28681] [11] /lib64/libpthread.so.0[0x334020f710]
+[mpi004:28681] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab70219660]
+[mpi004:28681] *** End of error message ***
+[mpi006][[14785,1],2][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:219:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[mpi006:29665] [[14785,1],2] ORTE_ERROR_LOG: Unreachable in file ../../../../../ompi/mca/pml/ob1/pml_ob1_sendreq.c at line 1130
+[mpi001][[14785,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:219:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+[mpi001:30071] [[14785,1],0] ORTE_ERROR_LOG: Unreachable in file ../../../../../ompi/mca/pml/ob1/pml_ob1_sendreq.c at line 1130
+[mpi001:30058] *** Process received signal ***
+[mpi001:30058] Signal: Segmentation fault (11)
+[mpi001:30058] Signal code: Address not mapped (1)
+[mpi001:30058] Failing at address: (nil)
+[mpi001:30058] [ 0] /lib64/libpthread.so.0[0x330b80f710]
+[mpi001:30058] *** End of error message ***
+/cm/local/apps/slurm/var/spool/job649768/slurm_script: line 24: 30058 Segmentation fault      (core dumped) mpirun --mca btl tcp,self --bind-to core --map-by node -np 4 java NPB_MPJ.CGbuf class=D
+===============================================================================
+End: Mon Feb 17 11:05:57 PST 2014

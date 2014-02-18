@@ -1,0 +1,33 @@
+Running Java benchmark SPopt, class C, on 8 servers (np=8), tcp,self
+
+Servers:
+mpi002
+mpi005
+mpi013
+mpi011
+mpi025
+mpi026
+mpi028
+mpi003
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 8 java NPB_MPJ.SPopt class=C
+
+Start: Tue Feb 18 01:23:23 PST 2014
+===============================================================================
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 7 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[mpi002:01922] *** Process received signal ***
+[mpi002:01922] Signal: Segmentation fault (11)
+[mpi002:01922] Signal code: Address not mapped (1)
+[mpi002:01922] Failing at address: (nil)
+[mpi002:01922] [ 0] /lib64/libpthread.so.0[0x3168a0f710]
+[mpi002:01922] *** End of error message ***
+/cm/local/apps/slurm/var/spool/job649814/slurm_script: line 24:  1922 Segmentation fault      (core dumped) mpirun --mca btl tcp,self --bind-to core --map-by node -np 8 java NPB_MPJ.SPopt class=C
+===============================================================================
+End: Tue Feb 18 01:23:25 PST 2014

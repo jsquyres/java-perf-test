@@ -1,0 +1,95 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.8, class tcp,self, on 8 servers (np=8), tcp,self
+
+Servers:
+mpi001
+mpi019
+mpi022
+mpi012
+mpi027
+mpi006
+mpi004
+mpi015
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 8 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.8
+
+Start: Mon Feb 17 11:06:58 PST 2014
+===============================================================================
+
+
+ NAS Parallel Benchmarks 3.3 -- CG Benchmark
+
+ Size:    1500000
+ Iterations:   100
+ Number of active processes:     8
+ Number of nonzeroes per row:       21
+ Eigenvalue shift: .500E+03
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x356123299F
+#3  0x2AAAAFA42660
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x330B43299F
+#3  0x2AAAAFA42660
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x333FE3299F
+#3  0x2AAAAFA42660
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x327A43299F
+#3  0x2AAAAFA42660
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x301823299F
+#3  0x2AAAAFA42660
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x3BD9C3299F
+#3  0x2AAAAFA42660
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x3311A3299F
+#3  0x2AAAAFA42660
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x2AAAAB1EB2E7
+#1  0x2AAAAB1EB8EE
+#2  0x3B9103299F
+#3  0x2AAAAFA42660
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 29834 on node mpi006 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+4 total processes killed (some possibly by mpirun during cleanup)
+===============================================================================
+End: Mon Feb 17 11:07:27 PST 2014

@@ -1,0 +1,57 @@
+Running Java benchmark IS, class C, on 1 servers (np=16), sm,self
+
+Servers:
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 16 java NPB_MPJ.IS class=C
+
+Start: Mon Feb 17 09:03:22 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version IS CLASS=C np=16
+ Size:  134217728 Iterations:   10
+
+   iteration
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+IS.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) IS ***** 
+* Class             = C                                        * 
+* Size              = 134217728                                * 
+* Iterations        = 10                                       * 
+* Time in seconds   = 2.560                                    * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 524.288                                  * 
+* Operation type    = keys ranked                              * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Mon Feb 17 09:03:27 PST 2014

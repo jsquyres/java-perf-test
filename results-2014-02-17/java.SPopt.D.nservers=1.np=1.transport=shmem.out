@@ -1,0 +1,19 @@
+Running Java benchmark SPopt, class D, on 1 servers (np=1), sm,self
+
+Servers:
+mpi016
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 1 java NPB_MPJ.SPopt class=D
+
+Start: Mon Feb 17 08:47:22 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version SP CLASS=D np=1
+ No input file inputsp.data. Using compiled defaults
+ Unofficial NAS Parallel Benchmarks -- SP Benchmark
+ Size: 408x408x408
+ Iterations: 500    dt: 3.0E-4
+ Number of processes: 1
+ Time step 1
+ Time step 20
+ Time step 40

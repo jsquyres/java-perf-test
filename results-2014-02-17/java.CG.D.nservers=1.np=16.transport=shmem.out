@@ -1,0 +1,35 @@
+Running Java benchmark CG, class D, on 1 servers (np=16), sm,self
+
+Servers:
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+mpi005
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 16 java NPB_MPJ.CG class=D
+
+Start: Mon Feb 17 09:02:22 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks -- CG Benchmark
+ Size: 1500000
+ Iterations: 100
+ Number of active processes: 16
+ Number of nonzeroes per row: 21
+ Eigenvalue shift: 500.0
+--------------------------------------------------------------------------
+mpirun noticed that process rank 9 with PID 25855 on node mpi005 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 09:03:18 PST 2014

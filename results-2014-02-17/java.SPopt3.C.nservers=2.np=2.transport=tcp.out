@@ -1,0 +1,20 @@
+Running Java benchmark SPopt3, class C, on 2 servers (np=2), tcp,self
+
+Servers:
+mpi003
+mpi013
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 2 java NPB_MPJ.SPopt3 class=C
+
+Start: Mon Feb 17 10:36:52 PST 2014
+===============================================================================
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 10:36:54 PST 2014

@@ -1,0 +1,70 @@
+Running Java benchmark SPopt3, class C, on 1 servers (np=1), sm,self
+
+Servers:
+mpi019
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 1 java NPB_MPJ.SPopt3 class=C
+
+Start: Mon Feb 17 08:51:22 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version SP CLASS=C np=1
+ No input file inputsp.data. Using compiled defaults
+ Unofficial NAS Parallel Benchmarks -- SP Benchmark
+ Size: 162x162x162
+ Iterations: 400    dt: 6.7E-4
+ Number of processes: 1
+ Time step 1
+ Time step 20
+ Time step 40
+ Time step 60
+ Time step 80
+ Time step 100
+ Time step 120
+ Time step 140
+ Time step 160
+ Time step 180
+ Time step 200
+ Time step 220
+ Time step 240
+ Time step 260
+ Time step 280
+ Time step 300
+ Time step 320
+ Time step 340
+ Time step 360
+ Time step 380
+ Time step 400
+ Verification being performed for class C
+ Accuracy setting for epsilon 1.0E-8
+ Comparison of RMS-norms of residual
+0 588.1691581829326 588.1691581829 5.547404513168574E-14
+1 245.44176035690882 245.4417603569 3.5897436160062766E-14
+2 329.38291918508054 329.3829191851 5.902081777188814E-14
+3 308.19249718905246 308.1924971891 1.5419291060313393E-13
+4 459.7223799175866 459.7223799176 2.918075655476069E-14
+ Comparison of RMS-norms of solution error
+0 0.25981205001830215 0.2598120500183 8.332696262034679E-15
+1 0.025908889223143924 0.02590888922315 2.3447557170620305E-13
+2 0.05132886416319649 0.0513288641632 6.826843879365305E-14
+3 0.0480607341945398 0.04806073419454 4.186950669517037E-15
+4 0.5483377491300531 0.5483377491301 8.564508647479912E-14
+ Verification successful
+SP.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) SP ***** 
+* Class             = C                                        * 
+* Size              = 162 X 162 X 162                          * 
+* Iterations        = 400                                      * 
+* Time in seconds   = 3114.385                                 * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 465.614                                  * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 1                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Mon Feb 17 09:43:45 PST 2014

@@ -1,0 +1,52 @@
+Running Java benchmark EP, class C, on 8 servers (np=8), tcp,self
+
+Servers:
+mpi002
+mpi013
+mpi005
+mpi026
+mpi011
+mpi025
+mpi028
+mpi003
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 8 java NPB_MPJ.EP class=C
+
+Start: Tue Feb 18 00:31:23 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version EP CLASS=C np=8
+EP Benchmark Results
+CPU Time = 57.814
+N = 2^32
+No. Gaussian Pairs = 3.373275903E9
+Sums = 47643.67927995973 -80840.72988049156
+Counts:
+0 1.572172634E9
+1 1.501108549E9
+2 2.81805648E8
+3 1.7761221E7
+4 424017.0
+5 3821.0
+6 13.0
+7 0.0
+8 0.0
+9 0.0
+EP.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) EP ***** 
+* Class             = C                                        * 
+* Size              = 2147483647                               * 
+* Iterations        = 1                                        * 
+* Time in seconds   = 57.814                                   * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 148.579                                  * 
+* Operation type    = Random numbers generated                 * 
+* Verification      = Successful                               * 
+* Process requested = 8                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Tue Feb 18 00:32:23 PST 2014

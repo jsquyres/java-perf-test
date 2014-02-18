@@ -1,0 +1,25 @@
+Running Java benchmark MGopt, class D, on 1 servers (np=8), sm,self
+
+Servers:
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+mpi024
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 8 java NPB_MPJ.MGopt class=D
+
+Start: Mon Feb 17 09:00:22 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=D np=8
+ No input file mg.input. Using compiled defaults
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 24488 on node mpi024 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+6 total processes killed (some possibly by mpirun during cleanup)
+===============================================================================
+End: Mon Feb 17 09:01:18 PST 2014

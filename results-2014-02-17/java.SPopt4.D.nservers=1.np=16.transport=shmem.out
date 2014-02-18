@@ -1,0 +1,37 @@
+Running Java benchmark SPopt4, class D, on 1 servers (np=16), sm,self
+
+Servers:
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+mpi021
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 16 java NPB_MPJ.SPopt4 class=D
+
+Start: Mon Feb 17 09:08:22 PST 2014
+===============================================================================
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[53991,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 09:08:23 PST 2014

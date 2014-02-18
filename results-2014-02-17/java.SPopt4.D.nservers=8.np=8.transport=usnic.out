@@ -1,0 +1,101 @@
+Running Java benchmark SPopt4, class D, on 8 servers (np=8), usnic,self
+
+Servers:
+mpi002
+mpi013
+mpi005
+mpi026
+mpi025
+mpi011
+mpi028
+mpi003
+
+mpirun --mca btl usnic,self --bind-to core --map-by node -np 8 java NPB_MPJ.SPopt4 class=D
+
+Start: Tue Feb 18 01:28:53 PST 2014
+===============================================================================
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/SPopt4Exception in thread "main" 
+java.lang.NoClassDefFoundError: NPB_MPJ/SPopt4Caused by: java.lang.ClassNotFoundException: NPB_MPJ.SPopt4
+
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)Caused by: java.lang.ClassNotFoundException: NPB_MPJ.SPopt4
+
+	at java.security.AccessController.doPrivileged(Native Method)	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+
+	at java.security.AccessController.doPrivileged(Native Method)	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/SPopt4
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.SPopt4
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.SPopt4. Program will exit.
+Could not find the main class: NPB_MPJ.SPopt4. Program will exit.
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/SPopt4
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.SPopt4
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)Could not find the main class: NPB_MPJ.SPopt4. Program will exit.
+
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+Could not find the main class: NPB_MPJ.SPopt4. Program will exit.
+Exception in thread "main" Exception in thread "main" Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/SPopt4java.lang.NoClassDefFoundError: NPB_MPJ/SPopt4java.lang.NoClassDefFoundError: NPB_MPJ/SPopt4
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.SPopt4
+
+
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)Caused by: java.lang.ClassNotFoundException: NPB_MPJ.SPopt4
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.SPopt4
+
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.AccessController.doPrivileged(Native Method)	at java.security.AccessController.doPrivileged(Native Method)	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+
+
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+
+
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+
+
+Could not find the main class: NPB_MPJ.SPopt4. Program will exit.
+Could not find the main class: NPB_MPJ.SPopt4. Program will exit.
+Could not find the main class: NPB_MPJ.SPopt4. Program will exit.
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/SPopt4
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.SPopt4
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.SPopt4. Program will exit.
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[32686,1],4]
+  Exit code:    1
+--------------------------------------------------------------------------
+===============================================================================
+End: Tue Feb 18 01:28:54 PST 2014

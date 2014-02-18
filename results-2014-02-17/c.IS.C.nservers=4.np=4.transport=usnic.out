@@ -1,0 +1,64 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.4, class usnic,self, on 4 servers (np=4), usnic,self
+
+Servers:
+mpi001
+mpi004
+mpi006
+mpi012
+
+mpirun --mca btl usnic,self --bind-to core --map-by node -np 4 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.4
+
+Start: Mon Feb 17 09:33:19 PST 2014
+===============================================================================
+
+
+ NAS Parallel Benchmarks 3.3 -- IS Benchmark
+
+ Size:  134217728  (class C)
+ Iterations:   10
+ Number of processes:     4
+
+   iteration
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+
+
+ IS Benchmark Completed
+ Class           =                        C
+ Size            =                134217728
+ Iterations      =                       10
+ Time in seconds =                     4.67
+ Total processes =                        4
+ Compiled procs  =                        4
+ Mop/s total     =                   287.60
+ Mop/s/process   =                    71.90
+ Operation type  =              keys ranked
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              17 Feb 2014
+
+ Compile options:
+    MPICC        = mpicc
+    CLINK        = $(MPICC)
+    CMPI_LIB     = (none)
+    CMPI_INC     = (none)
+    CFLAGS       = -O2 -mcmodel=large
+    CLINKFLAGS   = -O2 -mcmodel=large
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+===============================================================================
+End: Mon Feb 17 09:33:33 PST 2014

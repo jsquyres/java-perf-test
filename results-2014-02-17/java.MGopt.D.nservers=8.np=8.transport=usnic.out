@@ -1,0 +1,56 @@
+Running Java benchmark MGopt, class D, on 8 servers (np=8), usnic,self
+
+Servers:
+mpi002
+mpi013
+mpi005
+mpi011
+mpi025
+mpi026
+mpi028
+mpi003
+
+mpirun --mca btl usnic,self --bind-to core --map-by node -np 8 java NPB_MPJ.MGopt class=D
+
+Start: Tue Feb 18 01:17:23 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=D np=8
+ No input file mg.input. Using compiled defaults
+ Size                : 1024x1024x1024
+ Iterations          : 50
+ Number of processes : 8
+   iter 1
+   iter 5
+   iter 10
+   iter 15
+   iter 20
+   iter 25
+   iter 30
+   iter 35
+   iter 40
+   iter 45
+   iter 50
+ Initialization time: 42.882
+ Benchmark completed 
+ Verification successful 
+ L2 Norm is 1.5832750604261002E-10
+ Error is   2.4631841880885394E-12
+MG.D: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) MG ***** 
+* Class             = D                                        * 
+* Size              = 1024 X 1024 X 1024                       * 
+* Iterations        = 50                                       * 
+* Time in seconds   = 280.847                                  * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 11087.358                                * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 8                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Tue Feb 18 01:22:52 PST 2014

@@ -1,0 +1,12 @@
+Running Java benchmark IS, class C, on 2 servers (np=2), tcp,self
+
+Servers:
+mpi020
+mpi021
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 2 java NPB_MPJ.IS class=C
+
+Start: Mon Feb 17 10:29:52 PST 2014
+===============================================================================
+[mpi020][[39333,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:679:mca_btl_tcp_endpoint_complete_connect] connect() to 10.10.0.21 failed: No route to host (113)
+[mpi021][[39333,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:679:mca_btl_tcp_endpoint_complete_connect] connect() to 10.10.0.20 failed: No route to host (113)

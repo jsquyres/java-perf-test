@@ -1,0 +1,34 @@
+Running Java benchmark MGopt, class D, on 1 servers (np=2), sm,self
+
+Servers:
+mpi021
+mpi021
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 2 java NPB_MPJ.MGopt class=D
+
+Start: Mon Feb 17 08:53:52 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=D np=2
+ No input file mg.input. Using compiled defaults
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6014203
+Exception in thread "main" 	at NPB_MPJ.MGopt.zero3(MGopt.java:639)
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:241)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+java.lang.ArrayIndexOutOfBoundsException: 6014203
+	at NPB_MPJ.MGopt.zero3(MGopt.java:639)
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:241)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[59153,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
+===============================================================================
+End: Mon Feb 17 08:53:54 PST 2014

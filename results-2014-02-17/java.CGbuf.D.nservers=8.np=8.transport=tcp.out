@@ -1,0 +1,317 @@
+Running Java benchmark CGbuf, class D, on 8 servers (np=8), tcp,self
+
+Servers:
+mpi002
+mpi013
+mpi005
+mpi026
+mpi025
+mpi011
+mpi028
+mpi003
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 8 java NPB_MPJ.CGbuf class=D
+
+Start: Tue Feb 18 00:10:23 PST 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks -- CG Benchmark
+ Size: 1500000
+ Iterations: 100
+ Number of active processes: 8
+ Number of nonzeroes per row: 21
+ Eigenvalue shift: 500.0
+ Iteration "-1"  is the warm up iteration
+   iteration            ||r||                 zeta
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab74219660, pid=32306, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.32306
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid32306.log
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab74219660, pid=29935, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.29935
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid29935.log
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+[mpi011:32306] *** Process received signal ***
+[mpi011:32306] Signal: Aborted (6)
+[mpi011:32306] Signal code:  (-6)
+[mpi011:32306] [ 0] /lib64/libpthread.so.0[0x3c84e0f710]
+[mpi011:32306] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3c84a32925]
+[mpi011:32306] [ 2] /lib64/libc.so.6(abort+0x175)[0x3c84a34105]
+[mpi011:32306] [ 3] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi011:32306] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi011:32306] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi011:32306] [ 6] /lib64/libpthread.so.0[0x3c84e0f710]
+[mpi011:32306] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi011:32306] [ 8] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi011:32306] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi011:32306] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi011:32306] [11] /lib64/libpthread.so.0[0x3c84e0f710]
+[mpi011:32306] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab74219660]
+[mpi011:32306] *** End of error message ***
+[mpi002:29935] *** Process received signal ***
+[mpi002:29935] Signal: Aborted (6)
+[mpi002:29935] Signal code:  (-6)
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+[mpi002:29935] [ 0] /lib64/libpthread.so.0[0x3168a0f710]
+[mpi002:29935] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3168632925]
+[mpi002:29935] [ 2] /lib64/libc.so.6(abort+0x175)[0x3168634105]
+[mpi002:29935] [ 3] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi002:29935] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi002:29935] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi002:29935] [ 6] /lib64/libpthread.so.0[0x3168a0f710]
+[mpi002:29935] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi002:29935] [ 8] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi002:29935] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi002:29935] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi002:29935] [11] /lib64/libpthread.so.0[0x3168a0f710]
+[mpi002:29935] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab74219660]
+[mpi002:29935] *** End of error message ***
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab74219660, pid=8505, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.8505
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid8505.log
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+[mpi003:08505] *** Process received signal ***
+[mpi003:08505] Signal: Aborted (6)
+[mpi003:08505] Signal code:  (-6)
+[mpi003:08505] [ 0] /lib64/libpthread.so.0[0x3405c0f710]
+[mpi003:08505] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3405832925]
+[mpi003:08505] [ 2] /lib64/libc.so.6(abort+0x175)[0x3405834105]
+[mpi003:08505] [ 3] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi003:08505] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi003:08505] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi003:08505] [ 6] /lib64/libpthread.so.0[0x3405c0f710]
+[mpi003:08505] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi003:08505] [ 8] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi003:08505] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi003:08505] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi003:08505] [11] /lib64/libpthread.so.0[0x3405c0f710]
+[mpi003:08505] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab74219660]
+[mpi003:08505] *** End of error message ***
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab74219660, pid=4520, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.4520
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid4520.log
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab74219660, pid=603, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.603
+#
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab74219660, pid=30118, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.30118
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid603.log
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid30118.log
+[mpi025:04520] *** Process received signal ***
+[mpi025:04520] Signal: Aborted (6)
+[mpi025:04520] Signal code:  (-6)
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+[mpi025:04520] [ 0] /lib64/libpthread.so.0[0x323b60f710]
+[mpi025:04520] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x323b232925]
+[mpi025:04520] [ 2] /lib64/libc.so.6(abort+0x175)[0x323b234105]
+[mpi025:04520] [ 3] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi025:04520] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi025:04520] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi025:04520] [ 6] /lib64/libpthread.so.0[0x323b60f710]
+[mpi025:04520] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi025:04520] [ 8] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi025:04520] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi025:04520] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi025:04520] [11] /lib64/libpthread.so.0[0x323b60f710]
+[mpi025:04520] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab74219660]
+[mpi025:04520] *** End of error message ***
+[mpi013:00603] *** Process received signal ***
+[mpi013:00603] Signal: Aborted (6)
+[mpi013:00603] Signal code:  (-6)
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+[mpi013:00603] [ 0] /lib64/libpthread.so.0[0x378820f710]
+[mpi013:00603] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3787e32925]
+[mpi013:00603] [ 2] /lib64/libc.so.6(abort+0x175)[0x3787e34105]
+[mpi013:00603] [ 3] [mpi026:30118] *** Process received signal ***
+[mpi026:30118] Signal: Aborted (6)
+[mpi026:30118] Signal code:  (-6)
+/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi013:00603] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi013:00603] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi013:00603] [ 6] /lib64/libpthread.so.0[0x378820f710]
+[mpi013:00603] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi013:00603] [ 8] #
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi013:00603] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi013:00603] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi013:00603] [11] /lib64/libpthread.so.0[0x378820f710]
+[mpi013:00603] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab74219660]
+[mpi013:00603] *** End of error message ***
+[mpi026:30118] [ 0] /lib64/libpthread.so.0[0x30dfa0f710]
+[mpi026:30118] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x30df632925]
+[mpi026:30118] [ 2] /lib64/libc.so.6(abort+0x175)[0x30df634105]
+[mpi026:30118] [ 3] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi026:30118] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi026:30118] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi026:30118] [ 6] /lib64/libpthread.so.0[0x30dfa0f710]
+[mpi026:30118] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi026:30118] [ 8] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi026:30118] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi026:30118] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi026:30118] [11] /lib64/libpthread.so.0[0x30dfa0f710]
+[mpi026:30118] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab74219660]
+[mpi026:30118] *** End of error message ***
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab74219660, pid=5393, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.5393
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid5393.log
+[mpi005:05393] *** Process received signal ***
+[mpi005:05393] Signal: Aborted (6)
+[mpi005:05393] Signal code:  (-6)
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+[mpi005:05393] [ 0] /lib64/libpthread.so.0[0x3b6d80f710]
+[mpi005:05393] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3b6d432925]
+[mpi005:05393] [ 2] /lib64/libc.so.6(abort+0x175)[0x3b6d434105]
+[mpi005:05393] [ 3] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi005:05393] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi005:05393] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi005:05393] [ 6] /lib64/libpthread.so.0[0x3b6d80f710]
+[mpi005:05393] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi005:05393] [ 8] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi005:05393] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi005:05393] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi005:05393] [11] /lib64/libpthread.so.0[0x3b6d80f710]
+[mpi005:05393] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab74219660]
+[mpi005:05393] *** End of error message ***
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002aab74219660, pid=392, tid=46912518821632
+#
+# JRE version: 6.0_28-b28
+# Java VM: OpenJDK 64-Bit Server VM (23.25-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [mca_pml_ob1.so+0x219660]  _fini+0x203738
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.392
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid392.log
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+[mpi028:00392] *** Process received signal ***
+[mpi028:00392] Signal: Aborted (6)
+[mpi028:00392] Signal code:  (-6)
+[mpi028:00392] [ 0] /lib64/libpthread.so.0[0x3544e0f710]
+[mpi028:00392] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3544a32925]
+[mpi028:00392] [ 2] /lib64/libc.so.6(abort+0x175)[0x3544a34105]
+[mpi028:00392] [ 3] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x71d355)[0x2aaaab1e2355]
+[mpi028:00392] [ 4] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x8700af)[0x2aaaab3350af]
+[mpi028:00392] [ 5] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x87075b)[0x2aaaab33575b]
+[mpi028:00392] [ 6] /lib64/libpthread.so.0[0x3544e0f710]
+[mpi028:00392] [ 7] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x714dcf)[0x2aaaab1d9dcf]
+[mpi028:00392] [ 8] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86f207)[0x2aaaab334207]
+[mpi028:00392] [ 9] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(+0x86fc23)[0x2aaaab334c23]
+[mpi028:00392] [10] /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x127)[0x2aaaab1e65b7]
+[mpi028:00392] [11] /lib64/libpthread.so.0[0x3544e0f710]
+[mpi028:00392] [12] /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so(+0x219660)[0x2aab74219660]
+[mpi028:00392] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 32306 on node mpi011 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+===============================================================================
+End: Tue Feb 18 00:11:00 PST 2014
