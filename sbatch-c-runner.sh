@@ -11,6 +11,8 @@ cmd="mpirun --mca btl $btl --bind-to core --map-by node -np $np $benchmark"
 cat <<EOF
 Running C benchmark $benchmark, class $2, on $nservers servers (np=$np), $btl
 
+SLURM job ID: $SLURM_JOB_ID
+
 Servers:
 `mpirun -np $np --map-by node hostname`
 

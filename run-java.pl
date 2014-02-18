@@ -89,7 +89,7 @@ foreach my $nprocs (@nprocs) {
         foreach my $transport (@transports) {
             my ($transport_name, $btl) = split(/:/, $transport);
 
-            my $outfile = "$results_dir/java.$benchmark_name.$class.nservers=$nservers.np=$np.transport=$transport_name.out";
+            my $outfile = "$results_dir/java.$benchmark_name.$class.nservers=$nservers.np=$np.transport=$transport_name.slurm=%j.out";
 
             print "### Submitting $benchmark_name / $class / $transport_name at " . localtime() . "\n";
             system("sbatch -p $slurm_queue -N $nservers -o $outfile $script_dir/sbatch-java-runner.sh $benchmark_name $class $btl $np");
