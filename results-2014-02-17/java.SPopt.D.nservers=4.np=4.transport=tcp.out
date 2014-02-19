@@ -37,3 +37,16 @@ Start: Mon Feb 17 12:23:22 PST 2014
  Time step 340
  Time step 360
  Time step 380
+ Time step 400
+ Time step 420
+ Time step 440
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi001]: *** JOB 649784 CANCELLED AT 2014-02-19T09:34:20 ***
+slurmd[mpi004]: *** STEP 649784.1 CANCELLED AT 2014-02-19T09:34:20 ***
+srun: forcing job termination
+srun: error: mpi004: task 0: Exited with exit code 1
+srun: Terminating job step 649784.1
+srun: error: mpi012: task 2: Exited with exit code 1
+srun: error: mpi006: task 1: Exited with exit code 1

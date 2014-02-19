@@ -10,3 +10,11 @@ Start: Mon Feb 17 10:29:52 PST 2014
 ===============================================================================
 [mpi020][[39333,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:679:mca_btl_tcp_endpoint_complete_connect] connect() to 10.10.0.21 failed: No route to host (113)
 [mpi021][[39333,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:679:mca_btl_tcp_endpoint_complete_connect] connect() to 10.10.0.20 failed: No route to host (113)
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+slurmd[mpi020]: *** JOB 649744 CANCELLED AT 2014-02-19T09:34:20 ***
+srun: got SIGCONT
+slurmd[mpi021]: *** STEP 649744.1 CANCELLED AT 2014-02-19T09:34:20 ***
+srun: forcing job termination
+srun: error: mpi021: task 0: Exited with exit code 1
+srun: Terminating job step 649744.1
