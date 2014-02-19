@@ -27,3 +27,18 @@ Start: Mon Feb 17 12:23:52 PST 2014
  Time step 140
  Time step 160
  Time step 180
+ Time step 200
+ Time step 220
+ Time step 240
+ Time step 260
+--------------------------------------------------------------------------
+Open MPI detected a fatal error on a usNIC port.  Your MPI job will
+now abort; sorry.
+
+  Server:           mpi022
+  Device:           usnic_2
+  Port:             1
+  Async event code: local work queue catastrophic error (1)
+--------------------------------------------------------------------------
+===============================================================================
+End: Tue Feb 18 17:03:53 PST 2014

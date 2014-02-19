@@ -32,3 +32,44 @@ Start: Mon Feb 17 08:49:52 PST 2014
  Time step 300
  Time step 320
  Time step 340
+ Time step 360
+ Time step 380
+ Time step 400
+ Time step 420
+ Time step 440
+ Time step 460
+ Time step 480
+ Time step 500
+ Verification being performed for class D
+ Accuracy setting for epsilon 1.0E-8
+ Comparison of RMS-norms of residual
+0 10446.962168864455 10446.96216887 5.308814755678599E-13
+1 3204.427762578067 3204.427762578 2.086109144383718E-14
+2 4648.6807330268475 4648.680733032 1.1083332630122724E-12
+3 4238.923283690382 4238.923283697 1.561338222434007E-12
+4 7588.412036134819 7588.412036136 1.5568917607228623E-13
+ Comparison of RMS-norms of solution error
+0 5.089471423668781 5.089471423669 4.310468640135911E-14
+1 0.5323514855893877 0.5323514855894 2.3149133433327678E-14
+2 1.1870510089700916 1.187051008971 7.652446877878818E-13
+3 1.083734951938188 1.083734951938 1.735403846071221E-13
+4 11.641083385681466 11.64108338568 1.25889862992301E-13
+ Verification successful
+SP.D: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) SP ***** 
+* Class             = D                                        * 
+* Size              = 408 X 408 X 408                          * 
+* Iterations        = 500                                      * 
+* Time in seconds   = 111277.864                               * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 265.425                                  * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 1                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Tue Feb 18 15:51:35 PST 2014
