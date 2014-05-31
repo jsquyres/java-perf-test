@@ -12,11 +12,11 @@ my $ompitests = "$ENV{HOME}/svn/ompi-tests";
 my $java_npb_dir = "$ompitests/NPB_MPJ";
 my $c_npb_dir = "$ompitests/NPB3.3.1/NPB3.3-MPI";
 
-my $expected_ompi_ver = "Open MPI v1.9a1r30747";
+my $expected_ompi_ver = "Open MPI v1.8.1";
 
 my $pushover = "$ENV{HOME}/dotfiles/pushover";
 
-my $slurm_queue = "mtt-usnic-146";
+my $slurm_queue = "mtt-usnic-198";
 
 #######################################################################
 
@@ -28,8 +28,8 @@ open(VERSION, "ompi_info --version|") || die "Can't open ompi_info";
 my $ver = <VERSION>;
 close(VERSION);
 chomp($ver);
-#die "Wrong version of OMPI: $ver"
-#    if ($ver ne $expected_ompi_ver);
+die "Wrong version of OMPI: $ver"
+    if ($ver ne $expected_ompi_ver);
 
 # Sanity check that it's not a debugging build
 open(DEBUG, "ompi_info --parsable|") || die "Can't open ompi_info";
@@ -83,6 +83,12 @@ foreach my $nprocs (@nprocs) {
         @transports = qw/tcp:tcp,self usnic:usnic,self/;
     }
 
+    # If we are running with np=16, use mpi001..mpi016
+    my $hosts;
+    if (16 == $nservers) {
+        $hosts = "-w mpi[001-016]";
+    }
+
     foreach my $benchmark (@benchmarks) {
         my ($benchmark_name, $class) = split(/:/, $benchmark);
 
@@ -91,8 +97,14 @@ foreach my $nprocs (@nprocs) {
 
             my $outfile = "$results_dir/java.$benchmark_name.$class.nservers=$nservers.np=$np.transport=$transport_name.slurm=%j.out";
 
-            print "### Submitting $benchmark_name / $class / $transport_name at " . localtime() . "\n";
-            system("sbatch -p $slurm_queue -N $nservers -o $outfile $script_dir/sbatch-java-runner.sh $benchmark_name $class $btl $np");
+            print "### Submitting $benchmark_name / $class / $transport_name / ns=$nservers / np=$np at " . localtime() . "\n";
+            my $executable = "$java_npb_dir/NPB_MPJ/$benchmark_name.class";
+            if (-r $executable) {
+                system("sbatch -p $slurm_queue -N $nservers $hosts -o $outfile $script_dir/sbatch-java-runner.sh $benchmark_name $class $btl $np");
+                print "+++ Submitted $executable\n";
+            } else {
+                print "--- SKIPPED: no executable $executable\n";
+            }
         }
     }
 }

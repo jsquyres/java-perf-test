@@ -7,12 +7,44 @@ echo Removing old binaries...
 rm -rf bin
 mkdir bin
 
+banner_clean() {
+    NPROCS=$1
+    CLASS=$2
+
+    cat <<EOF
+******************************************************************************
+** Cleaning
+** NPROCS=$NPROCS
+** CLASS=$CLASS
+******************************************************************************
+EOF
+    MAKE="make -k clean NPROCS=$NPROCS"
+    $MAKE CLASS=$CLASS
+}
+
+banner_build() {
+    NPROCS=$1
+    CLASS=$2
+
+    cat <<EOF
+==============================================================================
+== Building
+== NPROCS=$NPROCS
+== CLASS=$CLASS
+==============================================================================
+EOF
+    MAKE="make -k cg ep ft is mg sp NPROCS=$NPROCS"
+    $MAKE CLASS=$CLASS
+}
+
 do_make() {
     NPROCS=$1
-    MAKE="make clean -k cg ep ft is mg sp NPROCS=$NPROCS"
-    $MAKE CLASS=C
-    $MAKE CLASS=D
-    $MAKE CLASS=E
+    banner_clean $NPROCS C
+    banner_build $NPROCS C
+    banner_clean $NPROCS D
+    banner_build $NPROCS D
+    banner_clean $NPROCS E
+    banner_build $NPROCS E
 }
 
 echo Building...
