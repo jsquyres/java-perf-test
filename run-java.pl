@@ -65,12 +65,6 @@ FT:C
 IS:C
 MG:D
 MGopt:D
-SPopt:C
-SPopt:D
-SPopt2:C
-SPopt2:D
-SPopt3:C
-SPopt4:D
 /;
 
 chdir($java_npb_dir);
