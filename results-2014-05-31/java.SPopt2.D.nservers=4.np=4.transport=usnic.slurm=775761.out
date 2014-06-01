@@ -1,0 +1,35 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark SPopt2, class D, on 4 servers (np=4), usnic,self
+
+SLURM job ID: 775761
+
+Servers:
+mpi012
+mpi015
+mpi030
+mpi032
+
+mpirun --mca btl usnic,self --bind-to core --map-by node -np 4 java NPB_MPJ.SPopt2 class=D
+
+Start: Sat May 31 18:40:15 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version SP CLASS=D np=4
+ No input file inputsp.data. Using compiled defaults
+ Unofficial NAS Parallel Benchmarks -- SP Benchmark
+ Size: 408x408x408
+ Iterations: 500    dt: 3.0E-4
+ Number of processes: 4
+--------------------------------------------------------------------------
+Open MPI detected a fatal error on a usNIC port.  Your MPI job will
+now abort; sorry.
+
+  Server:           mpi032
+  Device:           usnic_3
+  Port:             1
+  Async event code: local work queue catastrophic error (1)
+--------------------------------------------------------------------------
+[mpi032:11846] usnic
+===============================================================================
+End: Sat May 31 18:41:18 PDT 2014

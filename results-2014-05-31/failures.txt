@@ -1,0 +1,97 @@
+java.SPopt2.D.nservers=4.np=4.transport=tcp.slurm=775760.out
+22:slurmd[mpi015]: *** STEP 775760.1 CANCELLED AT 2014-05-31T18:40:13
+***
+23:slurmd[mpi012]: *** JOB 775760 CANCELLED AT 2014-05-31T18:40:13 ***
+--> BAD ETH7 -- re-run
+
+c.FT.D.nservers=2.np=2.transport=tcp.slurm=775553.out
+50:slurmd[mpi007]: *** JOB 775553 CANCELLED AT 2014-05-31T09:03:40 ***
+51:slurmd[mpi008]: *** STEP 775553.1 CANCELLED AT 2014-05-31T09:03:40
+***
+--> TCP BTL error -- re-run
+
+java.MG.D.nservers=4.np=4.transport=usnic.slurm=775751.out
+36:slurmd[mpi001]: *** JOB 775751 CANCELLED AT 2014-05-31T18:24:30 ***
+37:slurmd[mpi002]: *** STEP 775751.1 CANCELLED AT 2014-05-31T18:24:30
+***
+--> Looks like integer overflow
+
+java.SPopt2.D.nservers=2.np=2.transport=usnic.slurm=775731.out
+28:slurmd[mpi026]: *** JOB 775731 CANCELLED AT 2014-05-31T18:29:25 ***
+29:slurmd[mpi027]: *** STEP 775731.1 CANCELLED AT 2014-05-31T18:29:25
+***
+--> Immediate abort...?
+
+java.MGopt.D.nservers=2.np=2.transport=usnic.slurm=775723.out
+33:slurmd[mpi021]: *** STEP 775723.1 CANCELLED AT 2014-05-31T18:23:23
+***
+34:slurmd[mpi016]: *** JOB 775723 CANCELLED AT 2014-05-31T18:23:23 ***
+--> Looks like integer overflow
+
+java.SPopt3.C.nservers=2.np=2.transport=usnic.slurm=775733.out
+28:slurmd[mpi003]: *** JOB 775733 CANCELLED AT 2014-05-31T18:29:17 ***
+29:slurmd[mpi009]: *** STEP 775733.1 CANCELLED AT 2014-05-31T18:29:17
+***
+--> Immediate abort...?
+
+java.SPopt2.C.nservers=2.np=2.transport=usnic.slurm=775729.out
+28:slurmd[mpi011]: *** JOB 775729 CANCELLED AT 2014-05-31T18:29:32 ***
+29:slurmd[mpi014]: *** STEP 775729.1 CANCELLED AT 2014-05-31T18:29:32
+***
+--> Immediate abort...?
+
+c.IS.C.nservers=4.np=4.transport=tcp.slurm=775573.out
+28:slurmd[mpi012]: *** JOB 775573 CANCELLED AT 2014-05-31T18:22:21 ***
+29:slurmd[mpi022]: *** STEP 775573.1 CANCELLED AT 2014-05-31T18:22:21
+***
+--> TCP BTL error -- re-run
+
+java.CG.C.nservers=2.np=2.transport=tcp.slurm=775704.out
+28:slurmd[mpi030]: *** JOB 775704 CANCELLED AT 2014-05-31T18:23:06 ***
+29:slurmd[mpi032]: *** STEP 775704.1 CANCELLED AT 2014-05-31T18:23:06
+***
+--> Bad eth7 -- re-run
+
+java.MGopt.D.nservers=4.np=4.transport=usnic.slurm=775753.out
+36:slurmd[mpi022]: *** STEP 775753.1 CANCELLED AT 2014-05-31T18:30:15
+***
+37:slurmd[mpi010]: *** JOB 775753 CANCELLED AT 2014-05-31T18:30:15 ***
+--> Looks like integer overflow
+
+java.SPopt.C.nservers=2.np=2.transport=usnic.slurm=775725.out
+28:slurmd[mpi007]: *** JOB 775725 CANCELLED AT 2014-05-31T18:29:46 ***
+29:slurmd[mpi008]: *** STEP 775725.1 CANCELLED AT 2014-05-31T18:29:46
+***
+--> Immediate abort...?
+
+java.SPopt.C.nservers=4.np=4.transport=tcp.slurm=775754.out
+22:slurmd[mpi012]: *** JOB 775754 CANCELLED AT 2014-05-31T18:38:49 ***
+23:slurmd[mpi015]: *** STEP 775754.1 CANCELLED AT 2014-05-31T18:38:49
+***
+--> Bad eth7 -- re-run
+
+java.SPopt.D.nservers=2.np=2.transport=usnic.slurm=775727.out
+28:slurmd[mpi025]: *** JOB 775727 CANCELLED AT 2014-05-31T18:29:39 ***
+29:slurmd[mpi031]: *** STEP 775727.1 CANCELLED AT 2014-05-31T18:29:39 ***
+--> Immediate abort...?
+
+-------------------------
+
+To re-run:
+
+c.FT.D.nservers=2.np=2.transport=tcp.slurm=775553.out
+c.IS.C.nservers=4.np=4.transport=tcp.slurm=775573.out
+
+java.SPopt2.D.nservers=4.np=4.transport=tcp.slurm=775760.out
+java.CG.C.nservers=2.np=2.transport=tcp.slurm=775704.out
+java.SPopt.C.nservers=4.np=4.transport=tcp.slurm=775754.out
+
+These ^^ were all queued up to re-run.
+
+-------------------------
+
+Several SP jobs were running for 10+ hours, so I killed all remaining
+SP jobs and removed them from running in the future.
+
+I also edited the *.java files and ensured that all calls to MPI Abort
+print something before aborting.

@@ -1,0 +1,67 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.2, class sm,self, on 1 servers (np=2), sm,self
+
+SLURM job ID: 775507
+
+Servers:
+mpi023
+mpi023
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 2 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.2
+
+Start: Sat May 31 06:30:15 PDT 2014
+===============================================================================
+
+
+ NAS Parallel Benchmarks 3.3 -- MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size:  512x 512x 512  (class C)
+ Iterations:   20
+ Number of processes:      2
+
+ Initialization time:           3.053 seconds
+
+  iter    1
+  iter    5
+  iter   10
+  iter   15
+  iter   20
+
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ L2 Norm is  0.5706732285738E-06
+ Error is    0.3011212031159E-12
+
+
+ MG Benchmark Completed.
+ Class           =                        C
+ Size            =            512x 512x 512
+ Iterations      =                       20
+ Time in seconds =                    27.12
+ Total processes =                        2
+ Compiled procs  =                        2
+ Mop/s total     =                  5741.43
+ Mop/s/process   =                  2870.71
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              31 May 2014
+
+ Compile options:
+    MPIF77       = mpifort
+    FLINK        = $(MPIF77)
+    FMPI_LIB     = (none)
+    FMPI_INC     = (none)
+    FFLAGS       = -O2 -mcmodel=large
+    FLINKFLAGS   = -O2 -mcmodel=large
+    RAND         = randi8
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team 
+ Internet: npb@nas.nasa.gov
+
+
+===============================================================================
+End: Sat May 31 06:30:46 PDT 2014

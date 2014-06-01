@@ -1,0 +1,40 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.4, class tcp,self, on 4 servers (np=4), tcp,self
+
+SLURM job ID: 775829
+
+Servers:
+mpi010
+mpi023
+mpi022
+mpi024
+
+mpirun --mca btl_usnic_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl_tcp_if_exclude 127.0.0.0/8,10.4.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 4 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.4
+
+Start: Sat May 31 19:08:45 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- IS Benchmark
+
+ Size:  134217728  (class C)
+ Iterations:   10
+ Number of processes:     4
+[mpi010][[29449,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.2.0.23 failed: No route to host (113)
+slurmd[mpi022]: *** STEP 775829.1 CANCELLED AT 2014-05-31T19:12:40 DUE TO NODE FAILURE ***
+slurmd[mpi010]: *** JOB 775829 CANCELLED AT 2014-05-31T19:12:40 DUE TO NODE FAILURE ***
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: mpi022: task 0: Exited with exit code 1
+srun: Terminating job step 775829.1
+srun: error: mpi024: task 2: Exited with exit code 1
+srun: error: slurm_receive_msg: Zero Bytes were transmitted or received
+srun: error: slurm_receive_msg[10.3.0.23]: Zero Bytes were transmitted or received
+slurmd[mpi023]: Munge encode failed: Unable to access "/var/run/munge/munge.socket.2": No such file or directory (retrying ...)
+slurmd[mpi023]: Munge encode failed: Unable to access "/var/run/munge/munge.socket.2": No such file or directory (retrying ...)
+slurmd[mpi023]: Munge encode failed: Unable to access "/var/run/munge/munge.socket.2": No such file or directory
+slurmd[mpi023]: authentication: Munged communication error
+srun: error: Timed out waiting for job step to complete

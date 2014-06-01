@@ -1,0 +1,41 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MG, class D, on 4 servers (np=4), tcp,self
+
+SLURM job ID: 775750
+
+Servers:
+mpi001
+mpi005
+mpi002
+mpi006
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 4 java NPB_MPJ.MG class=D
+
+Start: Sat May 31 17:03:15 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[27513,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
+===============================================================================
+End: Sat May 31 17:03:16 PDT 2014

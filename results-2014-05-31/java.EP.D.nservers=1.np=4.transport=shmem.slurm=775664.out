@@ -1,0 +1,50 @@
+Running Java benchmark EP, class D, on 1 servers (np=4), sm,self
+
+SLURM job ID: 775664
+
+Servers:
+mpi026
+mpi026
+mpi026
+mpi026
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 4 java NPB_MPJ.EP class=D
+
+Start: Sat May 31 07:29:45 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version EP CLASS=D np=4
+EP Benchmark Results
+CPU Time = 1722.97
+N = 2^36
+No. Gaussian Pairs = 5.3972171957E10
+Sums = 198248.12009393788 -102059.66363731974
+Counts:
+0 2.5154622775E10
+1 2.4017899906E10
+2 4.508609839E9
+3 2.84201296E8
+4 6776403.0
+5 61541.0
+6 197.0
+7 0.0
+8 0.0
+9 0.0
+EP.D: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) EP ***** 
+* Class             = D                                        * 
+* Size              = 2147483647                               * 
+* Iterations        = 1                                        * 
+* Time in seconds   = 1722.970                                 * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 79.769                                   * 
+* Operation type    = Random numbers generated                 * 
+* Verification      = Successful                               * 
+* Process requested = 4                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Sat May 31 07:58:29 PDT 2014

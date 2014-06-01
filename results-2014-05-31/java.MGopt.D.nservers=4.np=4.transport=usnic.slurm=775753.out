@@ -1,0 +1,48 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MGopt, class D, on 4 servers (np=4), usnic,self
+
+SLURM job ID: 775753
+
+Servers:
+mpi010
+mpi023
+mpi022
+mpi024
+
+mpirun --mca btl usnic,self --bind-to core --map-by node -np 4 java NPB_MPJ.MGopt class=D
+
+Start: Sat May 31 18:23:15 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi022]: *** STEP 775753.1 CANCELLED AT 2014-05-31T18:30:15 ***
+slurmd[mpi010]: *** JOB 775753 CANCELLED AT 2014-05-31T18:30:15 ***
+srun: forcing job termination
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[31095,1],2]
+  Exit code:    1
+--------------------------------------------------------------------------
+srun: error: mpi022: task 0: Terminated
+srun: Terminating job step 775753.1
+srun: error: mpi024: task 2: Exited with exit code 1

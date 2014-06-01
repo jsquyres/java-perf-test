@@ -1,0 +1,28 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark SPopt2, class D, on 4 servers (np=4), tcp,self
+
+SLURM job ID: 775760
+
+Servers:
+mpi012
+mpi015
+mpi030
+mpi032
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 4 java NPB_MPJ.SPopt2 class=D
+
+Start: Sat May 31 18:39:15 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+[mpi030][[23382,1],2][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.4.0.32 failed: No route to host (113)
+[mpi032][[23382,1],3][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.4.0.30 failed: No route to host (113)
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi015]: *** STEP 775760.1 CANCELLED AT 2014-05-31T18:40:13 ***
+slurmd[mpi012]: *** JOB 775760 CANCELLED AT 2014-05-31T18:40:13 ***
+srun: forcing job termination
+srun: error: mpi030: task 1: Exited with exit code 1
+srun: Terminating job step 775760.1
+srun: error: mpi015: task 0: Exited with exit code 1
+srun: error: mpi032: task 2: Exited with exit code 1

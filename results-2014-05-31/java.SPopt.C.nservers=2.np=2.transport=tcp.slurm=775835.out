@@ -1,0 +1,29 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark NPB_MPJ.SPopt, class C, on 2 servers (np=2), tcp,self
+
+SLURM job ID: 775835
+
+Servers:
+mpi022
+mpi024
+
+mpirun --mca btl_usnic_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl_tcp_if_exclude 127.0.0.0/8,10.4.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 2 java NPB_MPJ.NPB_MPJ.SPopt class=C
+
+Start: Sat May 31 19:17:40 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+Exception in thread "main" java.lang.NoClassDefFoundError: NPB_MPJ/NPB_MPJ/SPopt
+Caused by: java.lang.ClassNotFoundException: NPB_MPJ.NPB_MPJ.SPopt
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+Could not find the main class: NPB_MPJ.NPB_MPJ.SPopt. Program will exit.
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+===============================================================================
+End: Sat May 31 19:17:41 PDT 2014

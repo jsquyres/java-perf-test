@@ -1,0 +1,695 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.2, class usnic,self, on 2 servers (np=2), usnic,self
+
+SLURM job ID: 775546
+
+Servers:
+mpi022
+mpi031
+
+mpirun --mca btl usnic,self --bind-to core --map-by node -np 2 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.2
+
+Start: Sat May 31 06:37:15 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- CG Benchmark
+
+ Size:    1500000
+ Iterations:   100
+ Number of active processes:     2
+ Number of nonzeroes per row:       21
+ Eigenvalue shift: .500E+03
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5251880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5251700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5251280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5251100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5250b00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524fc00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524f480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524ee80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524e880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524e580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524e400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524df80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5244e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5244c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523fd00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523fb80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523ef80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523ec80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523eb00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523e500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523e200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523df00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523dd80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523d000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523ce80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523cd00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523c880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523c700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523c580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523be00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5239400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5239280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5239100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238b00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5237d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5237c00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5237a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5237900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5237000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5236d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5236b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5236880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5236700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5236580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5235e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5235c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5235b00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5232980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5232500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5232380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5232080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5231f00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5231d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5231c00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5231a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5231780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5231300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5231180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5231000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5230e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5230d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5230a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5230880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5230580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5230400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5230280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5230100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522ff80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522fb00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522f980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522f680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522f380 vend_err 1, byte_len 0
+
+   iteration           ||r||                 zeta
+        1       0.58313166275521E-12   499.9996989885352
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab527f300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab527ee80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab527dc80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c0380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab527cf00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab527df80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab527b700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526ad80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526b080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526b200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526b680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526b500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526a900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5269280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526aa80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5269b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526cb80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526ca00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526c880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5268980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5269d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5267900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5269580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5265b00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5265800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5269100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5268f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526a600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526a300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5267a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5266d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5267600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5264300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5264480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5264c00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5262980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5262e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5262f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5261480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5263880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5265080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5264a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5260700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5262200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5265c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5265e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5265f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5263580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5263400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5262800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5261300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5261600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5263b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5262500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5263280 vend_err 1, byte_len 0
+        2       0.38602926618081E-15    49.1792921222655
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f6200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f8780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f6500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f8180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f4400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f7b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f5180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f6800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f5c00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f7100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f7700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f5d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f5f00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f7e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ef780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ee100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ef600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f1700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ee280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f0500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ef180 vend_err 1, byte_len 0
+        3       0.40480094702228E-15    49.7621417781026
+        4       0.41848494659769E-15    50.2476108448531
+        5       0.43033985132042E-15    50.6504113318657
+        6       0.43983563306565E-15    50.9835679329955
+        7       0.44860219627516E-15    51.2584179093585
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5208500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5206a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5209e80 vend_err 1, byte_len 0
+        8       0.45498717914230E-15    51.4846993919530
+        9       0.46077445613126E-15    51.6706894462850
+       10       0.46487016941935E-15    51.8233647189940
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522a100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab521ff00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5224b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5223e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5222d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5226800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5223500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5218e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab521bb80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5216d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5219000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5219f00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5217e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5217980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5215880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5217800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5215a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5210a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5218880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5214f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5216780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5213900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5214c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5217680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5211800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5212280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5219a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520f100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5214800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5215100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5213c00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520fd00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5211380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5211080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5213000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5214500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520ca00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5212580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5214380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520aa80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5212700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520eb00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5211980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5208f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520c280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520f400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5211200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520e500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520dc00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520b080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5210180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520bc80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520e980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520c880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5209280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5207f00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520bf80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5209b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5209e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520c400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520be00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5203580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5208380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5206a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5208c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5202500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5208b00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5204480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5205e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520d180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5202b00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520b380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5203880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5202680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5203e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5200a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5203d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5204000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5205380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5205680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5203a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5200100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5203400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5201780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5201480 vend_err 1, byte_len 0
+       11       0.46869421316366E-15    51.9485666805598
+       12       0.47171362037622E-15    52.0511603649588
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5237600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5235b00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523a300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5237780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5233b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5237300 vend_err 1, byte_len 0
+       13       0.47401821773437E-15    52.1351803974303
+       14       0.47510884824592E-15    52.2039614064441
+       15       0.47621640994844E-15    52.2602520412586
+       16       0.47773124506695E-15    52.3063130997598
+       17       0.47789828363708E-15    52.3440009815694
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5244c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523d900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5243900 vend_err 1, byte_len 0
+       18       0.47922924154894E-15    52.3748380152676
+       19       0.47900642023991E-15    52.4000713044042
+       20       0.48008601739198E-15    52.4207216938423
+       21       0.47975491852685E-15    52.4376243380992
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f3b00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f1880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f1580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f4a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ea800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f9c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ef480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f5180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f2900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f0680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f8180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f6500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f4580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f5600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ede00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f2f00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51eb100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ec300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e7800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f1700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f2480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f0b00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f2600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51efd80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e1080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f0e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51eed00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e8d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ea380 vend_err 1, byte_len 0
+       22       0.48189365842606E-15    52.4514621958400
+       23       0.48158856584300E-15    52.4627936097330
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520d480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520ac00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5213300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520b800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab520f700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5212580 vend_err 1, byte_len 0
+       24       0.48111150112638E-15    52.4720749669622
+       25       0.48116455803514E-15    52.4796792873469
+       26       0.48161874909629E-15    52.4859114504426
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5258780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5254e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5256800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5257d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524f900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524eb80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5255d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5245b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524e100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524a080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524a500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5247680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5246a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524be80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5241380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5247500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5249300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5241f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5247200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5242e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5248a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5244800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5245280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5244c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5243180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523fd00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5246300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523ec80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5244680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5241e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5242a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5245580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523be00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5244f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523d900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523e080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240f00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5239d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5242400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523a600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523c880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523d600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5239400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523e980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523b200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5236580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523b680 vend_err 1, byte_len 0
+       27       0.48183775447281E-15    52.4910206572324
+       28       0.48197226911209E-15    52.4952106205696
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522d280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5233400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5229680 vend_err 1, byte_len 0
+       29       0.48220035583350E-15    52.4986478935502
+       30       0.48186408453698E-15    52.5014686735305
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5263a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526e200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5269580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526a900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5262200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5266880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5266d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5262c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5262080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5266280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab525da00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab525d700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5265e00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab525d880 vend_err 1, byte_len 0
+       31       0.48192345860107E-15    52.5037843586983
+       32       0.48237287121162E-15    52.5056860859152
+       33       0.48289747436230E-15    52.5072484353536
+       34       0.48271313698246E-15    52.5085324557556
+       35       0.48232201271639E-15    52.5095881341481
+       36       0.48299929943614E-15    52.5104564131415
+       37       0.48267324495991E-15    52.5111708380620
+       38       0.48327107735090E-15    52.5117589027045
+       39       0.48312599754405E-15    52.5122431486836
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ee880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e1080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ec600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ed080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e7f80 vend_err 1, byte_len 0
+       40       0.48233772988413E-15    52.5126420639656
+       41       0.48280297466315E-15    52.5129708170913
+       42       0.48254945948393E-15    52.5132418579290
+       43       0.48287313070141E-15    52.5134654084301
+       44       0.48257353501630E-15    52.5136498646954
+       45       0.48299684344475E-15    52.5138021256340
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e6300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e5e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ec480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e9480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e2100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e6600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51de080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e8880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e0d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e0180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51dfe80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e1f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51dd780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e5b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d9a00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51de680 vend_err 1, byte_len 0
+       46       0.48260319235503E-15    52.5139278620817
+       47       0.48342151239969E-15    52.5140317371893
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5238380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522f800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5236400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5234600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5235500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5231000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522fe00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5235200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5232200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab522c500 vend_err 1, byte_len 0
+       48       0.48378295789467E-15    52.5141175871776
+       49       0.48257007114475E-15    52.5141885689064
+       50       0.48325306075023E-15    52.5142472814328
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523a600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5230d00 vend_err 1, byte_len 0
+       51       0.48291091676373E-15    52.5142958653942
+       52       0.48341793587221E-15    52.5143360844799
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5246180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5249180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524ac80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5241f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5249300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5252900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5249900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5243f00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524dc80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5247200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523cd00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5247500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5248b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523d480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5240180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5248700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5244080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2:        53       0.48264644610501E-15    52.5143693924391
+RX error polling CQ[1] with status 1 for wr_id 2aaab5242b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523f580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab524cc00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523c700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5243480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5247980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523ad80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab523d780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5239e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab527d980 vend_err 1, byte_len 0
+       54       0.48323198553180E-15    52.5143969881539
+       55       0.48323652581191E-15    52.5144198604578
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e8b80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d8f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d7d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51df880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51da180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51db680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ec480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5210480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab521a500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5221580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5219180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab521bb80 vend_err 1, byte_len 0
+       56       0.48270375692215E-15    52.5144388254718
+       57       0.48256491461299E-15    52.5144545570833
+       58       0.48293803833430E-15    52.5144676116803
+       59       0.48210967743858E-15    52.5144784491858
+       60       0.48223785020793E-15    52.5144874496764
+       61       0.48138798541680E-15    52.5144949274188
+       62       0.48125276590137E-15    52.5145011425178
+       63       0.48183253235319E-15    52.5145063101820
+       64       0.48112899322927E-15    52.5145106085530
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5258180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5252c00 vend_err 1, byte_len 0
+       65       0.48091727949258E-15    52.5145141852296
+       66       0.48141683619275E-15    52.5145171625375
+       67       0.48048563347888E-15    52.5145196417965
+       68       0.48058264214006E-15    52.5145217071298
+       69       0.48097196012728E-15    52.5145234282538
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ec180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ef600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e6a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ea680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e4c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e6c00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5274680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526da80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5273780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5268080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5279a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab527e880 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab526d480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5270c00 vend_err 1, byte_len 0
+       70       0.48008452690837E-15    52.5145248630642
+       71       0.48037210952966E-15    52.5145260596285
+       72       0.48059778751857E-15    52.5145270578517
+       73       0.48027282361630E-15    52.5145278908680
+       74       0.47976034836372E-15    52.5145285863336
+       75       0.48061991992402E-15    52.5145291671142
+       76       0.48056350351342E-15    52.5145296522802
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5220080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5219a80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab521d800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5222900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab521fd80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5221280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5212400 vend_err 1, byte_len 0
+       77       0.48032597703725E-15    52.5145300577243
+       78       0.48009974629445E-15    52.5145303966540
+       79       0.47984028710985E-15    52.5145306800727
+       80       0.48031722327870E-15    52.5145309171583
+       81       0.48034726201436E-15    52.5145311155214
+       82       0.48047640369469E-15    52.5145312815711
+       83       0.48041782970991E-15    52.5145314205998
+       84       0.48033807158519E-15    52.5145315370206
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d4900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d0700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ca580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d1780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d0d00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51cf080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d2380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c3080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51db500 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d0e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d5680 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d8200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d7180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d6e80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d4000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c7400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c8480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c8900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c6800 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab527f300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ccc80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51d6700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51cd280 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c0c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51cbd80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51cc080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c3200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c5300 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c2600 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c5d80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ca400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51cad00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c5f00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c2780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5278580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51cd100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51c7280 vend_err 1, byte_len 0
+       85       0.48080760222409E-15    52.5145316345728
+       86       0.47985216318744E-15    52.5145317163003
+       87       0.48072971632967E-15    52.5145317848354
+       88       0.48048521146239E-15    52.5145318422921
+       89       0.47998054728513E-15    52.5145318904770
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f6080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ffb00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e1080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51fce00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51fe900 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5202c80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f3080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e7980 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f9080 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f7580 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ea380 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e6480 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f0200 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ec000 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51eb100 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab5204780 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f3f80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51fd400 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51eab00 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51ef180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f1700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51dbf80 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e9180 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51e8700 vend_err 1, byte_len 0
+[mpi022][[1022,1],0][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaab51f0800 vend_err 1, byte_len 0
+       90       0.48036457466091E-15    52.5145319309082
+       91       0.47985802463556E-15    52.5145319648445
+       92       0.47986903841239E-15    52.5145319933223
+       93       0.48079397079694E-15    52.5145320172157
+       94       0.47995344567557E-15    52.5145320373113
+       95       0.48031534342030E-15    52.5145320541856
+       96       0.48035088535085E-15    52.5145320683595
+       97       0.47968122169005E-15    52.5145320802699
+       98       0.47999650174030E-15    52.5145320902892
+       99       0.48016205862626E-15    52.5145320987048
+      100       0.48046285404457E-15    52.5145321057934
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ Zeta is     0.5251453210579E+02
+ Error is    0.1204205787367E-13
+
+
+ CG Benchmark Completed.
+ Class           =                        D
+ Size            =                  1500000
+ Iterations      =                      100
+ Time in seconds =                  3996.19
+ Total processes =                        2
+ Compiled procs  =                        2
+ Mop/s total     =                   911.59
+ Mop/s/process   =                   455.80
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              31 May 2014
+
+ Compile options:
+    MPIF77       = mpifort
+    FLINK        = $(MPIF77)
+    FMPI_LIB     = (none)
+    FMPI_INC     = (none)
+    FFLAGS       = -O2 -mcmodel=large
+    FLINKFLAGS   = -O2 -mcmodel=large
+    RAND         = randi8
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team 
+ Internet: npb@nas.nasa.gov
+
+
+===============================================================================
+End: Sat May 31 07:45:00 PDT 2014

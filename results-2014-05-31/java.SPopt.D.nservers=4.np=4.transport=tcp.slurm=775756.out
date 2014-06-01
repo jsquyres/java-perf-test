@@ -1,0 +1,38 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark SPopt, class D, on 4 servers (np=4), tcp,self
+
+SLURM job ID: 775756
+
+Servers:
+mpi003
+mpi026
+mpi025
+mpi027
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 4 java NPB_MPJ.SPopt class=D
+
+Start: Sat May 31 18:29:45 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version SP CLASS=D np=4
+ No input file inputsp.data. Using compiled defaults
+ Unofficial NAS Parallel Benchmarks -- SP Benchmark
+ Size: 408x408x408
+ Iterations: 500    dt: 3.0E-4
+ Number of processes: 4
+ Time step 1
+ Time step 20
+ Time step 40
+ Time step 60
+ Time step 80
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+slurmd[mpi025]: *** STEP 775756.1 CANCELLED AT 2014-06-01T03:31:33 ***
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi003]: *** JOB 775756 CANCELLED AT 2014-06-01T03:31:33 ***
+srun: forcing job termination
+srun: error: mpi027: task 2: Exited with exit code 1
+srun: Terminating job step 775756.1
+srun: error: mpi026: task 1: Exited with exit code 1
+srun: error: mpi025: task 0: Exited with exit code 1

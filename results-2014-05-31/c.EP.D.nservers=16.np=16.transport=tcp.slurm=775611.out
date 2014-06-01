@@ -1,0 +1,68 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.16, class tcp,self, on 16 servers (np=16), tcp,self
+
+SLURM job ID: 775611
+
+Servers:
+mpi001
+mpi013
+mpi007
+mpi004
+mpi011
+mpi010
+mpi006
+mpi012
+mpi015
+mpi008
+mpi014
+mpi016
+mpi002
+mpi005
+mpi003
+mpi009
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 16 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.16
+
+Start: Sun Jun  1 03:52:03 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+ NAS Parallel Benchmarks 3.3 -- EP Benchmark
+
+ Number of random numbers generated:    137438953472
+ Number of active processes:                      16
+
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi002]: *** STEP 775611.1 CANCELLED AT 2014-06-01T03:54:03 ***
+slurmd[mpi001]: *** JOB 775611 CANCELLED AT 2014-06-01T03:54:03 ***
+srun: forcing job termination
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA742C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA72B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    000000347A80F710  Unknown               Unknown  Unknown
+ep.D.16            0000000000401B4E  Unknown               Unknown  Unknown
+ep.D.16            00000000004012D6  Unknown               Unknown  Unknown
+libc.so.6          000000347A41ED1D  Unknown               Unknown  Unknown
+ep.D.16            00000000004011C9  Unknown               Unknown  Unknown
+srun: error: mpi004: task 2: Exited with exit code 1
+srun: Terminating job step 775611.1
+srun: error: mpi008: task 6: Exited with exit code 1
+srun: error: mpi007: task 5: Exited with exit code 1
+srun: error: mpi010: task 8: Exited with exit code 1
+srun: error: mpi014: task 12: Exited with exit code 1
+srun: error: mpi013: task 11: Exited with exit code 1
+srun: error: mpi011: task 9: Exited with exit code 1
+srun: error: mpi002: task 0: Exited with exit code 1
+srun: error: mpi006: task 4: Exited with exit code 1
+srun: error: mpi012: task 10: Exited with exit code 1
+srun: error: mpi003: task 1: Exited with exit code 1
+srun: error: mpi016: task 14: Exited with exit code 1
+srun: error: mpi009: task 7: Exited with exit code 1
+srun: error: mpi005: task 3: Exited with exit code 1
+srun: error: mpi015: task 13: Exited with exit code 1

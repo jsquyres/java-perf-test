@@ -1,0 +1,37 @@
+Running Java benchmark SPopt2, class D, on 1 servers (np=1), sm,self
+
+SLURM job ID: 775642
+
+Servers:
+mpi004
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 1 java NPB_MPJ.SPopt2 class=D
+
+Start: Sat May 31 07:06:15 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version SP CLASS=D np=1
+ No input file inputsp.data. Using compiled defaults
+ Unofficial NAS Parallel Benchmarks -- SP Benchmark
+ Size: 408x408x408
+ Iterations: 500    dt: 3.0E-4
+ Number of processes: 1
+ Time step 1
+ Time step 20
+ Time step 40
+ Time step 60
+ Time step 80
+ Time step 100
+ Time step 120
+ Time step 140
+ Time step 160
+ Time step 180
+ Time step 200
+ Time step 220
+ Time step 240
+ Time step 260
+ Time step 280
+ Time step 300
+ Time step 320
+mpirun: Forwarding signal 18 to job
+slurmd[mpi004]: *** JOB 775642 CANCELLED AT 2014-06-01T03:31:08 ***

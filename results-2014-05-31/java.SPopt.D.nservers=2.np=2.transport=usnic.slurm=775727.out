@@ -1,0 +1,34 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark SPopt, class D, on 2 servers (np=2), usnic,self
+
+SLURM job ID: 775727
+
+Servers:
+mpi025
+mpi031
+
+mpirun --mca btl usnic,self --bind-to core --map-by node -np 2 java NPB_MPJ.SPopt class=D
+
+Start: Sat May 31 10:16:15 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[mpi025:20175] 1 more process has sent help message help-mpi-api.txt / mpi-abort
+[mpi025:20175] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi025]: *** JOB 775727 CANCELLED AT 2014-05-31T18:29:39 ***
+slurmd[mpi031]: *** STEP 775727.1 CANCELLED AT 2014-05-31T18:29:39 ***
+mpirun: abort is already in progress...hit ctrl-c again to forcibly terminate
+
+srun: forcing job termination
+srun: error: mpi031: task 0: Exited with exit code 1
+srun: Terminating job step 775727.1

@@ -1,0 +1,86 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2, class usnic,self, on 2 servers (np=2), usnic,self
+
+SLURM job ID: 775554
+
+Servers:
+mpi009
+mpi010
+
+mpirun --mca btl usnic,self --bind-to core --map-by node -np 2 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2
+
+Start: Sat May 31 06:50:15 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- FT Benchmark
+
+ No input file inputft.data. Using compiled defaults
+ Size                : 2048x1024x1024
+ Iterations          :             25
+ Number of processes :              2
+ Processor array     :         1x   2
+ Layout type         :             1D
+ Initialization time =   150.889731884003     
+ T =    1     Checksum =    2.921055029672D+02    2.921308135008D+02
+ T =    2     Checksum =    4.674554998802D+02    4.655962931755D+02
+ T =    3     Checksum =    3.546237221065D+02    3.532469664368D+02
+ T =    4     Checksum =    4.040045393227D+02    4.084955666242D+02
+ T =    5     Checksum =    3.347152131964D+02    3.333277267566D+02
+ T =    6     Checksum =    4.317076892367D+02    4.362613333843D+02
+ T =    7     Checksum =    4.106690287469D+02    4.091215556375D+02
+ T =    8     Checksum =    3.555765643057D+02    3.557130333712D+02
+ T =    9     Checksum =    3.601515895148D+02    3.600064789727D+02
+ T =   10     Checksum =    3.979886165219D+02    3.986512541573D+02
+ T =   11     Checksum =    4.126318677556D+02    4.129611796228D+02
+ T =   12     Checksum =    3.397958464224D+02    3.376035613926D+02
+ T =   13     Checksum =    3.937751782440D+02    3.948510984537D+02
+ T =   14     Checksum =    3.626584256696D+02    3.647392383772D+02
+ T =   15     Checksum =    4.166407713284D+02    4.195950069035D+02
+ T =   16     Checksum =    3.442292380608D+02    3.458761444637D+02
+ T =   17     Checksum =    3.650921524502D+02    3.655118050831D+02
+ T =   18     Checksum =    4.131387790051D+02    4.134187330798D+02
+ T =   19     Checksum =    3.142958117769D+02    3.131471877308D+02
+ T =   20     Checksum =    4.892288839596D+02    4.875717236734D+02
+ T =   21     Checksum =    2.838957764454D+02    2.793037105420D+02
+ T =   22     Checksum =    5.119634435193D+02    5.119415043004D+02
+ T =   23     Checksum =    3.893180483073D+02    3.867842093319D+02
+ T =   24     Checksum =    3.542383807026D+02    3.545901462929D+02
+ T =   25     Checksum =    4.170364276447D+02    4.151633319204D+02
+ Result verification failed
+ class = D
+
+
+ FT Benchmark Completed.
+ Class           =                        D
+ Size            =           2048x1024x1024
+ Iterations      =                       25
+ Time in seconds =                  3416.38
+ Total processes =                        2
+ Compiled procs  =                        2
+ Mop/s total     =                  2623.76
+ Mop/s/process   =                  1311.88
+ Operation type  =           floating point
+ Verification    =             UNSUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              31 May 2014
+
+ Compile options:
+    MPIF77       = mpifort
+    FLINK        = $(MPIF77)
+    FMPI_LIB     = (none)
+    FMPI_INC     = (none)
+    FFLAGS       = -O2 -mcmodel=large
+    FLINKFLAGS   = -O2 -mcmodel=large
+    RAND         = randi8
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team 
+ Internet: npb@nas.nasa.gov
+
+
+===============================================================================
+End: Sat May 31 07:49:44 PDT 2014

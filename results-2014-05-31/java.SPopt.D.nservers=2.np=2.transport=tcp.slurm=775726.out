@@ -1,0 +1,24 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark SPopt, class D, on 2 servers (np=2), tcp,self
+
+SLURM job ID: 775726
+
+Servers:
+mpi025
+mpi031
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 2 java NPB_MPJ.SPopt class=D
+
+Start: Sat May 31 10:15:45 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+===============================================================================
+End: Sat May 31 10:15:46 PDT 2014

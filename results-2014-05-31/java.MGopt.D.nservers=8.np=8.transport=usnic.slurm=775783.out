@@ -1,0 +1,56 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MGopt, class D, on 8 servers (np=8), usnic,self
+
+SLURM job ID: 775783
+
+Servers:
+mpi001
+mpi014
+mpi022
+mpi024
+mpi028
+mpi002
+mpi015
+mpi012
+
+mpirun --mca btl usnic,self --bind-to core --map-by node -np 8 java NPB_MPJ.MGopt class=D
+
+Start: Sat May 31 20:58:40 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=D np=8
+ No input file mg.input. Using compiled defaults
+[mpi024][[7688,1],6][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac565d80 vend_err 1, byte_len 0
+[mpi024][[7688,1],6][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac565c00 vend_err 1, byte_len 0
+[mpi024][[7688,1],6][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac565a80 vend_err 1, byte_len 0
+[mpi024][[7688,1],6][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac565900 vend_err 1, byte_len 0
+[mpi024][[7688,1],6][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac565600 vend_err 1, byte_len 0
+[mpi022][[7688,1],5][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac53f000 vend_err 1, byte_len 0
+[mpi022][[7688,1],5][../../../../../ompi/mca/btl/usnic/btl_usnic_component.c:1003:usnic_handle_completion] usnic_2: RX error polling CQ[1] with status 1 for wr_id 2aaaac53eb80 vend_err 1, byte_len 0
+--------------------------------------------------------------------------
+The Open MPI usNIC BTL was unable to establish full connectivity
+between at least one pair of servers in the MPI job.  Specifically,
+small UDP messages seem to flow between the servers, but large UDP
+messages do not.
+
+Your MPI job is going to abort now.
+
+  Source:
+    Hostname / IP:    mpi012 (10.10.0.12/16)
+    Host interfaces:  usnic_0 / eth4
+    MAC address:      24:57:20:0c:20:00
+  Destination:
+    Hostname / IP:    mpi014 (10.10.0.14/16)
+    MAC address:      bc:24:45:ae:aa:2a
+
+  Small message size: 16
+  Large message size: 8932
+
+Note that this behavior usually indicates that the MTU of some network
+link is too small between these two servers.  You should verify that
+UDP traffic with payloads up to the "large message size" listed above
+can flow between these two servers.
+--------------------------------------------------------------------------
+===============================================================================
+End: Sat May 31 20:59:00 PDT 2014

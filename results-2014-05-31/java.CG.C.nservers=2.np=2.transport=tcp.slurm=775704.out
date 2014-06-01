@@ -1,0 +1,32 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark CG, class C, on 2 servers (np=2), tcp,self
+
+SLURM job ID: 775704
+
+Servers:
+mpi030
+mpi032
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 2 java NPB_MPJ.CG class=C
+
+Start: Sat May 31 08:35:15 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks -- CG Benchmark
+ Size: 150000
+ Iterations: 75
+ Number of active processes: 2
+ Number of nonzeroes per row: 15
+ Eigenvalue shift: 110.0
+ Iteration "-1"  is the warm up iteration
+   iteration            ||r||                 zeta
+[mpi030][[54923,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.4.0.32 failed: No route to host (113)
+[mpi032][[54923,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.4.0.30 failed: No route to host (113)
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi030]: *** JOB 775704 CANCELLED AT 2014-05-31T18:23:06 ***
+slurmd[mpi032]: *** STEP 775704.1 CANCELLED AT 2014-05-31T18:23:06 ***
+srun: forcing job termination
+srun: error: mpi032: task 0: Exited with exit code 1
+srun: Terminating job step 775704.1

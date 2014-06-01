@@ -1,0 +1,76 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2, class tcp,self, on 2 servers (np=2), tcp,self
+
+SLURM job ID: 775553
+
+Servers:
+mpi007
+mpi008
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 2 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2
+
+Start: Sat May 31 06:45:45 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- FT Benchmark
+
+ No input file inputft.data. Using compiled defaults
+ Size                : 2048x1024x1024
+ Iterations          :             25
+ Number of processes :              2
+ Processor array     :         1x   2
+ Layout type         :             1D
+[mpi007][[29496,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:209:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv error (0x2aaa338ea560, 2147480784)
+	Bad address(1)
+
+[mpi007][[29496,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:209:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv error (0x2aaa338b0f18, 2147452952)
+	Bad address(1)
+
+[mpi007][[29496,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:209:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv error (0x2aaa33890d98, 2147452952)
+	Bad address(1)
+
+[mpi007][[29496,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:209:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv error (0x2aaa338d1098, 2147452952)
+	Bad address(1)
+
+[mpi008][[29496,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:209:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv error (0x2aaa338f1218, 2147452952)
+	Bad address(1)
+
+[mpi008][[29496,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:209:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv error (0x2aaa33890d98, 2147452952)
+	Bad address(1)
+
+[mpi008][[29496,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:209:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv error (0x2aaa338cbb84, 2147474732)
+	Bad address(1)
+
+[mpi008][[29496,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:215:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi007]: *** JOB 775553 CANCELLED AT 2014-05-31T09:03:40 ***
+slurmd[mpi008]: *** STEP 775553.1 CANCELLED AT 2014-05-31T09:03:40 ***
+srun: forcing job termination
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACF172C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACF15B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB945F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB8ADD7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB8BEF0E  Unknown               Unknown  Unknown
+libpthread.so.0    00002AAAAD171710  Unknown               Unknown  Unknown
+libc.so.6          00002AAAAD45E343  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAADD3F079  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAADD3435C  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAADCEB1CD  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB38D464  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB337ECFB  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB3384267  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB3A2183  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAB12DC1A  Unknown               Unknown  Unknown
+ft.D.2             00000000004109B4  Unknown               Unknown  Unknown
+ft.D.2             0000000000401BAD  Unknown               Unknown  Unknown
+ft.D.2             0000000000401596  Unknown               Unknown  Unknown
+libc.so.6          00002AAAAD39DD1D  Unknown               Unknown  Unknown
+ft.D.2             0000000000401489  Unknown               Unknown  Unknown
+srun: error: mpi008: task 0: Exited with exit code 1
+srun: Terminating job step 775553.1

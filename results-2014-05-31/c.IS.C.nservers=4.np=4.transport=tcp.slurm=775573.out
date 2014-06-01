@@ -1,0 +1,34 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.4, class tcp,self, on 4 servers (np=4), tcp,self
+
+SLURM job ID: 775573
+
+Servers:
+mpi012
+mpi023
+mpi022
+mpi024
+
+mpirun --mca btl tcp,self --bind-to core --map-by node -np 4 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.4
+
+Start: Sat May 31 10:00:45 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- IS Benchmark
+
+ Size:  134217728  (class C)
+ Iterations:   10
+ Number of processes:     4
+[mpi012][[15904,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.2.0.23 failed: No route to host (113)
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi012]: *** JOB 775573 CANCELLED AT 2014-05-31T18:22:21 ***
+slurmd[mpi022]: *** STEP 775573.1 CANCELLED AT 2014-05-31T18:22:21 ***
+srun: forcing job termination
+srun: error: mpi023: task 1: Exited with exit code 1
+srun: Terminating job step 775573.1
+srun: error: mpi024: task 2: Exited with exit code 1
+srun: error: mpi022: task 0: Exited with exit code 1

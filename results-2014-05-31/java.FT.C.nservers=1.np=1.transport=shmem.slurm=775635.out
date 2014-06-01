@@ -1,0 +1,57 @@
+Running Java benchmark FT, class C, on 1 servers (np=1), sm,self
+
+SLURM job ID: 775635
+
+Servers:
+mpi029
+
+mpirun --mca btl sm,self --bind-to core --map-by node -np 1 java NPB_MPJ.FT class=C
+
+Start: Sat May 31 06:52:45 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version FT CLASS=C np=1
+ No input file inputft.data. Using compiled defaults
+ Size                : 512x512x512
+ Iterations          : 20
+ Number of processes : 1
+ Processor array     : 1x1
+ Layout type         : 0D
+ T = 1 Checksum = ( 519.5078707456652, 514.9019699238075)
+ T = 2 Checksum = ( 515.5422171134105, 512.7578201996745)
+ T = 3 Checksum = ( 514.4678022222143, 512.2251847514312)
+ T = 4 Checksum = ( 514.015059432843, 512.1090289018035)
+ T = 5 Checksum = ( 513.7550426810105, 512.1143685823704)
+ T = 6 Checksum = ( 513.5811056727712, 512.1496764568179)
+ T = 7 Checksum = ( 513.4569343165189, 512.1870921892544)
+ T = 8 Checksum = ( 513.3651975661284, 512.2193250322362)
+ T = 9 Checksum = ( 513.2955192804634, 512.2454735793661)
+ T = 10 Checksum = ( 513.2410471738202, 512.2663649603148)
+ T = 11 Checksum = ( 513.1971141679046, 512.2830879826861)
+ T = 12 Checksum = ( 513.1605205715782, 512.2965869718479)
+ T = 13 Checksum = ( 513.1290734193582, 512.3075927445427)
+ T = 14 Checksum = ( 513.1012720313767, 512.3166486553143)
+ T = 15 Checksum = ( 513.0760908195351, 512.3241541685363)
+ T = 16 Checksum = ( 513.0528295923042, 512.3304037599432)
+ T = 17 Checksum = ( 513.031010777262, 512.3356167976101)
+ T = 18 Checksum = ( 513.0103090133048, 512.3399592211208)
+ T = 19 Checksum = ( 512.9905029333115, 512.3435588984759)
+ T = 20 Checksum = ( 512.9714421109037, 512.3465164008154)
+FT.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) FT ***** 
+* Class             = C                                        * 
+* Size              = 512 X 512 X 512                          * 
+* Iterations        = 20                                       * 
+* Time in seconds   = 435.096                                  * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 911.036                                  * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 1                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Sat May 31 07:00:39 PDT 2014
