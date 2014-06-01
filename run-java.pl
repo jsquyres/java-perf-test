@@ -85,6 +85,11 @@ foreach my $nprocs (@nprocs) {
 
     foreach my $benchmark (@benchmarks) {
         my ($benchmark_name, $class) = split(/:/, $benchmark);
+        my $np_save = $np;
+        # The SP benchmarks require np to be a square
+        if (strstr($benchmark_name, 0, 2) eq "SP" && $np == 8) {
+            $np = 9;
+        }
 
         foreach my $transport (@transports) {
             my ($transport_name, $btl) = split(/:/, $transport);
@@ -94,11 +99,13 @@ foreach my $nprocs (@nprocs) {
             print "### Submitting $benchmark_name / $class / $transport_name / ns=$nservers / np=$np at " . localtime() . "\n";
             my $executable = "$java_npb_dir/NPB_MPJ/$benchmark_name.class";
             if (-r $executable) {
-                system("sbatch -p $slurm_queue -N $nservers $hosts -o $outfile $script_dir/sbatch-java-runner.sh $benchmark_name $class $btl $np");
+                system("sbatch -p $slurm_queue -N $nservers $hosts -J 'Java $benchmark_name $class $transport_name $nservers:$np' -o $outfile $script_dir/sbatch-java-runner.sh $benchmark_name $class $btl $np");
                 print "+++ Submitted $executable\n";
             } else {
                 print "--- SKIPPED: no executable $executable\n";
             }
         }
+
+        $np = $np_save;
     }
 }

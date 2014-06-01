@@ -74,6 +74,12 @@ foreach my $nprocs (@nprocs) {
     }
 
     foreach my $benchmark (@benchmarks) {
+        my $np_save = $np;
+        # SP requires np to be a square
+        if ($benchmark eq "SP" && $np == 8) {
+            $np = 9;
+        }
+
         foreach my $class (@classes) {
             foreach my $transport (@transports) {
                 my ($transport_name, $btl) = split(/:/, $transport);
@@ -84,12 +90,14 @@ foreach my $nprocs (@nprocs) {
                 my $executable = "$c_npb_dir/bin/" .
                     lc($benchmark) . "." . uc($class) . ".$np";
                 if (-x $executable) {
-                    system("sbatch -p $slurm_queue -N $nservers $hosts -o $outfile $script_dir/sbatch-c-runner.sh $executable $btl $np");
+                    system("sbatch -p $slurm_queue -N $nservers $hosts -J 'C $benchmark $class $transport_name $nservers:$np' -o $outfile $script_dir/sbatch-c-runner.sh $executable $btl $np");
                     print "+++ Submitted $executable\n";
                 } else {
                     print "--- SKIPPED: no executable $executable\n";
                 }
             }
         }
+
+        $np = $np_save;
     }
 }

@@ -52,6 +52,7 @@ do_make 1
 do_make 2
 do_make 4
 do_make 8
+do_make 9 # this is just for SP, which requires nprocs to be a square
 do_make 16
 
 # Java NPB
