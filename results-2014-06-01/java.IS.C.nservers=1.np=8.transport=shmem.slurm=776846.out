@@ -1,0 +1,51 @@
+Running Java benchmark IS, class C, on 1 servers (np=8), sm,self
+
+SLURM job ID: 776846
+
+Servers:
+mpi027
+mpi027
+mpi027
+mpi027
+mpi027
+mpi027
+mpi027
+mpi027
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl sm,self --bind-to core --map-by node -np 8 java -Xmx64g NPB_MPJ.IS class=C
+
+Start: Sun Jun  1 07:59:50 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version IS CLASS=C np=8
+ Size:  134217728 Iterations:   10
+
+   iteration
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+IS.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) IS ***** 
+* Class             = C                                        * 
+* Size              = 134217728                                * 
+* Iterations        = 10                                       * 
+* Time in seconds   = 4.608                                    * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 291.271                                  * 
+* Operation type    = keys ranked                              * 
+* Verification      = Successful                               * 
+* Process requested = 8                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Sun Jun  1 08:00:00 PDT 2014

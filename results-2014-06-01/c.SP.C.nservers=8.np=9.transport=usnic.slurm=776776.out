@@ -1,0 +1,204 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.9, class usnic,self, on 8 servers (np=9), usnic,self
+
+SLURM job ID: 776776
+
+Servers:
+mpi022
+mpi024
+mpi022
+mpi031
+mpi028
+mpi026
+mpi032
+mpi025
+mpi027
+
+mpirun --mca btl_usnic_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 9 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.9
+
+Start: Sun Jun  1 07:07:53 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[mpi022:14511] Local abort before MPI_INIT completed successfully; not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+--------------------------------------------------------------------------
+At least one pair of MPI processes are unable to reach each other for
+MPI communications.  This means that no Open MPI device has indicated
+that it can be used to communicate between these processes.  This is
+an error; Open MPI requires that all MPI processes be able to reach
+each other.  This error can sometimes be the result of forgetting to
+specify the "self" BTL.
+
+  Process 1 ([[11324,1],8]) is on host: mpi022
+  Process 2 ([[11324,1],0]) is on host: mpi022
+  BTLs attempted: self usnic
+
+Your MPI job is now going to abort; sorry.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_INIT has failed because at least one MPI process is unreachable
+from another.  This *usually* means that an underlying communication
+plugin -- such as a BTL or an MTL -- has either not loaded or not
+allowed itself to be used.  Your MPI job will now abort.
+
+You may wish to try to narrow down the problem;
+
+ * Check the output of ompi_info to see which BTL/MTL plugins are
+   available.
+ * Run your application with MPI_THREAD_SINGLE.
+ * Set the MCA parameter btl_base_verbose to 100 (or mtl_base_verbose,
+   if using MTL-based communications) to see exactly which
+   communication plugins were considered and/or discarded.
+--------------------------------------------------------------------------
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[mpi022:14510] Local abort before MPI_INIT completed successfully; not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    000000318D40F710  Unknown               Unknown  Unknown
+libc.so.6          000000318D0CF527  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16F911  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB19259B  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF13877  Unknown               Unknown  Unknown
+sp.C.9             000000000043A858  Unknown               Unknown  Unknown
+sp.C.9             00000000004017F6  Unknown               Unknown  Unknown
+sp.C.9             0000000000401776  Unknown               Unknown  Unknown
+libc.so.6          000000318D01ED1D  Unknown               Unknown  Unknown
+sp.C.9             00000000004015F9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    00000035E100F710  Unknown               Unknown  Unknown
+libc.so.6          00000035E0CDF343  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1E8079  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1DD35C  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1941CD  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16F911  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB19259B  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF13877  Unknown               Unknown  Unknown
+sp.C.9             000000000043A858  Unknown               Unknown  Unknown
+sp.C.9             00000000004017F6  Unknown               Unknown  Unknown
+sp.C.9             0000000000401776  Unknown               Unknown  Unknown
+libc.so.6          00000035E0C1ED1D  Unknown               Unknown  Unknown
+sp.C.9             00000000004015F9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    00000036F920F710  Unknown               Unknown  Unknown
+libc.so.6          00000036F8EDF343  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1E8079  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1DD35C  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1941CD  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16F911  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB19259B  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF13877  Unknown               Unknown  Unknown
+sp.C.9             000000000043A858  Unknown               Unknown  Unknown
+sp.C.9             00000000004017F6  Unknown               Unknown  Unknown
+sp.C.9             0000000000401776  Unknown               Unknown  Unknown
+libc.so.6          00000036F8E1ED1D  Unknown               Unknown  Unknown
+sp.C.9             00000000004015F9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    000000338BA0F710  Unknown               Unknown  Unknown
+libc.so.6          000000338B6CF527  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16F911  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB19259B  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF13877  Unknown               Unknown  Unknown
+sp.C.9             000000000043A858  Unknown               Unknown  Unknown
+sp.C.9             00000000004017F6  Unknown               Unknown  Unknown
+sp.C.9             0000000000401776  Unknown               Unknown  Unknown
+libc.so.6          000000338B61ED1D  Unknown               Unknown  Unknown
+sp.C.9             00000000004015F9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    00000038C420F710  Unknown               Unknown  Unknown
+libc.so.6          00000038C3EDF343  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1E8079  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1DD35C  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1941CD  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16F911  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB19259B  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF13877  Unknown               Unknown  Unknown
+sp.C.9             000000000043A858  Unknown               Unknown  Unknown
+sp.C.9             00000000004017F6  Unknown               Unknown  Unknown
+sp.C.9             0000000000401776  Unknown               Unknown  Unknown
+libc.so.6          00000038C3E1ED1D  Unknown               Unknown  Unknown
+sp.C.9             00000000004015F9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    00000036C140F710  Unknown               Unknown  Unknown
+libc.so.6          00000036C10DF343  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1E8079  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1DD35C  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1941CD  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16F911  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB19259B  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF13877  Unknown               Unknown  Unknown
+sp.C.9             000000000043A858  Unknown               Unknown  Unknown
+sp.C.9             00000000004017F6  Unknown               Unknown  Unknown
+sp.C.9             0000000000401776  Unknown               Unknown  Unknown
+libc.so.6          00000036C101ED1D  Unknown               Unknown  Unknown
+sp.C.9             00000000004015F9  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    000000382880F710  Unknown               Unknown  Unknown
+libc.so.6          00000038284CF527  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16F911  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB19259B  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF13877  Unknown               Unknown  Unknown
+sp.C.9             000000000043A858  Unknown               Unknown  Unknown
+sp.C.9             00000000004017F6  Unknown               Unknown  Unknown
+sp.C.9             0000000000401776  Unknown               Unknown  Unknown
+libc.so.6          000000382841ED1D  Unknown               Unknown  Unknown
+sp.C.9             00000000004015F9  Unknown               Unknown  Unknown
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[11324,1],8]
+  Exit code:    1
+--------------------------------------------------------------------------
+===============================================================================
+End: Sun Jun  1 07:07:55 PDT 2014

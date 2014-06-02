@@ -1,0 +1,104 @@
+cg.c.1
+ep.c.1
+ft.c.1
+is.c.1
+mg.c.1
+sp.c.1
+
+cg.d.1
+ep.d.1
+ft.d.1--> fortran overflow error (NOT WITH IFORT)
+is.d.1--> npb IS D needs nprocs>=4
+mg.d.1--> fortran overflow error (NOT WITH IFORT)
+sp.d.1
+
+cg.e.1--> fortran overflow error (ONLY A WARNING WITH IFORT)
+ep.e.1
+ft.e.1--> fortran overflow error (ONLY A WARNING WITH IFORT)
+is.e.1--> npb IS E not defined
+mg.e.1--> fortran overflow error (ONLY A WARNING WITH IFORT)
+sp.e.1
+
+cg.c.2
+ep.c.2
+ft.c.2
+is.c.2
+mg.c.2
+sp.c.2--> npb SP nprocs must be square
+
+cg.d.2
+ep.d.2
+ft.d.2
+is.d.2--> npb IS D needs nprocs>=4
+mg.d.2--> fortran overflow error (NOT WITH IFORT)
+sp.d.2--> npb SP nprocs must be square
+
+cg.e.2--> fortran overflow error (ONLY A WARNING WITH IFORT)
+ep.e.2
+ft.e.2--> fortran overflow error (ONLY A WARNING WITH IFORT)
+is.e.2--> npb IS E not defined
+mg.e.2--> fortran overflow error (ONLY A WARNING WITH IFORT)
+sp.e.2--> npb SP nprocs must be square
+
+cg.c.4
+ep.c.4
+ft.c.4
+is.c.4
+mg.c.4
+sp.c.4
+
+cg.d.4
+ep.d.4
+ft.d.4
+is.d.4
+mg.d.4--> fortran overflow error (NOT WITH IFORT)
+sp.d.4
+
+cg.e.4
+ep.e.4
+ft.e.4--> fortran overflow error (ONLY A WARNING WITH IFORT)
+is.e.4--> npb IS E not defined
+mg.e.4--> fortran overflow error (NOT WITH IFORT)
+sp.e.4
+
+cg.c.8
+ep.c.8
+ft.c.8
+is.c.8
+mg.c.8
+sp.c.8--> npb SP nprocs must be square
+
+cg.d.8
+ep.d.8
+ft.d.8
+is.d.8
+mg.d.8
+sp.d.8--> npb SP nprocs must be square
+
+cg.e.8
+ep.e.8
+ft.e.8--> fortran overflow error (NOT WITH IFORT)
+is.e.8--> npb IS E not defined
+mg.e.8--> fortran overflow error (NOT WITH IFORT)
+sp.e.8--> npb SP nprocs must be square
+
+cg.c.16
+ep.c.16
+ft.c.16
+is.c.16
+mg.c.16
+sp.c.16
+
+cg.d.16
+ep.d.16
+ft.d.16
+is.d.16
+mg.d.16
+sp.d.16
+
+cg.e.16
+ep.e.16
+ft.e.16
+is.e.16--> npb IS E not defined
+mg.e.16--> fortran overflow error (NOT WITH IFORT)
+sp.e.16

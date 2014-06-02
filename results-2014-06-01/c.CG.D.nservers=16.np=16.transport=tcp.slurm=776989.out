@@ -1,0 +1,43 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.16, class tcp,self, on 16 servers (np=16), tcp,self
+
+SLURM job ID: 776989
+
+Servers:
+mpi001
+mpi013
+mpi006
+mpi011
+mpi004
+mpi007
+mpi010
+mpi012
+mpi015
+mpi014
+mpi008
+mpi016
+mpi005
+mpi009
+mpi002
+mpi003
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 16 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.16
+
+Start: Mon Jun  2 05:31:30 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- CG Benchmark
+
+ Size:    1500000
+ Iterations:   100
+ Number of active processes:    16
+ Number of nonzeroes per row:       21
+ Eigenvalue shift: .500E+03
+
+   iteration           ||r||                 zeta
+        1       0.48093932387672E-12   499.9996989885352
+        2       0.31970081450004E-15    49.1792921222620
+        3       0.33344827739115E-15    49.7621417780915
+        4       0.34448379017951E-15    50.2476108448490

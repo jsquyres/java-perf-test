@@ -1,0 +1,83 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.16, class sm,self, on 1 servers (np=16), sm,self
+
+SLURM job ID: 776704
+
+Servers:
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+mpi032
+
+mpirun --mca btl_usnic_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl sm,self --bind-to core --map-by node -np 16 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.16
+
+Start: Sun Jun  1 04:32:48 PDT 2014
+===============================================================================
+
+ NAS Parallel Benchmarks 3.3 -- EP Benchmark
+
+ Number of random numbers generated:    137438953472
+ Number of active processes:                      16
+
+EP Benchmark Results:
+
+CPU Time =  135.7627
+N = 2^   36
+No. Gaussian Pairs =   53972171957.
+Sums =     1.982481200946259D+05   -1.020596636360082D+05
+Counts:
+  0   25154622775.
+  1   24017899906.
+  2    4508609839.
+  3     284201296.
+  4       6776403.
+  5         61541.
+  6           197.
+  7             0.
+  8             0.
+  9             0.
+
+
+ EP Benchmark Completed.
+ Class           =                        D
+ Size            =             137438953472
+ Iterations      =                        0
+ Time in seconds =                   135.76
+ Total processes =                       16
+ Compiled procs  =                       16
+ Mop/s total     =                  1012.35
+ Mop/s/process   =                    63.27
+ Operation type  = Random numbers generated
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              01 Jun 2014
+
+ Compile options:
+    MPIF77       = mpifort
+    FLINK        = $(MPIF77)
+    FMPI_LIB     = (none)
+    FMPI_INC     = (none)
+    FFLAGS       = -O2 -mcmodel=large
+    FLINKFLAGS   = -O2 -mcmodel=large
+    RAND         = randi8
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team 
+ Internet: npb@nas.nasa.gov
+
+
+===============================================================================
+End: Sun Jun  1 04:35:04 PDT 2014

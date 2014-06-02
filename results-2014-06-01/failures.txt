@@ -1,0 +1,6 @@
+c.FT.D.nservers=2.np=2.transport=usnic.slurm=776724.out
+--> Hung?
+
+
+c.SP.D.nservers=1.np=1.transport=shmem.slurm=776667.out
+--> Killed so np=16 could run

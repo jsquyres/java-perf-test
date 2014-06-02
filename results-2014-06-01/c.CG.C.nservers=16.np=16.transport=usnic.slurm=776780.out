@@ -1,0 +1,107 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.16, class usnic,self, on 16 servers (np=16), usnic,self
+
+SLURM job ID: 776780
+
+Servers:
+mpi001
+mpi013
+mpi010
+mpi011
+mpi007
+mpi004
+mpi006
+mpi015
+mpi008
+mpi012
+mpi014
+mpi016
+mpi005
+mpi003
+mpi009
+mpi002
+
+mpirun --mca btl_usnic_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 16 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.16
+
+Start: Sun Jun  1 07:51:05 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- CG Benchmark
+
+ Size:     150000
+ Iterations:    75
+ Number of active processes:    16
+ Number of nonzeroes per row:       15
+ Eigenvalue shift: .110E+03
+
+   iteration           ||r||                 zeta
+        1       0.14248219242590E-12   109.9994423237398
+        2       0.41521812206686E-15    27.3920437146525
+        3       0.41285194427180E-15    28.0339761840275
+        4       0.41387676571330E-15    28.4191507551287
+        5       0.41018441839004E-15    28.6471670038893
+        6       0.40924504654818E-15    28.7812969418412
+        7       0.40953885413123E-15    28.8600458537343
+        8       0.40923479213596E-15    28.9063145572685
+        9       0.41000754431279E-15    28.9335649214622
+       10       0.40991619130423E-15    28.9496695449003
+       11       0.40717312188090E-15    28.9592263353755
+       12       0.41100074468411E-15    28.9649233484889
+       13       0.40945586929301E-15    28.9683359248936
+       14       0.40868740320801E-15    28.9703903960006
+       15       0.40855535130258E-15    28.9716336228371
+       16       0.40715884017789E-15    28.9723898600853
+       17       0.40701554161560E-15    28.9728522692229
+       18       0.40763533591020E-15    28.9731364797778
+       19       0.40643504279977E-15    28.9733120569288
+       20       0.40501010228939E-15    28.9734210663747
+       21       0.40429240460651E-15    28.9734890760554
+       22       0.40388723646262E-15    28.9735317064871
+       23       0.40400444972582E-15    28.9735585497258
+       24       0.40440916253336E-15    28.9735755256648
+       25       0.40382097368133E-15    28.9735863059382
+       26       0.40284378856725E-15    28.9735931787373
+       27       0.40400674285368E-15    28.9735975767371
+       28       0.40236580350587E-15    28.9736004009989
+       29       0.40505840140805E-15    28.9736022206772
+       30       0.40377097719296E-15    28.9736033967627
+       31       0.40119447596549E-15    28.9736041591157
+       32       0.40178628951518E-15    28.9736046546405
+       33       0.40189467922073E-15    28.9736049775614
+       34       0.39949092317097E-15    28.9736051885100
+       35       0.40073182072397E-15    28.9736053266246
+       36       0.39863908633103E-15    28.9736054172455
+       37       0.40001096332796E-15    28.9736054768226
+       38       0.40018606151603E-15    28.9736055160638
+       39       0.39769434898602E-15    28.9736055419574
+       40       0.39686567512866E-15    28.9736055590700
+       41       0.39828315299028E-15    28.9736055703976
+       42       0.39919334224558E-15    28.9736055779074
+       43       0.40136866429788E-15    28.9736055828934
+       44       0.39722408266469E-15    28.9736055862072
+       45       0.39781999661168E-15    28.9736055884132
+       46       0.39822719598013E-15    28.9736055898825
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi002]: *** STEP 776780.1 CANCELLED AT 2014-06-01T07:51:16 ***
+slurmd[mpi001]: *** JOB 776780 CANCELLED AT 2014-06-01T07:51:16 ***
+srun: forcing job termination
+srun: error: mpi006: task 4: Exited with exit code 1
+srun: Terminating job step 776780.1
+srun: error: mpi016: task 14: Exited with exit code 1
+srun: error: mpi012: task 10: Exited with exit code 1
+srun: error: mpi009: task 7: Exited with exit code 1
+srun: error: mpi011: task 9: Exited with exit code 1
+srun: error: mpi008: task 6: Exited with exit code 1
+srun: error: mpi007: task 5: Exited with exit code 1
+srun: error: mpi014: task 12: Exited with exit code 1
+srun: error: mpi002: task 0: Exited with exit code 1
+srun: error: mpi013: task 11: Exited with exit code 1
+srun: error: mpi010: task 8: Exited with exit code 1
+srun: error: mpi004: task 2: Exited with exit code 1
+srun: error: mpi003: task 1: Exited with exit code 1
+srun: error: mpi005: task 3: Exited with exit code 1
+srun: error: mpi015: task 13: Exited with exit code 1

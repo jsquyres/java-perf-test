@@ -1,0 +1,44 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MG, class D, on 4 servers (np=4), usnic,self
+
+SLURM job ID: 776896
+
+Servers:
+mpi002
+mpi010
+mpi009
+mpi011
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 4 java -Xmx64g NPB_MPJ.MG class=D
+
+Start: Sun Jun  1 09:57:12 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MG.runBenchmark(MG.java:198)
+	at NPB_MPJ.MG.main(MG.java:112)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi002]: *** JOB 776896 CANCELLED AT 2014-06-01T10:13:46 ***
+slurmd[mpi009]: *** STEP 776896.1 CANCELLED AT 2014-06-01T10:13:46 ***
+mpirun: abort is already in progress...hit ctrl-c again to forcibly terminate
+
+srun: forcing job termination
+srun: error: mpi011: task 2: Exited with exit code 1
+srun: Terminating job step 776896.1
+srun: error: mpi009: task 0: Exited with exit code 1
+srun: error: mpi010: task 1: Exited with exit code 1

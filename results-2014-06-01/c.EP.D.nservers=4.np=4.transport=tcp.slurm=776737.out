@@ -1,0 +1,83 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.4, class tcp,self, on 4 servers (np=4), tcp,self
+
+SLURM job ID: 776737
+
+Servers:
+mpi004
+mpi031
+mpi008
+mpi032
+
+mpirun --mca btl_usnic_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 4 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.4
+
+Start: Sun Jun  1 05:06:29 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+--------------------------------------------------------------------------
+WARNING: An invalid value was given for btl_tcp_if_include.  This
+value will be ignored.
+
+  Local host: mpi031
+  Value:      10.1.0.0/16
+  Message:    Did not find interface matching this subnet
+--------------------------------------------------------------------------
+
+ NAS Parallel Benchmarks 3.3 -- EP Benchmark
+
+ Number of random numbers generated:    137438953472
+ Number of active processes:                       4
+
+[mpi004:05318] 3 more processes have sent help message help-mpi-btl-tcp.txt / invalid if_inexclude
+[mpi004:05318] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+EP Benchmark Results:
+
+CPU Time =  539.2828
+N = 2^   36
+No. Gaussian Pairs =   53972171957.
+Sums =     1.982481200939379D+05   -1.020596636373198D+05
+Counts:
+  0   25154622775.
+  1   24017899906.
+  2    4508609839.
+  3     284201296.
+  4       6776403.
+  5         61541.
+  6           197.
+  7             0.
+  8             0.
+  9             0.
+
+
+ EP Benchmark Completed.
+ Class           =                        D
+ Size            =             137438953472
+ Iterations      =                        0
+ Time in seconds =                   539.28
+ Total processes =                        4
+ Compiled procs  =                        4
+ Mop/s total     =                   254.86
+ Mop/s/process   =                    63.71
+ Operation type  = Random numbers generated
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              01 Jun 2014
+
+ Compile options:
+    MPIF77       = mpifort
+    FLINK        = $(MPIF77)
+    FMPI_LIB     = (none)
+    FMPI_INC     = (none)
+    FFLAGS       = -O2 -mcmodel=large
+    FLINKFLAGS   = -O2 -mcmodel=large
+    RAND         = randi8
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team 
+ Internet: npb@nas.nasa.gov
+
+
+===============================================================================
+End: Sun Jun  1 05:15:29 PDT 2014

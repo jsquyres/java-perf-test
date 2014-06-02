@@ -1,0 +1,452 @@
+### Submitting CG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776517
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.1
+### Submitting CG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776518
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.1
+### Submitting EP / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776519
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.1
+### Submitting EP / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776520
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.1
+### Submitting FT / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776521
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.1
+### Submitting FT / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776522
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.1
+### Submitting IS / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776523
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.1
+### Submitting IS / D / shmem at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.1
+### Submitting MG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776524
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.1
+### Submitting MG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776525
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.1
+### Submitting SP / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776526
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.1
+### Submitting SP / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776527
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.1
+### Submitting CG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776528
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.2
+### Submitting CG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776529
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.2
+### Submitting EP / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776530
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.2
+### Submitting EP / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776531
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.2
+### Submitting FT / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776532
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.2
+### Submitting FT / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776533
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2
+### Submitting IS / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776534
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.2
+### Submitting IS / D / shmem at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.2
+### Submitting MG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776535
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.2
+### Submitting MG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776536
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.2
+### Submitting SP / C / shmem at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.2
+### Submitting SP / D / shmem at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.2
+### Submitting CG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776537
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.4
+### Submitting CG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776538
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.4
+### Submitting EP / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776539
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.4
+### Submitting EP / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776540
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.4
+### Submitting FT / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776541
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.4
+### Submitting FT / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776542
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.4
+### Submitting IS / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776543
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.4
+### Submitting IS / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776544
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.4
+### Submitting MG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776545
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.4
+### Submitting MG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776546
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.4
+### Submitting SP / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776547
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.4
+### Submitting SP / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776548
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.4
+### Submitting CG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776549
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.8
+### Submitting CG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776550
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.8
+### Submitting EP / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776551
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.8
+### Submitting EP / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776552
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.8
+### Submitting FT / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776553
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.8
+### Submitting FT / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776554
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.8
+### Submitting IS / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776555
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.8
+### Submitting IS / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776556
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.8
+### Submitting MG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776557
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.8
+### Submitting MG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776558
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.8
+### Submitting SP / C / shmem at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.9
+### Submitting SP / D / shmem at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.9
+### Submitting CG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776559
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.16
+### Submitting CG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776560
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.16
+### Submitting EP / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776561
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.16
+### Submitting EP / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776562
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.16
+### Submitting FT / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776563
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.16
+### Submitting FT / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776564
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.16
+### Submitting IS / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776565
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.16
+### Submitting IS / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776566
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.16
+### Submitting MG / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776567
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.16
+### Submitting MG / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776568
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.16
+### Submitting SP / C / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776569
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.16
+### Submitting SP / D / shmem at Sun Jun  1 04:16:29 2014
+Submitted batch job 776570
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.16
+### Submitting CG / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776571
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.2
+### Submitting CG / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776572
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.2
+### Submitting CG / D / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776573
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.2
+### Submitting CG / D / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776574
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.2
+### Submitting EP / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776575
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.2
+### Submitting EP / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776576
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.2
+### Submitting EP / D / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776577
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.2
+### Submitting EP / D / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776578
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.2
+### Submitting FT / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776579
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.2
+### Submitting FT / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776580
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.2
+### Submitting FT / D / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776581
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2
+### Submitting FT / D / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776582
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2
+### Submitting IS / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776583
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.2
+### Submitting IS / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776584
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.2
+### Submitting IS / D / tcp at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.2
+### Submitting IS / D / usnic at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.2
+### Submitting MG / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776585
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.2
+### Submitting MG / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776586
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.2
+### Submitting MG / D / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776587
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.2
+### Submitting MG / D / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776588
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.2
+### Submitting SP / C / tcp at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.2
+### Submitting SP / C / usnic at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.2
+### Submitting SP / D / tcp at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.2
+### Submitting SP / D / usnic at Sun Jun  1 04:16:29 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.2
+### Submitting CG / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776589
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.4
+### Submitting CG / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776590
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.4
+### Submitting CG / D / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776591
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.4
+### Submitting CG / D / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776592
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.4
+### Submitting EP / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776593
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.4
+### Submitting EP / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776594
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.4
+### Submitting EP / D / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776595
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.4
+### Submitting EP / D / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776596
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.4
+### Submitting FT / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776597
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.4
+### Submitting FT / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776598
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.4
+### Submitting FT / D / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776599
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.4
+### Submitting FT / D / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776600
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.4
+### Submitting IS / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776601
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.4
+### Submitting IS / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776602
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.4
+### Submitting IS / D / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776603
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.4
+### Submitting IS / D / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776604
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.4
+### Submitting MG / C / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776605
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.4
+### Submitting MG / C / usnic at Sun Jun  1 04:16:29 2014
+Submitted batch job 776606
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.4
+### Submitting MG / D / tcp at Sun Jun  1 04:16:29 2014
+Submitted batch job 776607
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.4
+### Submitting MG / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776608
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.4
+### Submitting SP / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776609
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.4
+### Submitting SP / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776610
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.4
+### Submitting SP / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776611
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.4
+### Submitting SP / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776612
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.4
+### Submitting CG / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776613
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.8
+### Submitting CG / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776614
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.8
+### Submitting CG / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776615
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.8
+### Submitting CG / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776616
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.8
+### Submitting EP / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776617
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.8
+### Submitting EP / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776618
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.8
+### Submitting EP / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776619
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.8
+### Submitting EP / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776620
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.8
+### Submitting FT / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776621
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.8
+### Submitting FT / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776622
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.8
+### Submitting FT / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776623
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.8
+### Submitting FT / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776624
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.8
+### Submitting IS / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776625
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.8
+### Submitting IS / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776626
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.8
+### Submitting IS / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776627
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.8
+### Submitting IS / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776628
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.8
+### Submitting MG / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776629
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.8
+### Submitting MG / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776630
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.8
+### Submitting MG / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776631
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.8
+### Submitting MG / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776632
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.8
+### Submitting SP / C / tcp at Sun Jun  1 04:16:30 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.9
+### Submitting SP / C / usnic at Sun Jun  1 04:16:30 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.9
+### Submitting SP / D / tcp at Sun Jun  1 04:16:30 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.9
+### Submitting SP / D / usnic at Sun Jun  1 04:16:30 2014
+--- SKIPPED: no executable /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.9
+### Submitting CG / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776633
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.16
+### Submitting CG / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776634
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.C.16
+### Submitting CG / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776635
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.16
+### Submitting CG / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776636
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.16
+### Submitting EP / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776637
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.16
+### Submitting EP / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776638
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.C.16
+### Submitting EP / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776639
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.16
+### Submitting EP / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776640
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.16
+### Submitting FT / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776641
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.16
+### Submitting FT / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776642
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.C.16
+### Submitting FT / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776643
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.16
+### Submitting FT / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776644
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.16
+### Submitting IS / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776645
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.16
+### Submitting IS / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776646
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.16
+### Submitting IS / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776647
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.16
+### Submitting IS / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776648
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.D.16
+### Submitting MG / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776649
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.16
+### Submitting MG / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776650
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.16
+### Submitting MG / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776651
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.16
+### Submitting MG / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776652
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.D.16
+### Submitting SP / C / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776653
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.16
+### Submitting SP / C / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776654
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.C.16
+### Submitting SP / D / tcp at Sun Jun  1 04:16:30 2014
+Submitted batch job 776655
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.16
+### Submitting SP / D / usnic at Sun Jun  1 04:16:30 2014
+Submitted batch job 776656
++++ Submitted /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/sp.D.16

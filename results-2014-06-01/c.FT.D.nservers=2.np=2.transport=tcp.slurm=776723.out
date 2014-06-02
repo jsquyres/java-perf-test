@@ -1,0 +1,92 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2, class tcp,self, on 2 servers (np=2), tcp,self
+
+SLURM job ID: 776723
+
+Servers:
+mpi015
+mpi032
+
+mpirun --mca btl_usnic_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.1.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 2 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2
+
+Start: Sun Jun  1 04:47:34 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+--------------------------------------------------------------------------
+WARNING: An invalid value was given for btl_tcp_if_include.  This
+value will be ignored.
+
+  Local host: mpi015
+  Value:      10.1.0.0/16
+  Message:    Did not find interface matching this subnet
+--------------------------------------------------------------------------
+
+
+ NAS Parallel Benchmarks 3.3 -- FT Benchmark
+
+ No input file inputft.data. Using compiled defaults
+ Size                : 2048x1024x1024
+ Iterations          :             25
+ Number of processes :              2
+ Processor array     :         1x   2
+ Layout type         :             1D
+[mpi015:06735] 1 more process has sent help message help-mpi-btl-tcp.txt / invalid if_inexclude
+[mpi015:06735] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF43  Unknown               Unknown  Unknown
+libpthread.so.0    000000318500F710  Unknown               Unknown  Unknown
+mca_btl_tcp.so     00002AAAB089C99D  Unknown               Unknown  Unknown
+mca_btl_tcp.so     00002AAAB089B896  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1DD7E7  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1941CD  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16E464  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB2202CFB  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB2208267  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB183183  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF0EC1A  Unknown               Unknown  Unknown
+ft.D.2             0000000000410AA4  Unknown               Unknown  Unknown
+ft.D.2             0000000000401C9D  Unknown               Unknown  Unknown
+ft.D.2             0000000000401686  Unknown               Unknown  Unknown
+libc.so.6          0000003184C1ED1D  Unknown               Unknown  Unknown
+ft.D.2             0000000000401509  Unknown               Unknown  Unknown
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+[mpi032][[21903,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_frag.c:215:mca_btl_tcp_frag_recv] mca_btl_tcp_frag_recv: readv failed: Connection reset by peer (104)
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    000000382880F710  Unknown               Unknown  Unknown
+libc.so.6          00000038284DF343  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1E8079  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1DD35C  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1941CD  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16E464  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB2202CFB  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB2208267  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB183183  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF0EC1A  Unknown               Unknown  Unknown
+ft.D.2             0000000000410AA4  Unknown               Unknown  Unknown
+ft.D.2             0000000000401C9D  Unknown               Unknown  Unknown
+ft.D.2             0000000000401686  Unknown               Unknown  Unknown
+libc.so.6          000000382841ED1D  Unknown               Unknown  Unknown
+ft.D.2             0000000000401509  Unknown               Unknown  Unknown
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[21903,1],0]
+  Exit code:    174
+--------------------------------------------------------------------------
+===============================================================================
+End: Sun Jun  1 04:49:24 PDT 2014

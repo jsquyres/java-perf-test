@@ -1,0 +1,2650 @@
+Removing old binaries...
+Building...
+******************************************************************************
+** Cleaning
+** NPROCS=1
+** CLASS=C
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=1
+== CLASS=C
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 1 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.1 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 1 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.1 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 1 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.1 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 1 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.1 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 1 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.1 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=1 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 1 C 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.C.1 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=1
+** CLASS=D
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=1
+== CLASS=D
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 1 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.1 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 1 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.1 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 1 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.1 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 1 D 
+setparams: IS class D size cannot be run on less than 4 processors
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 1 D 
+setparams: IS class D size cannot be run on less than 4 processors
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 1 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.D.1 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=1 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 1 D 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.D.1 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=1
+** CLASS=E
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=1
+== CLASS=E
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 1 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(140): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+     >              + na*(nonzer+2+num_procs/256)/num_proc_cols )
+--------------------^
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.E.1 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 1 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.1 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 1 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+mpifort -O2 -mcmodel=large -o ../bin/ft.E.1 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 1 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 1 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 1 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+mpifort -O2 -mcmodel=large -o ../bin/mg.E.1 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=1 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 1 E 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.E.1 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=2
+** CLASS=C
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=2
+== CLASS=C
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 2 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.2 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 2 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.2 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 2 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.2 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 2 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.2 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 2 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.2 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=2 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 2 C 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 2 C 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+******************************************************************************
+** Cleaning
+** NPROCS=2
+** CLASS=D
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=2
+== CLASS=D
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 2 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.2 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 2 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.2 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 2 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.2 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 2 D 
+setparams: IS class D size cannot be run on less than 4 processors
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 2 D 
+setparams: IS class D size cannot be run on less than 4 processors
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 2 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.D.2 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=2 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 2 D 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 2 D 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+******************************************************************************
+** Cleaning
+** NPROCS=2
+** CLASS=E
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=2
+== CLASS=E
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 2 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.E.2 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 2 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.2 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 2 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+mpifort -O2 -mcmodel=large -o ../bin/ft.E.2 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 2 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 2 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 2 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+globals.h(19): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+      parameter( nm=2+2**lm, nv=(2+2**ndim1)*(2+2**ndim2)*(2+2**ndim3) )
+---------------------------------------------------------^
+mpifort -O2 -mcmodel=large -o ../bin/mg.E.2 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=2 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 2 E 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 2 E 
+setparams: Number of processors 2 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+******************************************************************************
+** Cleaning
+** NPROCS=4
+** CLASS=C
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=4
+== CLASS=C
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 4 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.4 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 4 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.4 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 4 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.4 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 4 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.4 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 4 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.4 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=4 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 4 C 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.C.4 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=4
+** CLASS=D
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=4
+== CLASS=D
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 4 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.4 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 4 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.4 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 4 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.4 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 4 D 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.D.4 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 4 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.D.4 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=4 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 4 D 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.D.4 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=4
+** CLASS=E
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=4
+== CLASS=E
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 4 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.E.4 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 4 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.4 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 4 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+npbparams.h(12): warning #6384: The INTEGER(KIND=4) value is out-of-range.
+        parameter (ntdivnp=((nx*ny)/np_min)*nz)
+-------------------------------------------^
+mpifort -O2 -mcmodel=large -o ../bin/ft.E.4 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 4 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 4 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 4 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.E.4 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=4 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 4 E 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.E.4 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=8
+** CLASS=C
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=8
+== CLASS=C
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 8 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.8 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 8 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.8 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 8 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.8 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 8 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.8 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 8 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.8 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=8 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 8 C 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 8 C 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+******************************************************************************
+** Cleaning
+** NPROCS=8
+** CLASS=D
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=8
+== CLASS=D
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 8 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.8 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 8 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.8 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 8 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.8 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 8 D 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.D.8 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 8 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.D.8 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=8 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 8 D 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 8 D 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+******************************************************************************
+** Cleaning
+** NPROCS=8
+** CLASS=E
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=8
+== CLASS=E
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 8 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.E.8 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 8 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.8 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 8 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.E.8 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 8 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 8 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 8 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.E.8 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=8 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 8 E 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams sp 8 E 
+setparams: Number of processors 8 must be a square (1,4,9,...) for this benchmarkmake[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make: *** [sp] Error 2
+******************************************************************************
+** Cleaning
+** NPROCS=9
+** CLASS=C
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=9
+== CLASS=C
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=9 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 9 C 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams cg 9 C 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make: *** [cg] Error 2
+cd EP; make NPROCS=9 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 9 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.9 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=9 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 9 C 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams ft 9 C 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make: *** [ft] Error 2
+cd IS; make NPROCS=9 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 9 C 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 9 C 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=9 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 9 C 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams mg 9 C 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=9 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 9 C 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.C.9 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=9
+** CLASS=D
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=9
+== CLASS=D
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=9 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 9 D 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams cg 9 D 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make: *** [cg] Error 2
+cd EP; make NPROCS=9 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 9 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.9 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=9 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 9 D 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams ft 9 D 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make: *** [ft] Error 2
+cd IS; make NPROCS=9 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 9 D 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 9 D 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=9 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 9 D 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams mg 9 D 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=9 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 9 D 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.D.9 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=9
+** CLASS=E
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=9
+== CLASS=E
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=9 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 9 E 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams cg 9 E 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make: *** [cg] Error 2
+cd EP; make NPROCS=9 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 9 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.9 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=9 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 9 E 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams ft 9 E 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make: *** [ft] Error 2
+cd IS; make NPROCS=9 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 9 E 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 9 E 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=9 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 9 E 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams mg 9 E 
+setparams: Number of processors must be a power of two (1,2,4,...) for this benchmark
+make[1]: *** [npbparams.h] Error 1
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make: *** [mg] Error 2
+cd SP; make NPROCS=9 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 9 E 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.E.9 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=16
+** CLASS=C
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=16
+== CLASS=C
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 16 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.16 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 16 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.16 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 16 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.16 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 16 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.16 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 16 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.16 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 16 C 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.C.16 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=16
+** CLASS=D
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=16
+== CLASS=D
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 16 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.16 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 16 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.16 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 16 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.16 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 16 D 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.D.16 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 16 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.D.16 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 16 D 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.D.16 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=16
+** CLASS=E
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=16
+== CLASS=E
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 16 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.E.16 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 16 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.16 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 16 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.E.16 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 16 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 16 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 16 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.E.16 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 16 E 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.E.16 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+./build-npb.sh: line 57: ust: command not found
+******************************************************************************
+** Cleaning
+** NPROCS=16
+** CLASS=C
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=16
+== CLASS=C
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 16 C 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.C.16 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 16 C 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.C.16 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 16 C 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.C.16 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 16 C 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.C.16 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 16 C 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.C.16 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=16 CLASS=C
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 16 C 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.C.16 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=16
+** CLASS=D
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=16
+== CLASS=D
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 16 D 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.D.16 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 16 D 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.D.16 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 16 D 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.D.16 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 16 D 
+mpicc  -c  -O2 -mcmodel=large is.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+mpicc -O2 -mcmodel=large -o ../bin/is.D.16 is.o ../common/c_print_results.o ../common/c_timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+cd MG; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 16 D 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.D.16 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=16 CLASS=D
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 16 D 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.D.16 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+******************************************************************************
+** Cleaning
+** NPROCS=16
+** CLASS=E
+******************************************************************************
+rm -f core 
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f MPI_dummy/test MPI_dummy/libmpi.a
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -f btio.*.out*
+==============================================================================
+== Building
+== NPROCS=16
+== CLASS=E
+==============================================================================
+   =========================================
+   =      NAS Parallel Benchmarks 3.3      =
+   =      MPI/F77/C                        =
+   =========================================
+
+cd CG; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+cc -g  -o setparams setparams.c
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams cg 16 E 
+mpifort -c  -O2 -mcmodel=large cg.f
+cg.f(540): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 9001 format( 4x, i5, 7x, e20.14, f20.13 )
+---------------------------^
+cg.f(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1005 format(' Eigenvalue shift: ', e8.3)
+-------------------------------------^
+cd ../common; mpifort -c  -O2 -mcmodel=large print_results.f
+cd ../common; mpifort -c  -O2 -mcmodel=large randi8.f
+cd ../common; mpifort -c  -O2 -mcmodel=large timers.f
+mpifort -O2 -mcmodel=large -o ../bin/cg.E.16 cg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/CG'
+cd EP; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ep 16 E 
+mpifort -c  -O2 -mcmodel=large ep.f
+mpifort -O2 -mcmodel=large -o ../bin/ep.E.16 ep.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/EP'
+cd FT; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams ft 16 E 
+mpifort -c  -O2 -mcmodel=large ft.f
+mpifort -O2 -mcmodel=large -o ../bin/ft.E.16 ft.o ../common/randi8.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/FT'
+cd IS; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams is 16 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [config] Error 1
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams is 16 E 
+setparams: Benchmark class E not defined for IS or DT
+make[1]: *** [npbparams.h] Error 1
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_print_results.c
+cd ../common; mpicc  -c  -O2 -mcmodel=large c_timers.c
+make[1]: Target `default' not remade because of errors.
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/IS'
+make: *** [is] Error 2
+cd MG; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams mg 16 E 
+mpifort -c  -O2 -mcmodel=large mg.f
+mpifort -O2 -mcmodel=large -o ../bin/mg.E.16 mg.o ../common/print_results.o ../common/randi8.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/MG'
+cd SP; make NPROCS=16 CLASS=E
+make[1]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+make[2]: Entering directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/sys'
+../sys/setparams sp 16 E 
+mpifort -c  -O2 -mcmodel=large sp.f
+mpifort -c  -O2 -mcmodel=large make_set.f
+mpifort -c  -O2 -mcmodel=large initialize.f
+mpifort -c  -O2 -mcmodel=large exact_solution.f
+mpifort -c  -O2 -mcmodel=large exact_rhs.f
+mpifort -c  -O2 -mcmodel=large set_constants.f
+mpifort -c  -O2 -mcmodel=large adi.f
+mpifort -c  -O2 -mcmodel=large define.f
+mpifort -c  -O2 -mcmodel=large copy_faces.f
+mpifort -c  -O2 -mcmodel=large rhs.f
+mpifort -c  -O2 -mcmodel=large lhsx.f
+mpifort -c  -O2 -mcmodel=large lhsy.f
+mpifort -c  -O2 -mcmodel=large lhsz.f
+mpifort -c  -O2 -mcmodel=large x_solve.f
+mpifort -c  -O2 -mcmodel=large ninvr.f
+mpifort -c  -O2 -mcmodel=large y_solve.f
+mpifort -c  -O2 -mcmodel=large pinvr.f
+mpifort -c  -O2 -mcmodel=large z_solve.f
+mpifort -c  -O2 -mcmodel=large tzetar.f
+mpifort -c  -O2 -mcmodel=large add.f
+mpifort -c  -O2 -mcmodel=large txinvr.f
+mpifort -c  -O2 -mcmodel=large error.f
+mpifort -c  -O2 -mcmodel=large verify.f
+mpifort -c  -O2 -mcmodel=large setup_mpi.f
+mpifort -O2 -mcmodel=large -o ../bin/sp.E.16 sp.o make_set.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o define.o copy_faces.o rhs.o lhsx.o lhsy.o lhsz.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o setup_mpi.o ../common/print_results.o ../common/timers.o 
+make[1]: Leaving directory `/home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/SP'
+rm -f `find . -name \*.class` */*~
+/usr/bin/javac -cp /home/jsquyres/bogus/lib/mpi.jar:. NPB_MPJ/Benchmark.java NPB_MPJ/CGbuf.java NPB_MPJ/CG.java NPB_MPJ/DT.java NPB_MPJ/EP.java NPB_MPJ/EPopt.java NPB_MPJ/FT.java NPB_MPJ/FTopt.java NPB_MPJ/IS.java NPB_MPJ/MG.java NPB_MPJ/MGopt.java NPB_MPJ/SP.java NPB_MPJ/SPopt2.java NPB_MPJ/SPopt3.java NPB_MPJ/SPopt.java

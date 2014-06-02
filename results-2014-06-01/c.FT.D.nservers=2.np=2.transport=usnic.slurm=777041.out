@@ -1,0 +1,53 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2, class usnic,self, on 2 servers (np=2), usnic,self
+
+SLURM job ID: 777041
+
+Servers:
+mpi012
+mpi028
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 2 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2
+
+Start: Sun Jun  1 08:53:45 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- FT Benchmark
+
+ No input file inputft.data. Using compiled defaults
+ Size                : 2048x1024x1024
+ Iterations          :             25
+ Number of processes :              2
+ Processor array     :         1x   2
+ Layout type         :             1D
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi012]: *** JOB 777041 CANCELLED AT 2014-06-02T05:30:50 ***
+slurmd[mpi028]: *** STEP 777041.1 CANCELLED AT 2014-06-02T05:30:50 ***
+srun: forcing job termination
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF0E  Unknown               Unknown  Unknown
+libpthread.so.0    0000003C8760F710  Unknown               Unknown  Unknown
+mca_btl_usnic.so   00002AAAB089B758  Unknown               Unknown  Unknown
+mca_btl_usnic.so   00002AAAB089F9AB  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD19321B  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16E464  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB23B7CFB  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB23BD267  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB183183  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF0EC1A  Unknown               Unknown  Unknown
+ft.D.2             0000000000410AA4  Unknown               Unknown  Unknown
+ft.D.2             0000000000401C9D  Unknown               Unknown  Unknown
+ft.D.2             0000000000401686  Unknown               Unknown  Unknown
+libc.so.6          0000003C8721ED1D  Unknown               Unknown  Unknown
+ft.D.2             0000000000401509  Unknown               Unknown  Unknown
+srun: error: mpi028: task 0: Exited with exit code 1
+srun: Terminating job step 777041.1
