@@ -87,7 +87,7 @@ foreach my $nprocs (@nprocs) {
         my ($benchmark_name, $class) = split(/:/, $benchmark);
         my $np_save = $np;
         # The SP benchmarks require np to be a square
-        if (strstr($benchmark_name, 0, 2) eq "SP" && $np == 8) {
+        if (substr($benchmark_name, 0, 2) eq "SP" && $np == 8) {
             $np = 9;
         }
 
