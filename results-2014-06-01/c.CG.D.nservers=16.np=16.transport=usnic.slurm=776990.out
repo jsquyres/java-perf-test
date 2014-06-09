@@ -1,29 +1,29 @@
 srun: cluster configuration lacks support for cpu binding
-Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.16, class tcp,self, on 16 servers (np=16), tcp,self
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.16, class usnic,self, on 16 servers (np=16), usnic,self
 
-SLURM job ID: 776989
+SLURM job ID: 776990
 
 Servers:
 mpi001
 mpi013
-mpi006
 mpi011
-mpi004
-mpi007
 mpi010
-mpi012
-mpi015
+mpi007
+mpi004
+mpi006
 mpi014
+mpi015
 mpi008
-mpi016
-mpi005
-mpi009
-mpi002
+mpi012
 mpi003
+mpi009
+mpi005
+mpi002
+mpi016
 
-mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 16 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.16
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 16 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/cg.D.16
 
-Start: Mon Jun  2 05:31:30 PDT 2014
+Start: Mon Jun  2 05:40:31 PDT 2014
 ===============================================================================
 srun: cluster configuration lacks support for cpu binding
 
@@ -147,11 +147,11 @@ srun: cluster configuration lacks support for cpu binding
  Class           =                        D
  Size            =                  1500000
  Iterations      =                      100
- Time in seconds =                   528.28
+ Time in seconds =                   511.06
  Total processes =                       16
  Compiled procs  =                       16
- Mop/s total     =                  6895.84
- Mop/s/process   =                   430.99
+ Mop/s total     =                  7128.13
+ Mop/s/process   =                   445.51
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.3.1
@@ -174,4 +174,4 @@ srun: cluster configuration lacks support for cpu binding
 
 
 ===============================================================================
-End: Mon Jun  2 05:40:30 PDT 2014
+End: Mon Jun  2 05:49:14 PDT 2014

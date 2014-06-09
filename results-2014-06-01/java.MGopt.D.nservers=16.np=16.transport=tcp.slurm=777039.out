@@ -1,0 +1,68 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MGopt, class D, on 16 servers (np=16), tcp,self
+
+SLURM job ID: 777039
+
+Servers:
+mpi001
+mpi013
+mpi004
+mpi006
+mpi010
+mpi011
+mpi007
+mpi014
+mpi008
+mpi012
+mpi015
+mpi002
+mpi005
+mpi003
+mpi009
+mpi016
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 16 java -Xmx64g NPB_MPJ.MGopt class=D
+
+Start: Mon Jun  2 07:59:31 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=D np=16
+ No input file mg.input. Using compiled defaults
+ Size                : 1024x1024x1024
+ Iterations          : 50
+ Number of processes : 16
+   iter 1
+   iter 5
+   iter 10
+   iter 15
+   iter 20
+   iter 25
+   iter 30
+   iter 35
+   iter 40
+   iter 45
+   iter 50
+ Initialization time: 18.936
+ Benchmark completed 
+ Verification successful 
+ L2 Norm is 1.583275060435508E-10
+ Error is   3.4788578696752566E-12
+MG.D: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) MG ***** 
+* Class             = D                                        * 
+* Size              = 1024 X 1024 X 1024                       * 
+* Iterations        = 50                                       * 
+* Time in seconds   = 142.396                                  * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 21867.547                                * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Mon Jun  2 08:02:14 PDT 2014

@@ -1,0 +1,83 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.16, class tcp,self, on 16 servers (np=16), tcp,self
+
+SLURM job ID: 777003
+
+Servers:
+mpi001
+mpi011
+mpi010
+mpi007
+mpi004
+mpi013
+mpi006
+mpi012
+mpi008
+mpi014
+mpi015
+mpi016
+mpi005
+mpi009
+mpi003
+mpi002
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 16 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/mg.C.16
+
+Start: Mon Jun  2 06:12:46 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size:  512x 512x 512  (class C)
+ Iterations:   20
+ Number of processes:     16
+
+ Initialization time:           0.416 seconds
+
+  iter    1
+  iter    5
+  iter   10
+  iter   15
+  iter   20
+
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ L2 Norm is  0.5706732285740E-06
+ Error is    0.6345252708911E-13
+
+
+ MG Benchmark Completed.
+ Class           =                        C
+ Size            =            512x 512x 512
+ Iterations      =                       20
+ Time in seconds =                     3.47
+ Total processes =                       16
+ Compiled procs  =                       16
+ Mop/s total     =                 44919.42
+ Mop/s/process   =                  2807.46
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              01 Jun 2014
+
+ Compile options:
+    MPIF77       = mpifort
+    FLINK        = $(MPIF77)
+    FMPI_LIB     = (none)
+    FMPI_INC     = (none)
+    FFLAGS       = -O2 -mcmodel=large
+    FLINKFLAGS   = -O2 -mcmodel=large
+    RAND         = randi8
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team 
+ Internet: npb@nas.nasa.gov
+
+
+===============================================================================
+End: Mon Jun  2 06:12:51 PDT 2014
