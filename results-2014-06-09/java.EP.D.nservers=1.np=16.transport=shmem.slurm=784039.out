@@ -1,0 +1,62 @@
+Running Java benchmark EP, class D, on 1 servers (np=16), sm,self
+
+SLURM job ID: 784039
+
+Servers:
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+mpi029
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl sm,self --bind-to core --map-by node -np 16 java -Xmx64g NPB_MPJ.EP class=D
+
+Start: Mon Jun  9 17:12:21 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version EP CLASS=D np=16
+EP Benchmark Results
+CPU Time = 435.886
+N = 2^36
+No. Gaussian Pairs = 5.3972171957E10
+Sums = 198248.12009462598 -102059.66363600826
+Counts:
+0 2.5154622775E10
+1 2.4017899906E10
+2 4.508609839E9
+3 2.84201296E8
+4 6776403.0
+5 61541.0
+6 197.0
+7 0.0
+8 0.0
+9 0.0
+EP.D: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) EP ***** 
+* Class             = D                                        * 
+* Size              = 2147483647                               * 
+* Iterations        = 1                                        * 
+* Time in seconds   = 435.886                                  * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 315.309                                  * 
+* Operation type    = Random numbers generated                 * 
+* Verification      = Successful                               * 
+* Process requested = 16                                       * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Mon Jun  9 17:19:38 PDT 2014
