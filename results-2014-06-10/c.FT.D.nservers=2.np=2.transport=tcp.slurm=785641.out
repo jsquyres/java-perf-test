@@ -1,0 +1,59 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2, class tcp,self, on 2 servers (np=2), tcp,self
+
+SLURM job ID: 785641
+
+Servers:
+mpi009
+mpi012
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 2 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ft.D.2
+
+Start: Tue Jun 10 12:05:22 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- FT Benchmark
+
+ No input file inputft.data. Using compiled defaults
+ Size                : 2048x1024x1024
+ Iterations          :             25
+ Number of processes :              2
+ Processor array     :         1x   2
+ Layout type         :             1D
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+libintlc.so.5      00002AAAACA752C9  Unknown               Unknown  Unknown
+libintlc.so.5      00002AAAACA73B9E  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB726F3F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB68ED7F  Unknown               Unknown  Unknown
+libifcore.so.5     00002AAAAB69FF43  Unknown               Unknown  Unknown
+libpthread.so.0    00000030AA40F710  Unknown               Unknown  Unknown
+mca_btl_tcp.so     00002AAAB089C6C8  Unknown               Unknown  Unknown
+mca_btl_tcp.so     00002AAAB089B896  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1DD7E7  Unknown               Unknown  Unknown
+libopen-pal.so.6   00002AAAAD1941CD  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB16E584  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB2202CFB  Unknown               Unknown  Unknown
+mca_coll_tuned.so  00002AAAB2208267  Unknown               Unknown  Unknown
+libmpi.so.1        00002AAAAB1832A3  Unknown               Unknown  Unknown
+libmpi_mpifh.so.2  00002AAAAAF0ED3A  Unknown               Unknown  Unknown
+ft.D.2             0000000000410AA4  Unknown               Unknown  Unknown
+ft.D.2             0000000000401C9D  Unknown               Unknown  Unknown
+ft.D.2             0000000000401686  Unknown               Unknown  Unknown
+libc.so.6          00000030AA01ED1D  Unknown               Unknown  Unknown
+ft.D.2             0000000000401509  Unknown               Unknown  Unknown
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[39091,1],0]
+  Exit code:    174
+--------------------------------------------------------------------------
+===============================================================================
+End: Tue Jun 10 12:07:13 PDT 2014

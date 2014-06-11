@@ -1,0 +1,60 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark FT, class C, on 2 servers (np=2), usnic,self
+
+SLURM job ID: 785760
+
+Servers:
+mpi001
+mpi015
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 2 java -Xmx64g NPB_MPJ.FT class=C
+
+Start: Tue Jun 10 13:45:20 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version FT CLASS=C np=2
+ No input file inputft.data. Using compiled defaults
+ Size                : 512x512x512
+ Iterations          : 20
+ Number of processes : 2
+ Processor array     : 1x2
+ Layout type         : 1D
+ T = 1 Checksum = ( 519.5078707456657, 514.9019699238067)
+ T = 2 Checksum = ( 515.5422171134112, 512.7578201996746)
+ T = 3 Checksum = ( 514.4678022222142, 512.2251847514312)
+ T = 4 Checksum = ( 514.0150594328433, 512.109028901803)
+ T = 5 Checksum = ( 513.7550426810105, 512.1143685823704)
+ T = 6 Checksum = ( 513.5811056727715, 512.1496764568182)
+ T = 7 Checksum = ( 513.4569343165185, 512.1870921892545)
+ T = 8 Checksum = ( 513.3651975661282, 512.2193250322357)
+ T = 9 Checksum = ( 513.2955192804634, 512.2454735793661)
+ T = 10 Checksum = ( 513.2410471738197, 512.2663649603148)
+ T = 11 Checksum = ( 513.197114167905, 512.2830879826865)
+ T = 12 Checksum = ( 513.1605205715779, 512.2965869718473)
+ T = 13 Checksum = ( 513.1290734193583, 512.3075927445427)
+ T = 14 Checksum = ( 513.1012720313772, 512.3166486553143)
+ T = 15 Checksum = ( 513.0760908195366, 512.3241541685366)
+ T = 16 Checksum = ( 513.0528295923039, 512.3304037599429)
+ T = 17 Checksum = ( 513.0310107772618, 512.3356167976099)
+ T = 18 Checksum = ( 513.0103090133052, 512.3399592211209)
+ T = 19 Checksum = ( 512.9905029333115, 512.3435588984759)
+ T = 20 Checksum = ( 512.9714421109038, 512.3465164008164)
+FT.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) FT ***** 
+* Class             = C                                        * 
+* Size              = 512 X 512 X 512                          * 
+* Iterations        = 20                                       * 
+* Time in seconds   = 263.125                                  * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 1506.463                                 * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 2                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Tue Jun 10 13:50:03 PDT 2014

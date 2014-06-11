@@ -1,0 +1,75 @@
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.8, class sm,self, on 1 servers (np=8), sm,self
+
+SLURM job ID: 785610
+
+Servers:
+mpi022
+mpi022
+mpi022
+mpi022
+mpi022
+mpi022
+mpi022
+mpi022
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl sm,self --bind-to core --map-by node -np 8 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/ep.D.8
+
+Start: Tue Jun 10 11:44:06 PDT 2014
+===============================================================================
+
+ NAS Parallel Benchmarks 3.3 -- EP Benchmark
+
+ Number of random numbers generated:    137438953472
+ Number of active processes:                       8
+
+EP Benchmark Results:
+
+CPU Time =  271.2063
+N = 2^   36
+No. Gaussian Pairs =   53972171957.
+Sums =     1.982481200958002D+05   -1.020596636362469D+05
+Counts:
+  0   25154622775.
+  1   24017899906.
+  2    4508609839.
+  3     284201296.
+  4       6776403.
+  5         61541.
+  6           197.
+  7             0.
+  8             0.
+  9             0.
+
+
+ EP Benchmark Completed.
+ Class           =                        D
+ Size            =             137438953472
+ Iterations      =                        0
+ Time in seconds =                   271.21
+ Total processes =                        8
+ Compiled procs  =                        8
+ Mop/s total     =                   506.77
+ Mop/s/process   =                    63.35
+ Operation type  = Random numbers generated
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              09 Jun 2014
+
+ Compile options:
+    MPIF77       = mpifort
+    FLINK        = $(MPIF77)
+    FMPI_LIB     = (none)
+    FMPI_INC     = (none)
+    FFLAGS       = -O2 -mcmodel=large
+    FLINKFLAGS   = -O2 -mcmodel=large
+    RAND         = randi8
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team 
+ Internet: npb@nas.nasa.gov
+
+
+===============================================================================
+End: Tue Jun 10 11:48:38 PDT 2014

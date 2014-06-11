@@ -1,0 +1,52 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark EP, class C, on 4 servers (np=4), usnic,self
+
+SLURM job ID: 785776
+
+Servers:
+mpi008
+mpi015
+mpi010
+mpi016
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 4 java -Xmx64g NPB_MPJ.EP class=C
+
+Start: Tue Jun 10 16:05:09 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version EP CLASS=C np=4
+EP Benchmark Results
+CPU Time = 108.455
+N = 2^32
+No. Gaussian Pairs = 3.373275903E9
+Sums = 47643.6792799594 -80840.72988039246
+Counts:
+0 1.572172634E9
+1 1.501108549E9
+2 2.81805648E8
+3 1.7761221E7
+4 424017.0
+5 3821.0
+6 13.0
+7 0.0
+8 0.0
+9 0.0
+EP.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) EP ***** 
+* Class             = C                                        * 
+* Size              = 2147483647                               * 
+* Iterations        = 1                                        * 
+* Time in seconds   = 108.455                                  * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 79.203                                   * 
+* Operation type    = Random numbers generated                 * 
+* Verification      = Successful                               * 
+* Process requested = 4                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Tue Jun 10 16:06:59 PDT 2014

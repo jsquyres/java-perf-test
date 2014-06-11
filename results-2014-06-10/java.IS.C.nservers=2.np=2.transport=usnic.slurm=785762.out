@@ -1,0 +1,47 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark IS, class C, on 2 servers (np=2), usnic,self
+
+SLURM job ID: 785762
+
+Servers:
+mpi014
+mpi031
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 2 java -Xmx64g NPB_MPJ.IS class=C
+
+Start: Tue Jun 10 13:48:20 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version IS CLASS=C np=2
+ Size:  134217728 Iterations:   10
+
+   iteration
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+IS.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) IS ***** 
+* Class             = C                                        * 
+* Size              = 134217728                                * 
+* Iterations        = 10                                       * 
+* Time in seconds   = 14.898                                   * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 90.091                                   * 
+* Operation type    = keys ranked                              * 
+* Verification      = Successful                               * 
+* Process requested = 2                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Tue Jun 10 13:48:51 PDT 2014
