@@ -1,0 +1,80 @@
+srun: cluster configuration lacks support for cpu binding
+Running C benchmark /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.16, class usnic,self, on 16 servers (np=16), usnic,self
+
+SLURM job ID: 785820
+
+Servers:
+mpi001
+mpi002
+mpi007
+mpi013
+mpi011
+mpi010
+mpi004
+mpi006
+mpi015
+mpi012
+mpi014
+mpi008
+mpi016
+mpi003
+mpi009
+mpi005
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 16 /home/jsquyres/svn/ompi-tests/NPB3.3.1/NPB3.3-MPI/bin/is.C.16
+
+Start: Wed Jun 11 06:26:16 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+
+
+ NAS Parallel Benchmarks 3.3 -- IS Benchmark
+
+ Size:  134217728  (class C)
+ Iterations:   10
+ Number of processes:     16
+
+   iteration
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+
+
+ IS Benchmark Completed
+ Class           =                        C
+ Size            =                134217728
+ Iterations      =                       10
+ Time in seconds =                     1.10
+ Total processes =                       16
+ Compiled procs  =                       16
+ Mop/s total     =                  1225.20
+ Mop/s/process   =                    76.58
+ Operation type  =              keys ranked
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              09 Jun 2014
+
+ Compile options:
+    MPICC        = mpicc
+    CLINK        = $(MPICC)
+    CMPI_LIB     = (none)
+    CMPI_INC     = (none)
+    CFLAGS       = -O2 -mcmodel=large
+    CLINKFLAGS   = -O2 -mcmodel=large
+
+
+ Please send feedbacks and/or the results of this run to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+===============================================================================
+End: Wed Jun 11 06:26:20 PDT 2014
