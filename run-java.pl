@@ -63,6 +63,8 @@ EP:C
 EP:D
 FT:C
 IS:C
+MG:C
+MGopt:C
 MG:D
 MGopt:D
 /;
