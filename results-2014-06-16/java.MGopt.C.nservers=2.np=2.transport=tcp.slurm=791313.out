@@ -1,0 +1,48 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MGopt, class C, on 2 servers (np=2), tcp,self
+
+SLURM job ID: 791313
+
+Servers:
+mpi019
+mpi020
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 2 java -Xmx64g NPB_MPJ.MGopt class=C
+
+Start: Mon Jun 16 09:31:40 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=C np=2
+ No input file mg.input. Using compiled defaults
+ Size                : 512x512x512
+ Iterations          : 20
+ Number of processes : 2
+   iter 1
+   iter 5
+   iter 10
+   iter 15
+   iter 20
+ Initialization time: 18.681
+ Benchmark completed 
+ Verification successful 
+ L2 Norm is 5.706732285730513E-7
+ Error is   1.6623819962526945E-12
+MG.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) MG ***** 
+* Class             = C                                        * 
+* Size              = 512 X 512 X 512                          * 
+* Iterations        = 20                                       * 
+* Time in seconds   = 57.805                                   * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 2693.410                                 * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 2                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Mon Jun 16 09:32:58 PDT 2014

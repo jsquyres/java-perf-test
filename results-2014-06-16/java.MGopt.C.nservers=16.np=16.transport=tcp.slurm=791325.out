@@ -1,0 +1,57 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MGopt, class C, on 16 servers (np=16), tcp,self
+
+SLURM job ID: 791325
+
+Servers:
+mpi001
+mpi006
+mpi013
+mpi010
+mpi007
+mpi011
+mpi004
+mpi014
+mpi015
+mpi012
+mpi008
+mpi016
+mpi003
+mpi002
+mpi009
+mpi005
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 16 java -Xmx64g NPB_MPJ.MGopt class=C
+
+Start: Mon Jun 16 11:22:52 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=C np=16
+ No input file mg.input. Using compiled defaults
+[mpi002][[12720,1],1][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.2.0.10 failed: No route to host (113)
+[mpi009][[12720,1],8][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.2.0.10 failed: No route to host (113)
+[mpi014][[12720,1],13][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.2.0.10 failed: No route to host (113)
+[mpi012][[12720,1],11][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.2.0.10 failed: No route to host (113)
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi001]: *** JOB 791325 CANCELLED AT 2014-06-16T12:27:53 ***
+slurmd[mpi002]: *** STEP 791325.1 CANCELLED AT 2014-06-16T12:27:53 ***
+srun: forcing job termination
+srun: error: mpi002: task 0: Exited with exit code 1
+srun: Terminating job step 791325.1
+srun: error: mpi006: task 4: Exited with exit code 1
+srun: error: mpi004: task 2: Exited with exit code 1
+srun: error: mpi016: task 14: Exited with exit code 1
+srun: error: mpi003: task 1: Exited with exit code 1
+srun: error: mpi010: task 8: Exited with exit code 1
+srun: error: mpi005: task 3: Exited with exit code 1
+srun: error: mpi008: task 6: Exited with exit code 1
+srun: error: mpi014: task 12: Exited with exit code 1
+srun: error: mpi007: task 5: Exited with exit code 1
+srun: error: mpi009: task 7: Exited with exit code 1
+srun: error: mpi015: task 13: Exited with exit code 1
+srun: error: mpi013: task 11: Exited with exit code 1
+srun: error: mpi012: task 10: Exited with exit code 1
+srun: error: mpi011: task 9: Exited with exit code 1

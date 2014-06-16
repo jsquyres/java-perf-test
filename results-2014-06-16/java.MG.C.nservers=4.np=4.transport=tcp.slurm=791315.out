@@ -1,0 +1,31 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MG, class C, on 4 servers (np=4), tcp,self
+
+SLURM job ID: 791315
+
+Servers:
+mpi023
+mpi024
+mpi025
+mpi026
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 4 java -Xmx64g NPB_MPJ.MG class=C
+
+Start: Mon Jun 16 09:31:40 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=C np=4
+ No input file mg.input. Using compiled defaults
+[mpi023][[15720,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.2.0.24 failed: No route to host (113)
+[mpi023][[15720,1],0][../../../../../ompi/mca/btl/tcp/btl_tcp_endpoint.c:657:mca_btl_tcp_endpoint_complete_connect] connect() to 10.2.0.25 failed: No route to host (113)
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+slurmd[mpi024]: *** STEP 791315.1 CANCELLED AT 2014-06-16T09:58:24 ***
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi023]: *** JOB 791315 CANCELLED AT 2014-06-16T09:58:24 ***
+srun: forcing job termination
+srun: error: mpi025: task 1: Exited with exit code 1
+srun: Terminating job step 791315.1
+srun: error: mpi024: task 0: Exited with exit code 1
+srun: error: mpi026: task 2: Exited with exit code 1
