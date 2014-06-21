@@ -7,10 +7,12 @@ np=$4
 
 nservers=$SLURM_NNODES
 
+java_bin=/home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java
+
 networks="10.10.0.0/16,10.2.0.0/16"
 mca_networks="--mca btl_usnic_if_include $networks --mca btl_tcp_if_include $networks"
 
-cmd="mpirun $mca_networks --mca btl $btl --bind-to core --map-by node -np $np java -Xmx64g NPB_MPJ.$benchmark class=$class"
+cmd="mpirun $mca_networks --mca btl $btl --bind-to core --map-by node -np $np $java_bin -Xmx64g NPB_MPJ.$benchmark class=$class"
 
 cat <<EOF
 Running Java benchmark $benchmark, class $2, on $nservers servers (np=$np), $btl
