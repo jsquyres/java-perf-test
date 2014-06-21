@@ -1,0 +1,15 @@
+Running Java benchmark EP, class D, on 1 servers (np=1), sm,self
+
+SLURM job ID: 798288
+
+Servers:
+mpi004
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl sm,self --bind-to core --map-by node -np 1 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.EP class=D
+
+Start: Sat Jun 21 10:24:25 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version EP CLASS=D np=1
+mpirun: Forwarding signal 18 to job
+slurmd[mpi004]: *** JOB 798288 CANCELLED AT 2014-06-21T10:32:47 ***

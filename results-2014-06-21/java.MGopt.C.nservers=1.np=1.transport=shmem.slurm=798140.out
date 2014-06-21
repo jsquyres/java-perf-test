@@ -1,0 +1,45 @@
+Running Java benchmark MGopt, class C, on 1 servers (np=1), sm,self
+
+SLURM job ID: 798140
+
+Servers:
+mpi005
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl sm,self --bind-to core --map-by node -np 1 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.MGopt class=C
+
+Start: Sat Jun 21 06:33:55 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=C np=1
+ No input file mg.input. Using compiled defaults
+ Size                : 512x512x512
+ Iterations          : 20
+ Number of processes : 1
+   iter 1
+   iter 5
+   iter 10
+   iter 15
+   iter 20
+ Initialization time: 284.166
+ Benchmark completed 
+ Verification successful 
+ L2 Norm is 5.706732285705188E-7
+ Error is   6.100162684686646E-12
+MG.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) MG ***** 
+* Class             = C                                        * 
+* Size              = 512 X 512 X 512                          * 
+* Iterations        = 20                                       * 
+* Time in seconds   = 253.687                                  * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 613.719                                  * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 1                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Sat Jun 21 06:42:55 PDT 2014

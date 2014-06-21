@@ -1,0 +1,60 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MGopt, class D, on 8 servers (np=8), tcp,self
+
+SLURM job ID: 798261
+
+Servers:
+mpi022
+mpi025
+mpi027
+mpi028
+mpi029
+mpi026
+mpi023
+mpi024
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 8 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.MGopt class=D
+
+Start: Sat Jun 21 11:08:16 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=D np=8
+ No input file mg.input. Using compiled defaults
+ Size                : 1024x1024x1024
+ Iterations          : 50
+ Number of processes : 8
+   iter 1
+   iter 5
+   iter 10
+   iter 15
+   iter 20
+   iter 25
+   iter 30
+   iter 35
+   iter 40
+   iter 45
+   iter 50
+ Initialization time: 283.415
+ Benchmark completed 
+ Verification successful 
+ L2 Norm is 1.5832750604261004E-10
+ Error is   2.463020922748307E-12
+MG.D: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) MG ***** 
+* Class             = D                                        * 
+* Size              = 1024 X 1024 X 1024                       * 
+* Iterations        = 50                                       * 
+* Time in seconds   = 403.446                                  * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 7718.117                                 * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 8                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Sat Jun 21 11:19:44 PDT 2014

@@ -1,0 +1,38 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MG, class D, on 2 servers (np=2), usnic,self
+
+SLURM job ID: 798212
+
+Servers:
+mpi016
+mpi027
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 2 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.MG class=D
+
+Start: Sat Jun 21 08:04:55 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=D np=2
+ No input file mg.input. Using compiled defaults
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6014203
+	at NPB_MPJ.MG.zero3(MG.java:639)
+	at NPB_MPJ.MG.runBenchmark(MG.java:241)
+	at NPB_MPJ.MG.main(MG.java:112)
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6014203
+	at NPB_MPJ.MG.zero3(MG.java:639)
+	at NPB_MPJ.MG.runBenchmark(MG.java:241)
+	at NPB_MPJ.MG.main(MG.java:112)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[18855,1],1]
+  Exit code:    1
+--------------------------------------------------------------------------
+===============================================================================
+End: Sat Jun 21 08:04:58 PDT 2014

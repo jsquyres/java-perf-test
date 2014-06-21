@@ -1,0 +1,44 @@
+srun: cluster configuration lacks support for cpu binding
+Running Java benchmark MGopt, class D, on 4 servers (np=4), usnic,self
+
+SLURM job ID: 798238
+
+Servers:
+mpi002
+mpi020
+mpi005
+mpi021
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 4 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.MGopt class=D
+
+Start: Sat Jun 21 09:24:21 PDT 2014
+===============================================================================
+srun: cluster configuration lacks support for cpu binding
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+mpirun: Forwarding signal 18 to job
+srun: got SIGCONT
+slurmd[mpi002]: *** JOB 798238 CANCELLED AT 2014-06-21T10:32:31 ***
+slurmd[mpi005]: *** STEP 798238.1 CANCELLED AT 2014-06-21T10:32:31 ***
+mpirun: abort is already in progress...hit ctrl-c again to forcibly terminate
+
+srun: forcing job termination
+srun: error: mpi005: task 0: Terminated
+srun: Terminating job step 798238.1
+srun: error: mpi021: task 2: Exited with exit code 1
+srun: error: mpi020: task 1: Exited with exit code 1
