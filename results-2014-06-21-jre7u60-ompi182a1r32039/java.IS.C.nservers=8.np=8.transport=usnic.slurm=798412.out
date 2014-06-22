@@ -1,0 +1,177 @@
+Running Java benchmark IS, class C, on 8 servers (np=8), usnic,self
+
+SLURM job ID: 798412
+
+Servers:
+mpi007
+mpi020
+mpi016
+mpi021
+mpi022
+mpi008
+mpi009
+mpi019
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 8 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.IS class=C
+
+Start: Sat Jun 21 20:40:55 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version IS CLASS=C np=8
+ Size:  134217728 Iterations:   10
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000003f5fa89c17, pid=19065, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89c17]  memcpy+0x2c7
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.19065
+#
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00000032bac89c68, pid=17437, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89c68]  memcpy+0x318
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.17437
+#
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000000326bc89c68, pid=16035, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89c68]  memcpy+0x318
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.16035
+#
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000003270e89c68, pid=30196, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89c68]  memcpy+0x318
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.30196
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid19065.log
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid16035.log
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid30196.log
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid17437.log
+[mpi016:16035] *** Process received signal ***
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+[error occurred during error reporting , id 0xb]
+
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000003d52c89d7a, pid=12856, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89d7a]  memcpy+0x42a
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.12856
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid12856.log
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00002abbb6102e94, pid=3149, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libintlc.so.5+0x42e94]  __intel_ssse3_rep_memcpy+0x18a4
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.3149
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid3149.log
+[mpi009:12856] *** Process received signal ***
+[mpi009:12856] Signal: Aborted (6)
+[mpi009:12856] Signal code:  (-6)
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+[mpi009:12856] [ 0] /lib64/libpthread.so.0[0x3d5300f710]
+[mpi009:12856] [ 1] [mpi020:03149] *** Process received signal ***
+[mpi020:03149] Signal: Aborted (6)
+[mpi020:03149] Signal code:  (-6)
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+/lib64/libc.so.6(gsignal+0x35)[0x3d52c32925]
+[mpi009:12856] [ 2] /lib64/libc.so.6(abort+0x175)[0x3d52c34105]
+[mpi009:12856] [ 3] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81e8c5)[0x2aaaab4fa8c5]
+[mpi009:12856] [ 4] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99ebc7)[0x2aaaab67abc7]
+[mpi009:12856] [ 5] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x14f)[0x2aaaab4ff7cf]
+[mpi020:03149] [ 0] /lib64/libpthread.so.0[0x326000f710]
+[mpi020:03149] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x325fc32925]
+[mpi020:03149] [ 2] /lib64/libc.so.6(abort+0x175)[0x325fc34105]
+[mpi020:03149] [ 3] [mpi009:12856] [ 6] /lib64/libpthread.so.0[0x3d5300f710]
+[mpi009:12856] [ 7] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81e8c5)[0x2aaaab4fa8c5]
+[mpi020:03149] [ 4] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99ebc7)[0x2aaaab67abc7]
+[mpi020:03149] [ 5] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x14f)[0x2aaaab4ff7cf]
+[mpi020:03149] [ 6] /lib64/libpthread.so.0[0x326000f710]
+[mpi020:03149] [ 7] /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libintlc.so.5(__intel_ssse3_rep_memcpy+0x18a4)[0x2abbb6102e94]
+[mpi020:03149] [ 8] /lib64/libc.so.6(memcpy+0x42a)[0x3d52c89d7a]
+[mpi009:12856] [ 8] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x651a12)[0x2aaaab32da12]
+[mpi009:12856] [ 9] /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(ompi_java_getReadPtrv+0x7f4)[0x2abbb001a1b4]
+[mpi009:12856] [10] /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(Java_mpi_Comm_allToAllv+0x109)[0x2abbb0011999]
+[mpi009:12856] [11] [0x2aaab0887d98]
+[mpi009:12856] *** End of error message ***
+/home/jsquyres/bogus/lib/libopen-pal.so.6(opal_datatype_copy_content_same_ddt+0xda)[0x2abbb48019ea]
+[mpi020:03149] [ 9] /home/jsquyres/bogus/lib/libmpi.so.1(ompi_datatype_sndrcv+0x5b4)[0x2abbb4282cb4]
+[mpi020:03149] [10] /home/jsquyres/bogus/lib/openmpi/mca_coll_tuned.so(ompi_coll_tuned_alltoallv_intra_pairwise+0xed)[0x2abbbe7447fd]
+[mpi020:03149] [11] /home/jsquyres/bogus/lib/libmpi.so.1(PMPI_Alltoallv+0x59)[0x2abbb4285329]
+[mpi020:03149] [12] /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(Java_mpi_Comm_allToAllv+0x189)[0x2abbb4011a19]
+[mpi020:03149] [13] [0x2aaab0887d98]
+[mpi020:03149] *** End of error message ***
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000003fa3a89c17, pid=16899, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89c17]  memcpy+0x2c7
+#
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.16899
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid16899.log
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 16035 on node mpi016 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+3 total processes killed (some possibly by mpirun during cleanup)
+===============================================================================
+End: Sat Jun 21 20:41:09 PDT 2014

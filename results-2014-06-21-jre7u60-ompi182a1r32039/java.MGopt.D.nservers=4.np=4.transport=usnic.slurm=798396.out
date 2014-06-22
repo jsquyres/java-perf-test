@@ -1,0 +1,39 @@
+Running Java benchmark MGopt, class D, on 4 servers (np=4), usnic,self
+
+SLURM job ID: 798396
+
+Servers:
+mpi019
+mpi022
+mpi021
+mpi024
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 4 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.MGopt class=D
+
+Start: Sat Jun 21 19:30:04 PDT 2014
+===============================================================================
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+Exception in thread "main" 	at NPB_MPJ.MGopt.main(MGopt.java:113)
+java.lang.NegativeArraySizeException
+	at NPB_MPJ.MGopt.runBenchmark(MGopt.java:198)
+	at NPB_MPJ.MGopt.main(MGopt.java:113)
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[24768,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
+===============================================================================
+End: Sat Jun 21 19:30:05 PDT 2014

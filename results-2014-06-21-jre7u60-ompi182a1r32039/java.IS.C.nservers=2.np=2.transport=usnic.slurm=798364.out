@@ -1,0 +1,826 @@
+Running Java benchmark IS, class C, on 2 servers (np=2), usnic,self
+
+SLURM job ID: 798364
+
+Servers:
+mpi007
+mpi019
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl usnic,self --bind-to core --map-by node -np 2 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.IS class=C
+
+Start: Sat Jun 21 18:15:46 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version IS CLASS=C np=2
+ Size:  134217728 Iterations:   10
+*** glibc detected *** /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java: malloc(): smallbin double linked list corrupted: 0x00002aaaac102220 ***
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000003f5fa89c17, pid=11735, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89c17]======= Backtrace: =========
+/lib64/libc.so.6[0x3f5fa76166]
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00000032bac89c60, pid=9659, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89c60]/lib64/libc.so.6[0x3f5fa79f1f]
+/lib64/libc.so.6(__libc_malloc+0x71)[0x3f5fa7a991]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x816889)[0x2aaaab4f2889]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x499f2c)[0x2aaaab175f2c]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x49a235)[0x2aaaab176235]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81c3fd)[0x2aaaab4f83fd]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x51cdee)[0x2aaaab1f8dee]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99d022)[0x2aaaab679022]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99e644)[0x2aaaab67a644]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x14f)[0x2aaaab4ff7cf]
+/lib64/libpthread.so.0[0x3f5fe0f710]
+/lib64/libc.so.6(memcpy+0x2c7)[0x3f5fa89c17]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x651a12)[0x2aaaab32da12]
+/home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(ompi_java_getReadPtrv+0x7f4)[0x2abbb001a1b4]
+/home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(Java_mpi_Comm_allToAllv+0x109)[0x2abbb0011999]
+[0x2aaab0887d98]
+======= Memory map: ========
+00400000-00401000 r-xp 00000000 00:13 667422483                          /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java
+00600000-00601000 rw-p 00000000 00:13 667422483                          /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java
+00601000-00622000 rw-p 00000000 00:00 0                                  [heap]
+3f5f200000-3f5f220000 r-xp 00000000 08:02 53239968                       /lib64/ld-2.12.so
+3f5f41f000-3f5f420000 r--p 0001f000 08:02 53239968                       /lib64/ld-2.12.so
+3f5f420000-3f5f421000 rw-p 00020000 08:02 53239968                       /lib64/ld-2.12.so
+3f5f421000-3f5f422000 rw-p 00000000 00:00 0 
+3f5f600000-3f5f602000 r-xp 00000000 08:02 53240318                       /lib64/libdl-2.12.so
+3f5f602000-3f5f802000 ---p 00002000 08:02 53240318                       /lib64/libdl-2.12.so
+3f5f802000-3f5f803000 r--p 00002000 08:02 53240318                       /lib64/libdl-2.12.so
+3f5f803000-3f5f804000 rw-p 00003000 08:02 53240318                       /lib64/libdl-2.12.so
+3f5fa00000-3f5fb8b000 r-xp 00000000 08:02 53240315                       /lib64/libc-2.12.so
+3f5fb8b000-3f5fd8a000 ---p 0018b000 08:02 53240315                       /lib64/libc-2.12.so
+3f5fd8a000-3f5fd8e000 r--p 0018a000 08:02 53240315                       /lib64/libc-2.12.so
+3f5fd8e000-3f5fd8f000 rw-p 0018e000 08:02 53240315                       /lib64/libc-2.12.so
+3f5fd8f000-3f5fd94000 rw-p 00000000 00:00 0 
+3f5fe00000-3f5fe17000 r-xp 00000000 08:02 53240316                       /lib64/libpthread-2.12.so
+3f5fe17000-3f60017000 ---p 00017000 08:02 53240316                       /lib64/libpthread-2.12.so
+3f60017000-3f60018000 r--p 00017000 08:02 53240316                       /lib64/libpthread-2.12.so
+3f60018000-3f60019000 rw-p 00018000 08:02 53240316                       /lib64/libpthread-2.12.so
+3f60019000-3f6001d000 rw-p 00000000 00:00 0 
+3f60200000-3f6020d000 r-xp 00000000 08:02 34997221                       /usr/lib64/libibverbs.so.1.0.0
+3f6020d000-3f6040c000 ---p 0000d000 08:02 34997221                       /usr/lib64/libibverbs.so.1.0.0
+3f6040c000-3f6040d000 rw-p 0000c000 08:02 34997221                       /usr/lib64/libibverbs.so.1.0.0
+3f60600000-3f60683000 r-xp 00000000 08:02 53240337                       /lib64/libm-2.12.so
+3f60683000-3f60882000 ---p 00083000 08:02 53240337                       /lib64/libm-2.12.so
+3f60882000-3f60883000 r--p 00082000 08:02 53240337                       /lib64/libm-2.12.so
+3f60883000-3f60884000 rw-p 00083000 08:02 53240337                       /lib64/libm-2.12.so
+3f60a00000-3f60a07000 r-xp 00000000 08:02 53240317                       /lib64/librt-2.12.so
+3f60a07000-3f60c06000 ---p 00007000 08:02 53240317                       /lib64/librt-2.12.so
+3f60c06000-3f60c07000 r--p 00006000 08:02 53240317                       /lib64/librt-2.12.so
+3f60c07000-3f60c08000 rw-p 00007000 08:02 53240317                       /lib64/librt-2.12.so
+3f64e00000-3f64e4d000 r-xp 00000000 08:02 53240363                       /lib64/libnl.so.1.1.4
+3f64e4d000-3f6504c000 ---p 00*** glibc detected *** /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java: malloc(): smallbin double linked list corrupted: 0x00002aaaac1022c0 ***
+04d000 08:02 53240363                       /lib64/libnl.so.1.1.4
+3f6504c000-3f65052000 rw-p 0004c000 08:02 53240363                       /lib64/libnl.so.1.1.4
+3f67200000-3f67202000 r-xp 00000000 08:02 53240340                       /lib64/libutil-2.12.so
+3f67202000-3f67401000 ---p 00002000 08:02 53240340                       /lib64/libutil-2.12.so
+3f67401000-3f67402000 r--p 00001000 08:02 53240340                       /lib64/libutil-2.12.so
+3f67402000-3f67403000 rw-p 00002000 08:02 53240340                       /lib64/libutil-2.12.so
+3f6f600000-3f6f616000 r-xp 00000000 08:02 53240347                       /lib64/libnsl-2.12.so
+3f6f616000-3f6f815000 ---p 00016000 08:02 53240347                       /lib64/libnsl-2.12.so
+3f6f815000-3f6f816000 r--p 00015000 08:02 53240347                       /lib64/libnsl-2.12.so
+3f6f816000-3f6f817000 rw-p 00016000 08:02 53240347                       /lib64/libnsl-2.12.so
+3f6f817000-3f6f819000 rw-p 00000000 00:00 0 
+2aaaaaaab000-2aaaaaaac000 r-xp 00000000 00:00 0                          [vdso]
+2aaaaaaac000-2aaaaaaad000 rw-p 00000000 00:00 0 
+2aaaaaac1000-2aaaaaac2000 rw-p 00000000 00:00 0 
+2aaaaaac2000-2aaaaaad8000 r-xp 00000000 00:13 667422147                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/jli/libjli.so
+2aaaaaad8000-2aaaaacd8000 ---p 00016000 00:13 667422147                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/jli/libjli.so
+2aaaaacd8000-2aaaaacd9000 rw-p 00016000 00:13 667422147                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/jli/libjli.so
+2aaaaacd9000-2aaaaacdc000 rw-p 00000000 00:00 0 
+2aaaaacdc000-2aaaab84c000 r-xp 00000000 00:13 667421886                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so
+2aaaab84c000-2aaaaba4b000 ---p 00b70000 00:13 667421886                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so
+2aaaaba4b000-2aaaabb0f000 rw-p 00b6f000 00:13 667421886                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so
+2aaaabb0f000-2aaaabb50000 rw-p 00000000 00:00 0 
+2aaaabb50000-2aaaabb53000 ---p 00000000 00:00 0 
+2aaaabb53000-2aaaabc51000 rw-p 00000000 00:00 0 
+2aaaabc51000-2aaaabc5e000 r-xp 00000000 00:13 667421873                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libverify.so
+2aaaabc5e000-2aaaabe5d000 ---p 0000d000 00:13 667421873                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libverify.so
+2aaaabe5d000-2aaaabe5f000 rw-p 0000c000 00:13 667421873                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libverify.so
+2aaaac000000-2aaaad199000 rw-p 00000000 00:00 0 
+2aaaad199000-2aaab0000000 ---p 00000000 00:00 0 
+2aaab0000000-2aaab0029000 r-xp 00000000 00:13 667422156                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libjava.so
+2aaab0029000-2aaab0229000 ---p 00029000 00:13 667422156                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libjava.so
+2aaab0229000-2aaab022b000 rw-p 00029000 00:13 667422156                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libjava.so
+2aaab022b000-2aaab022c000 r--p 00000000 00:00 0 
+2aaab022c000-2aaab022d000 rw-p 00000000 00:00 0 
+2aaab022d000-2aaab0235000 rw-s 00000000 08:02 1163528                    /tmp/hsperfdata_jsquyres/11735
+2aaab0241000-2aaab024d000 r-xp 00000000 08:02 53240021                   /lib64/libnss_files-2.12.so
+2aaab024d000-2aaab044d000 ---p 0000c000 08:02 53240021                   /lib64/libnss_files-2.12.so
+2aaab044d000-2aaab044e000 r--p 0000c000 08:02 53240021                   /lib64/libnss_files-2.12.so
+2aaab044e000-2aaab044f000 rw-p 0000d000 08:02 53240021                   /lib64/libnss_files-2.12.so
+2aaab044f000-2aaab045a000 r-xp 00000000 08:02 53239973                   /lib64/libnss_ldap.so.2
+2aaab045a000-2aaab0659000 ---p 0000b000 08:02 53239973                   /lib64/libnss_ldap.so.2
+2aaab0659000-2aaab065a000 rw-p 0000a000 08:02 53239973                   /lib64/libnss_ldap.so.2
+2aaab065a000-2aaab0674000 r-xp 00000000 00:1======= Backtrace: =========
+/lib64/libc.so.6[0x32bac76166]
+3 667422173                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libzip.so
+2aaab0674000-2aaab0874000 ---p 0001a000 00:13 667422173                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libzip.so
+2aaab0874000-2aaab0875000 rw-p 0001a000 00:13 667422173                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libzip.so
+2aaab0875000-2aaab0ae5000 rwxp 00000000 00:00 0 
+2aaab0ae5000-2aaab3875000 rw-p 00000000 00:00 0 
+2aaab3875000-2aaab387f000 rw-p 00000000 00:00 0 
+2aaab387f000-2aaab3935000 rw-p 00000000 00:00 0 
+2aaab3935000-2aaab3940000 rw-p 00000000 00:00 0 
+2aaab3940000-2aaab395e000 rw-p 00000000 00:00 0 
+2aaab3980000-2aaab4e80000 rw-p 00000000 00:00 0 
+2aaab4e80000-2aaab8b80000 rw-p 00000000 00:00 0 
+2aaab8b80000-2aab56280000 rw-p 00000000 00:00 0 
+2aab56280000-2ab563600000 rw-p 00000000 00:00 0 
+2ab563600000-2ab5d4900000 rw-p 00000000 00:00 0 
+2ab5d4900000-2ab5d7180000 ---p 00000000 00:00 0 
+2ab5d7180000-2abab8b80000 rw-p 00000000 00:00 0 
+2abab8b80000-2abab8b8b000 rw-p 00000000 00:00 0 
+2abab8b8b000-2abab8ba9000 rw-p 00000000 00:00 0 
+2abab8ba9000-2abab9095000 rw-p 00000000 00:00 0 
+2abab9095000-2ababe0fe000 rw-p 00000000 00:00 0 
+2ababe0fe000-2ababe488000 rw-p 00000000 00:00 0 
+2ababe488000-2ababe49c000 ---p 00000000 00:00 0 
+2ababe49c000-2abac0ba9000 rw-p 00000000 00:00 0 
+2abac0ba9000-2abac1096000 rw-p 00000000 00:00 0 
+2abac1096000-2abac6100000 rw-p 00000000 00:00 0 
+2abac6100000-2abac6101000 ---p 00000000 00:00 0 
+2abac6101000-2abac6201000 rw-p 00000000 00:00 0 
+2abac6201000-2abac6202000 ---p 00000000 00:00 0 
+2abac6202000-2abac6302000 rw-p 00000000 00:00 0 
+2abac6302000-2abac6303000 ---p 00000000 00:00 0 
+2abac6303000-2abac6403000 rw-p 00000000 00:00 0 
+2abac6403000-2abac6404000 ---p 00000000 00:00 0 
+2abac6404000-2abac6504000 rw-p 00000000 00:00 0 
+2abac6504000-2abac6505000 ---p 00000000 00:00 0 
+2abac6505000-2abac6605000 rw-p 00000000 00:00 0 
+2abac6605000-2abac6606000 ---p 00000000 00:00 0 
+2abac6606000-2abac6706000 rw-p 00000000 00:00 0 
+2abac6706000-2abac6707000 ---p 00000000 00:00 0 
+2abac6707000-2abac6807000 rw-p 00000000 00:00 0 
+2abac6807000-2abac6808000 ---p 00000000 00:00 0 
+2abac6808000-2abac6908000 rw-p 00000000 00:00 0 
+2abac6908000-2abac6909000 ---p 00000000 00:00 0 
+2abac6909000-2abac6a09000 rw-p 00000000 00:00 0 
+2abac6a09000-2abac6a0a000 ---p 00000000 00:00 0 
+2abac6a0a000-2abac6b0a000 rw-p 00000000 00:00 0 
+2abac6b0a000-2abac6b0b000 ---p 00000000 00:00 0 
+2abac6b0b000-2abac6c0b000 rw-p 00000000 00:00 0 
+2abac6c0b000-2abac6c0c000 ---p 00000000 00:00 0 
+2abac6c0c000-2abac6d0c000 rw-p 00000000 00:00 0 
+2abac6d0c000-2abac6d0d000 ---p 00000000 00:00 0 
+2abac6d0d000-2abb4f6c2000 rw-p 00000000 00:00 0 
+2abb50000000-2abb50021000 rw-p 00000000 00:00 0 
+2abb50021000-2abb54000000 ---p 00000000 00:00 0 
+2abb54000000-2abb54021000 rw-p 00000000 00:00 0 
+2abb54021000-2abb58000000 ---p 00000000 00:00 0 
+2abb58000000-2abb58021000 rw-p 00000000 00:00 0 
+2abb58021000-2abb5c000000 ---p 00000000 00:00 0 
+2abb5c000000-2abb5c021000 rw-p 00000000 00:00 0 
+2abb5c021000-2abb60000000 ---p 00000000 00:00 0 
+2abb60000000-2abb60021000 rw-p 00000000 00:00 0 
+2abb60021000-2abb64000000 ---p 00000000 00:00 0 
+2abb64000000-2abb64021000 rw-p 00000000 00:00 0 
+2abb64021000-2abb68000000 ---p 00000000 00:00 0 
+2abb68000000-2abb68021000 rw-p 00000000 00:00 0 
+2abb68021000-2abb6c000000 ---p 00000000 00:00 0 
+2abb6c000000-2abb6c021000 rw-p 00000000 00:00 0 
+2abb6c021000-2abb70000000 ---p 00000000 00:00 0 
+2abb70000000-2abb70021000 rw-p 00000000 00:00 0 
+2abb70021000-2abb74000000 ---p 00000000 00:00 0 
+2abb74000000-2abb74021000 rw-p 00000000 00:00 0 
+2abb74021000-2abb78000000 ---p 00000000 00:00 0 
+2abb78000000-2abb78021000 rw-p 00000000 00:00 0 
+2abb78021000-2abb7c000000 ---p 00000000 00:00 0 
+2abb7c000000-2abb7c021000 rw-p 00000000 00:00 0 
+2abb7c021000-2abb80000000 ---p 00000000 00:00 0 
+2abb80000000-2abb80021000 rw-p 00000000 00:00 0 
+2abb80021000-2abb84000000 ---p 00000000 00:00 0 
+2abb84000000-2abb841bf000 r--s 031c1000 00:13 667422343                  /home/jsquyres/git/java-/lib64/libc.so.6[0x32bac79f1f]
+perf-test/jre1.7.0_60/lib/rt.jar
+2abb841bf000-2abb86e02000 rw-p 00000000 00:00 0 
+2abb86e02000-2abb86e03000 ---p 00000000 00:00 0 
+2abb86e03000-2abb86f03000 rw-p 00000000 00:00 0 
+2abb86f03000-2abb86f06000 ---p 00000000 00:00 0 
+2abb86f06000-2abb87004000 rw-p 00000000 00:00 0 
+2abb87004000-2abb87007000 ---p 00000000 00:00 0 
+2abb87007000-2abb87105000 rw-p 00000000 00:00 0 
+2abb87105000-2abb87108000 ---p 00000000 00:00 0 
+2abb87108000-2abb87206000 rw-p 00000000 00:00 0 
+2abb87206000-2abb87209000 ---p 00000000 00:00 0 
+2abb87209000-2abb87307000 rw-p 00000000 00:00 0 
+2abb87307000-2abb8730a000 ---p 00000000 00:00 0 
+2abb8730a000-2abb87408000 rw-p 00000000 00:00 0 
+2abb87408000-2abb8740b000 ---p 00000000 00:00 0 
+2abb8740b000-2abb87509000 rw-p 00000000 00:00 0 
+2abb87509000-2abb8750a000 ---p 00000000 00:00 0 
+2abb8750a000-2abb8760a000 rw-p 00000000 00:00 0 
+2abb88000000-2abb88021000 rw-p 00000000 00:00 0 
+2abb88021000-2abb8c000000 ---p 00000000 00:00 0 
+2abb8c000000-2abb8c021000 rw-p 00000000 00:00 0 
+2abb8c021000-2abb90000000 ---p 00000000 00:00 0 
+2abb90000000-2abb95e91000 r--p 00000000 08:02 35023679                   /usr/lib/locale/locale-archive
+2abb98000000-2abb98021000 rw-p 00000000 00:00 0 
+2abb98021000-2abb9c000000 ---p 00000000 00:00 0 
+2abb9c000000-2abb9c021000 rw-p 00000000 00:00 0 
+2abb9c021000-2abba0000000 ---p 00000000 00:00 0 
+2abba0000000-2abba00cc000 rw-p 00000000 00:00 0 
+2abba00cc000-2abba4000000 ---p 00000000 00:00 0 
+2abba4000000-2abba4498000 rw-p 00000000 00:00 0 
+2abba4498000-2abba8000000 ---p 00000000 00:00 0 
+2abba8000000-2abba8021000 rw-p 00000000 00:00 0 
+2abba8021000-2abbac000000 ---p 00000000 00:00 0 
+2abbac000000-2abbac021000 rw-p 00000000 00:00 0 
+2abbac021000-2abbb0000000 ---p 00000000 00:00 0 
+2abbb0000000-2abbb0002000 r--s 0000d000 00:13 562046015                  /home/jsquyres/bogus/lib/mpi.jar
+2abbb0002000-2abbb0028000 r-xp 00000000 00:13 562046016                  /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2
+2abbb0028000-2abbb0227000 ---p 00026000 00:13 562046016                  /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2
+2abbb0227000-2abbb0229000 rw-p 00025000 00:13 562046016                  /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2
+2abbb0229000-2abbb0307000 r-xp 00000000 00:13 562045397                  /home/jsquyres/bogus/lib/libmpi.so.1.5.1
+2abbb0307000-2abbb0507000 ---p 000de000 00:13 562045397                  /home/jsquyres/bogus/lib/libmpi.so.1.5.1
+2abbb0507000-2abbb0518000 rw-p 000de000 00:13 562045397                  /home/jsquyres/bogus/lib/libmpi.so.1.5.1
+2abbb0518000-2abbb052b000 rw-p 00000000 00:00 0 
+2abbb052b000-2abbb05ba000 r-xp 00000000 00:13 562045216                  /home/jsquyres/bogus/lib/libopen-rte.so.7.0.3
+2abbb05ba000-2abbb07ba000 ---p 0008f000 00:13 562045216                  /home/jsquyres/bogus/lib/libopen-rte.so.7.0.3
+2abbb07ba000-2abbb07c0000 rw-p 0008f000 00:13 562045216                  /home/jsquyres/bogus/lib/libopen-rte.so.7.0.3
+2abbb07c0000-2abbb07c1000 rw-p 00000000 00:00 0 
+2abbb07c1000-2abbb08b9000 r-xp 00000000 00:13 562045164                  /home/jsquyres/bogus/lib/libopen-pal.so.6.1.2
+2abbb08b9000-2abbb0ab8000 ---p 000f8000 00:13 562045164                  /home/jsquyres/bogus/lib/libopen-pal.so.6.1.2
+2abbb0ab8000-2abbb0ac2000 rw-p 000f7000 00:13 562045164                  /home/jsquyres/bogus/lib/libopen-pal.so.6.1.2
+2abbb0ac2000-2abbb0ac8000 rw-p 00000000 00:00 0 
+2abbb0adc000-2abbb0ae4000 r-xp 00000000 08:02 35002015                   /usr/lib64/libnuma.so.1
+2abbb0ae4000-2abbb0ce4000 ---p 00008000 08:02 35002015                   /usr/lib64/libnuma.so.1
+2abbb0ce4000-2abbb0ce5000 rw-p 00008000 08:02 35002015                   /usr/lib64/libnuma.so.1
+2abbb0ce5000-2abbb0f66000 r-xp 00000000 00:14 98942979                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libimf.so
+2abbb0f66000-2abbb1165000 ---p 00281000 00:14 98942979                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libimf.so
+2abbb1165000-2abbb11a8000 rw-p 00280000 00:14 98942979                   /opt/intel/composer_xe_2013_/lib64/libc.so.6(__libc_malloc+0x71)[0x32bac7a991]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x816889)[0x2aaaab4f2889]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x499f2c)[0x2aaaab175f2c]
+sp1.3.174/compiler/lib/intel64/libimf.so
+2abbb11a8000-2abbb1b6c000 r-xp 00000000 00:14 98942991                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libsvml.so
+2abbb1b6c000-2abbb1d6c000 ---p 009c4000 00:14 98942991                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libsvml.so
+2abbb1d6c000-2abbb1da3000 rw-p 009c4000 00:14 98942991                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libsvml.so
+2abbb1da3000-2abbb1da8000 r-xp 00000000 00:14 98942985                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libirng.so
+2abbb1da8000-2abbb1fa8000 ---p 00005000 00:14 98942985                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libirng.so
+2abbb1fa8000-2abbb1faa000 rw-p 00005000 00:14 98942985                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libirng.so
+2abbb1faa000-2abbb1fbf000 r-xp 00000000 00:14 95182934                   /opt/intel/vtune_amplifier_xe_2013/lib64/libgcc_s.so.1
+2abbb1fbf000-2abbb20bf000 ---p 00015000 00:14 95182934                   /opt/intel/vtune_amplifier_xe_2013/lib64/libgcc_s.so.1
+2abbb20bf000-2abbb20c0000 rw-p 00015000 00:14 95182934                   /opt/intel/vtune_amplifier_xe_2013/lib64/libgcc_s.so.1
+2abbb20c0000-2abbb2112000 r-xp 00000000 00:14 98942981                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libintlc.so.5
+2abbb2112000-2abbb2312000 ---p 00052000 00:14 98942981                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libintlc.so.5
+2abbb2312000-2abbb2315000 rw-p 00052000 00:14 98942981                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libintlc.so.5
+2abbb2315000-2abbb2358000 rw-p 00000000 00:00 0 
+2abbb2358000-2abbb235f000 r--s 00000000 08:02 35054104                   /usr/lib64/gconv/gconv-modules.cache
+2abbb235f000-2abbb2362000 r-xp 00000000 00:13 562045189                  /home/jsquyres/bogus/lib/openmpi/mca_shmem_mmap.so
+2abbb2362000-2abbb2561000 ---p 00003000 00:13 562045189                  /home/jsquyres/bogus/lib/openmpi/mca_shmem_mmap.so
+2abbb2561000-2abbb2562000 rw-p 00002000 00:13 562045189                  /home/jsquyres/bogus/lib/openmpi/mca_shmem_mmap.so
+2abbb2562000-2abbb2563000 r-xp 00000000 00:13 562045186                  /home/jsquyres/bogus/lib/openmpi/mca_sec_basic.so
+2abbb2563000-2abbb2762000 ---p 00001000 00:13 562045186                  /home/jsquyres/bogus/lib/openmpi/mca_sec_basic.so
+2abbb2762000-2abbb2763000 rw-p 00000000 00:13 562045186                  /home/jsquyres/bogus/lib/openmpi/mca_sec_basic.so
+2abbb2763000-2abbb2765000 r-xp 00000000 00:13 562045246                  /home/jsquyres/bogus/lib/openmpi/mca_ess_env.so
+2abbb2765000-2abbb2965000 ---p 00002000 00:13 562045246                  /home/jsquyres/bogus/lib/openmpi/mca_ess_env.so
+2abbb2965000-2abbb2966000 rw-p 00002000 00:13 562045246                  /home/jsquyres/bogus/lib/openmpi/mca_ess_env.so
+2abbb2966000-2abbb2968000 r-xp 00000000 00:13 562045320                  /home/jsquyres/bogus/lib/openmpi/mca_state_app.so
+2abbb2968000-2abbb2b67000 ---p 00002000 00:13 562045320                  /home/jsquyres/bogus/lib/openmpi/mca_state_app.so
+2abbb2b67000-2abbb2b68000 rw-p 00001000 00:13 562045320                  /home/jsquyres/bogus/lib/openmpi/mca_state_app.so
+2abbb2b68000-2abbb2b6a000 r-xp 00000000 00:13 562045238                  /home/jsquyres/bogus/lib/openmpi/mca_errmgr_default_app.so
+2abbb2b6a000-2abbb2d69000 ---p 00002000 00:13 562045238                  /home/jsquyres/bogus/lib/openmpi/mca_errmgr_default_app.so
+2abbb2d69000-2abbb2d6a000 rw-p 00001000 00:13 562045238                  /home/jsquyres/bogus/lib/openmpi/mca_errmgr_default_app.so
+2abbb2d6a000-2abbb2d6e000 r-xp 00000000 00:13 562045318                  /home/jsquyres/bogus/lib/openmpi/mca_routed_binomial.so
+2abbb2d6e000-2abbb2f6d000 ---p 00004000 00:13 562045318                  /home/jsquyres/bogus/lib/openmpi/mca_routed_binomial.so
+2abbb2f6d000-2abbb2f6e000 rw-p 00003000 00:13 562045318                  /home/jsquyres/b/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x49a235)[0x2aaaab176235]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81c3fd)[0x2aaaab4f83fd]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x51cdee)[0x2aaaab1f8dee]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99d022)[0x2aaaab679022]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99e644)[0x2aaaab67a644]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x14f)[0x2aaaab4ff7cf]
+/lib64/libpthread.so.0[0x32bb00f710]
+ogus/lib/openmpi/mca_routed_binomial.so
+2abbb2f6e000-2abbb2f72000 r-xp 00000000 00:13 562045182                  /home/jsquyres/bogus/lib/openmpi/mca_db_hash.so
+2abbb2f72000-2abbb3172000 ---p 00004000 00:13 562045182                  /home/jsquyres/bogus/lib/openmpi/mca_db_hash.so
+2abbb3172000-2abbb3173000 rw-p 00004000 00:13 562045182                  /home/jsquyres/bogus/lib/openmpi/mca_db_hash.so
+2abbb3173000-2abbb3175000 r-xp 00000000 00:13 562045180                  /home/jsquyres/bogus/lib/openmpi/mca_db_print.so
+2abbb3175000-2abbb3374000 ---p 00002000 00:13 562045180                  /home/jsquyres/bogus/lib/openmpi/mca_db_print.so
+2abbb3374000-2abbb3375000 rw-p 00001000 00:13 562045180                  /home/jsquyres/bogus/lib/openmpi/mca_db_print.so
+2abbb3375000-2abbb338a000 r-xp 00000000 00:13 562045269                  /home/jsquyres/bogus/lib/openmpi/mca_oob_tcp.so
+2abbb338a000-2abbb358a000 ---p 00015000 00:13 562045269                  /home/jsquyres/bogus/lib/openmpi/mca_oob_tcp.so
+2abbb358a000-2abbb358b000 rw-p 00015000 00:13 562045269                  /home/jsquyres/bogus/lib/openmpi/mca_oob_tcp.so
+2abbb358b000-2abbb358f000 r-xp 00000000 00:13 562045310                  /home/jsquyres/bogus/lib/openmpi/mca_rml_oob.so
+2abbb358f000-2abbb378e000 ---p 00004000 00:13 562045310                  /home/jsquyres/bogus/lib/openmpi/mca_rml_oob.so
+2abbb378e000-2abbb378f000 rw-p 00003000 00:13 562045310                  /home/jsquyres/bogus/lib/openmpi/mca_rml_oob.so
+2abbb378f000-2abbb3791000 r-xp 00000000 00:13 562045253                  /home/jsquyres/bogus/lib/openmpi/mca_grpcomm_bad.so
+2abbb3791000-2abbb3991000 ---p 00002000 00:13 562045253                  /home/jsquyres/bogus/lib/openmpi/mca_grpcomm_bad.so
+2abbb3991000-2abbb3992000 rw-p 00002000 00:13 562045253                  /home/jsquyres/bogus/lib/openmpi/mca_grpcomm_bad.so
+2abbb3992000-2abbb3993000 ---p 00000000 00:00 0 
+2abbb3993000-2abbb3b93000 rw-p 00000000 00:00 0 
+2abbb3b93000-2abbb3b95000 r-xp 00000000 00:13 562045809                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_basic.so
+2abbb3b95000-2abbb3d95000 ---p 00002000 00:13 562045809                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_basic.so
+2abbb3d95000-2abbb3d96000 rw-p 00002000 00:13 562045809                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_basic.so
+2abbb3d96000-2abbb3d98000 r-xp 00000000 00:13 562045807                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_bucket.so
+2abbb3d98000-2abbb3f97000 ---p 00002000 00:13 562045807                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_bucket.so
+2abbb3f97000-2abbb3f98000 rw-p 00001000 00:13 562045807                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_bucket.so
+2abbb4000000-2abbb4021000 rw-p 00000000 00:00 0 
+2abbb4021000-2abbb8000000 ---p 00000000 00:00 0 
+2abbb8000000-2abbb8004000 r-xp 00000000 00:13 562045897                  /home/jsquyres/bogus/lib/openmpi/mca_rcache_vma.so
+2abbb8004000-2abbb8203000 ---p 00004000 00:13 562045897                  /home/jsquyres/bogus/lib/openmpi/mca_rcache_vma.so
+2abbb8203000-2abbb8204000 rw-p 00003000 00:13 562045897                  /home/jsquyres/bogus/lib/openmpi/mca_rcache_vma.so
+2abbb8204000-2abbb8208000 r-xp 00000000 00:13 562045878                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_grdma.so
+2abbb8208000-2abbb8407000 ---p 00004000 00:13 562045878                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_grdma.so
+2abbb8407000-2abbb8408000 rw-p 00003000 00:13 562045878                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_grdma.so
+2abbb8408000-2abbb840a000 r-xp 00000000 00:13 562045880                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_sm.so
+2abbb840a000-2abbb8609000 ---p 00002000 00:13 562045880                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_sm.so
+2abbb8609000-2abbb860a000 rw-p 00001000 00:13 562045880                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_sm.so
+2abbb860a000-2abbb860d000 r-xp 00000000 00:13 562045797                  /home/jsquyres/bogus/lib/libmca_common_sm.so.4.0.3
+2abbb860d000-2ab/lib64/libc.so.6(memcpy+0x310)[0x32bac89c60]
+/home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x651a12)[0x2aaaab32da12]
+/home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(ompi_java_getReadPtrv+0x7f4)[0x2abbb001a1b4]
+bb880d000 ---p 00003000 00:13 562045797                  /home/jsquyres/bogus/lib/libmca_common_sm.so.4.0.3
+2abbb880d000-2abbb880e000 rw-p 00003000 00:13 562045797                  /home/jsquyres/bogus/lib/libmca_common_sm.so.4.0.3
+2abbb880e000-2abbb8812000 r-xp 00000000 00:13 562045816                  /home/jsquyres/bogus/lib/openmpi/mca_bml_r2.so
+2abbb8812000-2abbb8a11000 ---p 00004000 00:13 562045816                  /home/jsquyres/bogus/lib/openmpi/mca_bml_r2.so
+2abbb8a11000-2abbb8a12000 rw-p 00003000 00:13 562045816                  /home/jsquyres/bogus/lib/openmpi/mca_bml_r2.so
+2abbb8a12000-2abbb8a15000 r-xp 00000000 00:13 562045818                  /home/jsquyres/bogus/lib/openmpi/mca_btl_self.so
+2abbb8a15000-2abbb8c15000 ---p 00003000 00:13 562045818                  /home/jsquyres/bogus/lib/openmpi/mca_btl_self.so
+2abbb8c15000-2abbb8c16000 rw-p 00003000 00:13 562045818                  /home/jsquyres/bogus/lib/openmpi/mca_btl_self.so
+2abbb8c16000-2abbb8c3a000 r-xp 00000000 00:13 562045837                  /home/jsquyres/bogus/lib/openmpi/mca_btl_usnic.so
+2abbb8c3a000-2abbb8e39000 ---p 00024000 00:13 562045837                  /home/jsquyres/bogus/lib/openmpi/mca_btl_usnic.so
+2abbb8e39000-2abbb8e3c000 rw-p 00023000 00:13 562045837                  /home/jsquyres/bogus/lib/openmpi/mca_btl_usnic.so
+2abbb8e3c000-2abbb8e42000 rw-p 00000000 00:00 0 
+2abbb8e56000-2abbb8e5a000 r-xp 00000000 00:13 562045802                  /home/jsquyres/bogus/lib/libmca_common_verbs.so.0.2.2
+2abbb8e5a000-2abbb905a000 ---p 00004000 00:13 562045802                  /home/jsquyres/bogus/lib/libmca_common_verbs.so.0.2.2
+2abbb905a000-2abbb905b000 rw-p 00004000 00:13 562045802                  /home/jsquyres/bogus/lib/libmca_common_verbs.so.0.2.2
+2abbb905b000-2abbb905f000 r-xp 00000000 00:13 562045895                  /home/jsquyres/bogus/lib/openmpi/mca_pubsub_orte.so
+2abbb905f000-2abbb925e000 ---p 00004000 00:13 562045895                  /home/jsquyres/bogus/lib/openmpi/mca_pubsub_orte.so
+2abbb925e000-2abbb925f000 rw-p 00003000 00:13 562045895                  /home/jsquyres/bogus/lib/openmpi/mca_pubsub_orte.so
+2abbb925f000-2abbb9266000 r-xp 00000000 00:13 562045858                  /home/jsquyres/bogus/lib/openmpi/mca_dpm_orte.so
+2abbb9266000-2abbb9465000 ---p 00007000 00:13 562045858                  /home/jsquyres/bogus/lib/openmpi/mca_dpm_orte.so
+2abbb9465000-2abbb9466000 rw-p 00006000 00:13 562045858                  /home/jsquyres/bogus/lib/openmpi/mca_dpm_orte.so
+2abbb948a000-2abbb94a6000 r-xp 00000000 00:13 562045892                  /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so
+2abbb94a6000-2abbb96a5000 ---p 0001c000 00:13 562045892                  /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so
+2abbb96a5000-2abbb96a7000 rw-p 0001b000 00:13 562045892                  /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so
+2abbb98af000-2abbb98bf000 r-xp 00000000 00:13 562045851                  /home/jsquyres/bogus/lib/openmpi/mca_coll_basic.so
+2abbb98bf000-2abbb9abf000 ---p 00010000 00:13 562045851                  /home/jsquyres/bogus/lib/openmpi/mca_coll_basic.so
+2abbb9abf000-2abbb9ac0000 rw-p 00010000 00:13 562045851                  /home/jsquyres/bogus/lib/openmpi/mca_coll_basic.so
+2abbb9ac0000-2abbb9ac7000 r-xp 00000000 00:13 562045855                  /home/jsquyres/bogus/lib/openmpi/mca_coll_hierarch.so
+2abbb9ac7000-2abbb9cc7000 ---p 00007000 00:13 562045855                  /home/jsquyres/bogus/lib/openmpi/mca_coll_hierarch.so
+2abbb9cc7000-2abbb9cc8000 rw-p 00007000 00:13 562045855                  /home/jsquyres/bogus/lib/openmpi/mca_coll_hierarch.so
+2abbb9cc8000-2abbb9ccc000 r-xp 00000000 00:13 562045853                  /home/jsquyres/bogus/lib/openmpi/mca_coll_inter.so
+2abbb9ccc000-2abbb9ecc000 ---p 00004000 00:13 562045853                  /home/jsquyres/bogus/lib/openmpi/mca_coll_inter.so
+2abbb9ecc000-2abbb9ecd000 rw-p 00004000 00:13 562045853                  /home/jsquyres/bogus/lib/openmpi/mca_coll_inter.so
+2abbb9ecd000-2abbb9eef000 r-xp 00000000 00:13 562045841                  /home/jsquyres/bogus/lib/openmpi/mca_/home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(Java_mpi_Comm_allToAllv+0x109)[0x2abbb0011999]
+[0x2aaab0887d98]
+======= Memory map: ========
+coll_libnbc.so
+2abbb9eef000-2abbba0ef000 ---p 00022000 00:13 562045841                  /home/jsquyres/bogus/lib/openmpi/mca_coll_libnbc.so
+2abbba0ef000-2abbba0f0000 rw-p 00022000 00:13 562045841                  /home/jsquyres/bogus/lib/openmpi/mca_coll_libnbc.so
+2abbba0f0000-2abbba108000 r-xp 00000000 00:13 562045884                  /home/jsquyres/bogus/lib/openmpi/mca_osc_rdma.so
+2abbba108000-2abbba307000 ---p 00018000 00:13 562045884                  /home/jsquyres/bogus/lib/openmpi/mca_osc_rdma.so
+2abbba307000-2abbba309000 rw-p 00017000 00:13 562045884                  /home/jsquyres/bogus/lib/openmpi/mca_osc_rdma.so
+2abbba32d000-2abbba32f000 r-xp 00000000 00:13 562045843                  /home/jsquyres/bogus/lib/openmpi/mca_coll_self.so
+2abbba32f000-2abbba52f000 ---p 00002000 00:13 562045843                  /home/jsquyres/bogus/lib/openmpi/mca_coll_self.so
+2abbba52f000-2abbba530000 rw-p 00002000 00:13 562045843                  /home/jsquyres/bogus/lib/openmpi/mca_coll_self.so
+2abbba737000-2abbba75d000 r-xp 00000000 00:13 562045839                  /home/jsquyres/bogus/lib/openmpi/mca_coll_tuned.so
+2abbba75d000-2abbba95c000 ---p 00026000 00:13 562045839                  /home/jsquyres/bogus/lib/openmpi/mca_coll_tuned.so
+2abbba95c000-2abbba95e000 rw-p 00025000 00:13 562045839                  /home/jsquyres/bogus/lib/openmpi/mca_coll_tuned.so
+2abbba95e000-2abbba963000 r-xp 00000000 00:13 562045882                  /home/jsquyres/bogus/lib/openmpi/mca_osc_sm.so
+2abbba963000-2abbbab62000 ---p 00005000 00:13 562045882                  /home/jsquyres/bogus/lib/openmpi/mca_osc_sm.so
+2abbbab62000-2abbbab64000 rw-p 00004000 00:13 562045882                  /home/jsquyres/bogus/lib/openmpi/mca_osc_sm.so
+2abbbab78000-2abbbab7e000 r-xp 00000000 08:02 35002138                   /usr/lib64/libmlx4-rdmav2.so
+2abbbab7e000-2abbbad7d000 ---p 00006000 08:02 35002138                   /usr/lib64/libmlx4-rdmav2.so
+2abbbad7d000-2abbbad7e000 rw-p 00005000 08:02 35002138                   /usr/lib64/libmlx4-rdmav2.so
+2abbbad7e000400000-00401000 r-xp 00000000 00:13 667422483                          /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java
+00600000-00601000 rw-p 00000000 00:13 667422483                          /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java
+00601000-00622000 rw-p 00000000 00:00 0                                  [heap]
+32ba400000-32ba420000 r-xp 00000000 08:02 65699998                       /lib64/ld-2.12.so
+32ba61f000-32ba620000 r--p 0001f000 08:02 65699998                       /lib64/ld-2.12.so
+32ba620000-32ba621000 rw-p 00020000 08:02 65699998                       /lib64/ld-2.12.so
+32ba621000-32ba622000 rw-p 00000000 00:00 0 
+32ba800000-32ba802000 r-xp 00000000 08:02 65700075                       /lib64/libdl-2.12.so
+32ba802000-32baa02000 ---p 00002000 08:02 65700075                       /lib64/libdl-2.12.so
+32baa02000-32baa03000 r--p 00002000 08:02 65700075                       /lib64/libdl-2.12.so
+32baa03000-32baa04000 rw-p 00003000 08:02 65700075                       /lib64/libdl-2.00-2abbbad81000 r-xp 00000000 08:02 35001997                   /usr/lib64/libipathverbs-rdmav2.so
+2abbbad81000-2abbbaf81000 ---p 00003000 08:02 35001997                   /usr/lib64/libipathverbs-rdmav2.so
+2abbbaf81000-2abbbaf82000 rw-p 00003000 08:02 35001997                   /usr/lib64/libipathverbs-rdmav2.so
+2abbbaf82000-2abbbaf87000 r-xp 00000000 08:02 34997472                   /usr/lib64/libcxgb3-rdmav2.so
+2abbbaf87000-2abbbb186000 ---p 00005000 08:02 34997472                   /usr/lib64/libcxgb3-rdmav2.so
+2abbbb186000-2abbbb187000 rw-p 00004000 08:02 34997472                   /usr/lib64/libcxgb3-rdmav2.so
+2abbbb187000-2abbbb18e000 r-xp 00000000 08:02 35002009                   /usr/lib64/libmthca-rdmav2.so
+2abbbb18e000-2abbbb38e000 ---p 00007000 08:02 35002009                   /usr/lib64/libmthca-rdmav2.so
+2abbbb38e000-2abbbb38f000 rw-p 00007000 08:02 35002009                   /usr/lib64/libmthca-rdmav2.so
+2abbbb38f000-2abbbb39c000 r-xp 00000000 08:02 34997294                   /usr/lib64/libusnic12.so
+32bac00000-32bad8b000 r-xp 00000000 08:02 65700072                       /lib64/libc-2.12.so
+32bad8b000-32baf8a000 ---p 0018b000 08:02 65700072                       /lib64/libc-2.12.so
+32baf8a000-32baf8e000 r--p 0018a000 08:02 65700072                       /lib64/libc-2.12.so
+32baf8e000-32baf8f000 rw-p 0018e000 08:02 65700072                       /lib64/libc-2.12.so
+32baf8f000-32baf94000 rw-p 00000000 00:00 0 
+32bb000000-32bb017000 r-xp 00000000 08:02 65700073                       /lib64/libpthread-2.12.so
+32bb017000-32bb217000 ---p 00017000 08:02 65700073                       /lib64/libpthread-2.12.so
+32bb217000-32bb218000 r--p 00017000 08:02 65700073                       /lib64/libpthread-2.12.so
+32bb218000-32bb219000 rw-p 00018000 08:02 65700073                       /lib64/libpthread-2.12.so
+32bb219000-32bb21d000 rw-p 00000000 00:00 0 
+32bb400000-32bb40d000 r-xp 00000000 08:02 86495832                       /usr/lib64/libibverbs.so.1.0.0
+32bb40d000-32bb60c000 ---p 0000d000 08:02 86495832                       /usr/lib64/libibverbs.so.1.0.0
+32bb60c000-32bb60d000 rw-p 0000c000 08:02 86495832                       /usr/lib64/libibverbs.so.1.0.0
+32bb800000-32bb883000 r-xp 00000000 08:02 65700369                       /lib64/libm-2.12.so
+32bb883000-32bba82000 ---p 00083000 08:02 65700369                       /lib64/libm-2.12.so
+32bba82000-32bba83000 r--p 00082000 08:02 65700369                       /lib64/libm-2.12.so
+32bba83000-32bba84000 rw-p 00083000 08:02 65700369                       /lib64/libm-2.12.so
+32bbc00000-32bbc07000 r-xp 00000000 08:02 65700074                       /lib64/librt-2.12.so
+32bbc07000-32bbe06000 ---p 00007000 08:02 65700074                       /lib64/librt-2.12.so
+32bbe06000-32bbe07000 r--p 00006000 08:02 65700074                       /lib64/librt-2.12.so
+32bbe07000-32bbe08000 rw-p 00007000 08:02 65700074                       /lib64/librt-2.12.so
+32bfc00000-32bfc4d000 r-xp 00000000 08:02 65700396                       /lib64/libnl.so.1.1.4
+32bfc4d000-32bfe4c000 ---p 00_verbs-rdmav2.so
+2abbbb39c000-2abbbb59b000 ---p 0000d000 08:02 34997294                   /usr/lib64/libusnic_verbs-rdmav2.so
+2abbbb59b000-2abbbb59c000 rw-p 0000c000 08:02 34997294                   /usr/lib64/libusnic_verbs-rdmav2.so
+2abbbb59c000-2abbbb59d000 ---p 00000000 00:00 0 
+2abbbb59d000-2abbbb79d000 rw-p 00000000 00:00 0 
+2abbbb79d000-2abbbb7a5000 rw-s c8200000 00:05 26134                      /dev/infiniband/uverbs1
+2abbbb7a5000-2abbbbde4000 rw-p 00000000 00:00 0 
+2abbbc000000-2abbbc021000 rw-p 00000000 00:00 0 
+2abbbc021000-2abbc0000000 ---p 00000000 00:00 0 
+2abbc0000000-2abbca5ae000 rw-p 00000000 00:00 0 
+2abbca5ae000-2abbca5b6000 rw-s c8500000 00:05 26133                      /dev/infiniband/uverbs0
+2abbca5b6000-2abbd51a3000 rw-p 00000000 00:00 0 
+7ffffffe9000-7ffffffff000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[mpi007:11735] *** Process received signal ***
+[mpi007:11735] Signal: Aborted (6)
+[mpi007:11735] Signal code:  (-6)
+04d000 08:02 65700396                       /lib64/libnl.so.1.1.4
+32bfe4c000-32bfe52000 rw-p 0004c000 08:02 65700396                       /lib64/libnl.so.1.1.4
+32c2400000-32c2402000 r-xp 00000000 08:02 65700372                       /lib64/libutil-2.12.so
+32c2402000-32c2601000 ---p 00002000 08:02 65700372                       /lib64/libutil-2.12.so
+32c2601000-32c2602000 r--p 00001000 08:02 65700372                       /lib64/libutil-2.12.so
+32c2602000-32c2603000 rw-p 00002000 08:02 65700372                       /lib64/libutil-2.12.so
+32ca800000-32ca816000 r-xp 00000000 08:02 65700380                       /lib64/libnsl-2.12.so
+32ca816000-32caa15000 ---p 00016000 08:02 65700380                       /lib64/libnsl-2.12.so
+32caa15000-32caa16000 r--p 00015000 08:02 65700380                       /lib64/libnsl-2.12.so
+32caa16000-32caa17000 rw-p 00016000 08:02 65700380                       /lib64/libnsl-2.12.so
+32caa17000-32caa19000 rw-p 00000000 00:00 0 
+2aaaaaaab000-2aaaaaaac000 r-xp 00000000 00:00 0                          [vdso]
+2aaaaaaac000-2aaaaaaad000 rw-p 00000000 00:00 0 
+2aaaaaac1000-2aaaaaac2000 rw-p 00000000 00:00 0 
+2aaaaaac2000-2aaaaaad8000 r-xp 00000000 00:13 667422147                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/jli/libjli.so
+2aaaaaad8000-2aaaaacd8000 ---p 00016000 00:13 667422147                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/jli/libjli.so
+2aaaaacd8000-2aaaaacd9000 rw-p 00016000 00:13 667422147                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/jli/libjli.so
+2aaaaacd9000-2aaaaacdc000 rw-p 00000000 00:00 0 
+2aaaaacdc000-2aaaab84c000 r-xp 00000000 00:13 667421886                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so
+2aaaab84c000-2aaaaba4b000 ---p 00b70000 00:13 667421886                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so
+2aaaaba4b000-2aaaabb0f000 rw-p 00b6f000 00:13 667421886                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so
+2aaaabb0f000-2aaaabb50000 rw-p 00000000 00:00 0 
+2aaaabb50000-2aaaabb53000 ---p 00000000 00:00 0 
+2aaaabb53000-2aaaabc51000 rw-p 00000000 00:00 0 
+2aaaabc51000-2aaaabc5e000 r-xp 00000000 00:13 667421873                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libverify.so
+2aaaabc5e000-2aaaabe5d000 ---p 0000d000 00:13 667421873                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libverify.so
+2aaaabe5d000-2aaaabe5f000 rw-p 0000c000 00:13 667421873                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libverify.so
+2aaaac000000-2aaaad199000 rw-p 00000000 00:00 0 
+2aaaad199000-2aaab0000000 ---p 00000000 00:00 0 
+2aaab0000000-2aaab0029000 r-xp 00000000 00:13 667422156                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libjava.so
+2aaab0029000-2aaab0229000 ---p 00029000 00:13 667422156                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libjava.so
+2aaab0229000-2aaab022b000 rw-p 00029000 00:13 667422156                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libjava.so
+2aaab022b000-2aaab022c000 r--p 00000000 00:00 0 
+2aaab022c000-2aaab022d000 rw-p 00000000 00:00 0 
+2aaab022d000-2aaab0235000 rw-s 00000000 08:02 27820049                   /tmp/hsperfdata_jsquyres/9659
+2aaab0241000-2aaab024d000 r-xp 00000000 08:02 65700009                   /lib64/libnss_files-2.12.so
+2aaab024d000-2aaab044d000 ---p 0000c000 08:02 65700009                   /lib64/libnss_files-2.12.so
+2aaab044d000-2aaab044e000 r--p 0000c000 08:02 65700009                   /lib64/libnss_files-2.12.so
+2aaab044e000-2aaab044f000 rw-p 0000d000 08:02 65700009                   /lib64/libnss_files-2.12.so
+2aaab044f000-2aaab045a000 r-xp 00000000 08:02 65700013                   /lib64/libnss_ldap.so.2
+2aaab045a000-2aaab0659000 ---p 0000b000 08:02 65700013                   /lib64/libnss_ldap.so.2
+2aaab0659000-2aaab065a000 rw-p 0000a000 08:02 65700013                   /lib64/libnss_ldap.so.2
+2aaab065a000-2aaab0674000 r-xp 00000000 00:13 667422173                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libzip.so
+2aaab0674000-2aaab0874000 ---p 0001a000 00:13 667422173                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libzip.so
+2aaab0874000-2aaab0875000 rw-p 0001a000 00:13 667422173                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/libzip.so
+2aaab0875000-2aaab0ae5000 rwxp 00000000 00:00 0 
+2aaab0ae5000-2aaab3875000 rw-p 00000000 00:00 0 
+2aaab3875000-2aaab387f000 rw-p 00000000 00:00 0 
+2aaab387f000-2aaab3935000 rw-p 00000000 00:00 0 
+2aaab3935000-2aaab3940000 rw-p 00000000 00:00 0 
+2aaab3940000-2aaab395e000 rw-p 00000000 00:00 0 
+2aaab3980000-2aaab4e80000 rw-p 00000000 00:00 0 
+2aaab4e80000-2aaab8b80000 rw-p 00000000 00:00 0 
+2aaab8b80000-2aab54e80000 rw-p 00000000 00:00 0 
+2aab54e80000-2ab563600000 rw-p 00000000 00:00 0 
+2ab563600000-2ab5de300000 rw-p 00000000 00:00 0 
+2ab5de300000-2ab5dfe00000 ---p 00000000 00:00 0 
+2ab5dfe00000-2abab8b80000 rw-p 00000000 00:00 0 
+2abab8b80000-2abab8b8b000 rw-p 00000000 00:00 0 
+2abab8b8b000-2abab8ba9000 rw-p 00000000 00:00 0 
+2abab8ba9000-2abab908b000 rw-p 00000000 00:00 0 
+2abab908b000-2ababe0fe000 rw-p 00000000 00:00 0 
+2ababe0fe000-2ababe4d5000 rw-p 00000000 00:00 0 
+2ababe4d5000-2ababe4e3000 ---p 00000000 00:00 0 
+2ababe4e3000-2abac0ba9000 rw-p 00000000 00:00 0 
+2abac0ba9000-2abac108c000 rw-p 00000000 00:00 0 
+2abac108c000-2abac6100000 rw-p 00000000 00:00 0 
+2abac6100000-2abac6101000 ---p 00000000 00:00 0 
+2abac6101000-2abac6201000 rw-p 00000000 00:00 0 
+2abac6201000-2abac6202000 ---p 00000000 00:00 0 
+2abac6202000-2abac6302000 rw-p 00000000 00:00 0 
+2abac6302000-2abac6303000 ---p 00000000 00:00 0 
+2abac6303000-2abac6403000 rw-p 00000000 00:00 0 
+2abac6403000-2abac6404000 ---p 00000000 00:00 0 
+2abac6404000-2abac6504000 rw-p 00000000 00:00 0 
+2abac6504000-2abac6505000 ---p 00000000 00:00 0 
+2abac6505000-2abac6605000 rw-p 00000000 00:00 0 
+2abac6605000-2abac6606000 ---p 00000000 00:00 0 
+2abac6606000-2abac6706000 rw-p 00000000 00:00 0 
+2abac67060[mpi007:11735] [ 0] /lib64/libpthread.so.0[0x3f5fe0f710]
+[mpi007:11735] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3f5fa32925]
+[mpi007:11735] [ 2] /lib64/libc.so.6(abort+0x175)[0x3f5fa34105]
+[mpi007:11735] [ 3] /lib64/libc.so.6[0x3f5fa70837]
+[mpi007:11735] [ 4] 00-2abac6707000 ---p 00000000 00:00 0 
+2abac6707000-2abac6807000 rw-p 00000000 00:00 0 
+2abac6807000-2abac6808000 ---p 00000000 00:00 0 
+2abac6808000-2abac6908000 rw-p 00000000 00:00 0 
+2abac6908000-2abac6909000 ---p 00000000 00:00 0 
+2abac6909000-2abac6a09000 rw-p 00000000 00:00 0 
+2abac6a09000-2abac6a0a000 ---p 00000000 00:00 0 
+2abac6a0a000-2abac6b0a000 rw-p 00000000 00:00 0 
+2abac6b0a000-2abac6b0b000 ---p 00000000 00:00 0 
+2abac6b0b000-2abac6c0b000 rw-p 00000000 00:00 0 
+2abac6c0b000-2abac6c0c000 ---p 00000000 00:00 0 
+2abac6c0c000-2abac6d0c000 rw-p 00000000 00:00 0 
+2abac6d0c000-2abac6d0d000 ---p 00000000 00:00 0 
+2abac6d0d000-2abb4f6c2000 rw-p 00000000 00:00 0 
+2abb50000000-2abb50021000 rw-p 00000000 00:00 0 
+2abb50021000-2abb54000000 ---p 00000000 00:00 0 
+2abb54000000-2abb54021000 rw-p 00000000 00:00 0 
+2abb54021000-2abb58000000 ---p 00000000 00:00 0 
+2abb58000000-2abb58021000 rw-p 00000000 00:00 0 
+2abb58021000-2abb5c000000 ---p 00000000 00:00 0 
+2abb5c000000-2abb5c021000 rw-p 00000000 00:00 0 
+2abb5c021000-2abb60000000 ---p 00000000 00:00 0 
+2abb60000000-2abb60021000 rw-p 00000000 00:00 0 
+2abb60021000-2abb64000000 ---p 00000000 00:00 0 
+2abb64000000-2abb64021000 rw-p 00000000 00:00 0 
+2abb64021000-2abb68000000 ---p 00000000 00:00 0 
+2abb68000000-2abb68021000 rw-p 00000000 00:00 0 
+2abb68021000-2abb6c000000 ---p 00000000 00:00 0 
+2abb6c000000-2abb6c021000 rw-p 00000000 00:00 0 
+2abb6c021000-2abb70000000 ---p 00000000 00:00 0 
+2abb70000000-2abb70021000 rw-p 00000000 00:00 0 
+2abb70021000-2abb74000000 ---p 00000000 00:00 0 
+2abb74000000-2abb74021000 rw-p 00000000 00:00 0 
+2abb74021000-2abb78000000 ---p 00000000 00:00 0 
+2abb78000000-2abb78021000 rw-p 00000000 00:00 0 
+2abb78021000-2abb7c000000 ---p 00000000 00:00 0 
+2abb7c000000-2abb7c021000 rw-p 00000000 00:00 0 
+2abb7c021000-2abb80000000 ---p 00000000 00:00 0 
+2abb80000000-2abb80021000 rw-p 00000000 00:00 0 
+2abb80021000-2abb84000000 ---p 00000000 00:00 0 
+2abb84000000-2abb841bf000 r--s 031c1000 00:13 667422343                  /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/rt.jar
+2abb841bf000-2abb86e02000 rw-p 00000000 00:00 0 
+2abb86e02000-2abb86e03000 ---p 00000000 00:00 0 
+2abb86e03000-2abb86f03000 rw-p 00000000 00:00 0 
+2abb86f03000-2abb86f06000 ---p 00000000 00:00 0 
+2abb86f06000-2abb87004000 rw-p 00000000 00:00 0 
+2abb87004000-2abb87007000 ---p 00000000 00:00 0 
+2abb87007000-2abb87105000 rw-p 00000000 00:00 0 
+2abb87105000-2abb87108000 ---p 00000000 00:00 0 
+2abb87108000-2abb87206000 rw-p 00000000 00:00 0 
+2abb87206000-2abb87209000 ---p 00000000 00:00 0 
+2abb87209000-2abb87307000 rw-p 00000000 00:00 0 
+2abb87307000-2abb8730a000 ---p 00000000 00:00 0 
+2abb8730a000-2abb87408000 rw-p 00000000 00:00 0 
+2abb87408000-2abb8740b000 ---p 00000000 00:00 0 
+2abb8740b000-2abb87509000 rw-p 00000000 00:00 0 
+2abb87509000-2abb8750a000 ---p 00000000 00:00 0 
+2abb8750a000-2abb8760a000 rw-p 00000000 00:00 0 
+2abb88000000-2abb88021000 rw-p 00000000 00:00 0 
+2abb88021000-2abb8c000000 ---p 00000000 00:00 0 
+2abb8c000000-2abb8c021000 rw-p 00000000 00:00 0 
+2abb8c021000/lib64/libc.so.6[0x3f5fa76166]
+[mpi007:11735] [ 5] /lib64/libc.so.6[0x3f5fa79f1f]
+[mpi007:11735] [ 6] /lib64/libc.so.6(__libc_malloc+0x71)[0x3f5fa7a991]
+[mpi007:11735] [ 7] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x816889)[0x2aaaab4f2889]
+[mpi007:11735] [ 8] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x499f2c)[0x2aaaab175f2c]
+[mpi007:11735] [ 9] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x49a235)[0x2aaaab176235]
+[mpi007:11735] [10] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81c3fd)[0x2aaaab4f83fd]
+[mpi007:11735] [11] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x51cdee)[0x2aaaab1f8dee]
+[mpi007:11735] [12] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99d022)[0x2aaaab679022]
+[mpi007:11735] [13] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99e644)[0x2aaaab67a644]
+[mpi007:11735] [14] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x14f)[0x2aaaab4ff7cf]
+[mpi007:11735] [15] /lib64/libpthread.so.0[0x3f5fe0f710]
+[mpi007:11735] [16] /lib64/libc.so.6(memcpy+0x2c7)[0x3f5fa89c17]
+[mpi007:11735] [17] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x651a12)[0x2aaaab32da12]
+[mpi007:11735] [18] /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(ompi_java_getReadPtrv+0x7f4)[0x2abbb001a1b4]
+[mpi007:11735] [19] /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(Java_mpi_Comm_allToAllv+0x109)[0x2abbb0011999]
+[mpi007:11735] [20] [0x2aaab0887d98]
+[mpi007:11735] *** End of error message ***
+-2abb90000000 ---p 00000000 00:00 0 
+2abb90000000-2abb95e91000 r--p 00000000 08:02 86510806                   /usr/lib/locale/locale-archive
+2abb98000000-2abb98021000 rw-p 00000000 00:00 0 
+2abb98021000-2abb9c000000 ---p 00000000 00:00 0 
+2abb9c000000-2abb9c021000 rw-p 00000000 00:00 0 
+2abb9c021000-2abba0000000 ---p 00000000 00:00 0 
+2abba0000000-2abba00cc000 rw-p 00000000 00:00 0 
+2abba00cc000-2abba4000000 ---p 00000000 00:00 0 
+2abba4000000-2abba4498000 rw-p 00000000 00:00 0 
+2abba4498000-2abba8000000 ---p 00000000 00:00 0 
+2abba8000000-2abba8021000 rw-p 00000000 00:00 0 
+2abba8021000-2abbac000000 ---p 00000000 00:00 0 
+2abbac000000-2abbac021000 rw-p 00000000 00:00 0 
+2abbac021000-2abbb0000000 ---p 00000000 00:00 0 
+2abbb0000000-2abbb0002000 r--s 0000d000 00:13 562046015                  /home/jsquyres/bogus/lib/mpi.jar
+2abbb0002000-2abbb0028000 r-xp 00000000 00:13 562046016                  /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2
+2abbb0028000-2abbb0227000 ---p 00026000 00:13 562046016                  /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2
+2abbb0227000-2abbb0229000 rw-p 00025000 00:13 562046016                  /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2
+2abbb0229000-2abbb0307000 r-xp 00000000 00:13 562045397                  /home/jsquyres/bogus/lib/libmpi.so.1.5.1
+2abbb0307000-2abbb0507000 ---p 000de000 00:13 562045397                  /home/jsquyres/bogus/lib/libmpi.so.1.5.1
+2abbb0507000-2abbb0518000 rw-p 000de000 00:13 562045397                  /home/jsquyres/bogus/lib/libmpi.so.1.5.1
+2abbb0518000-2abbb052b000 rw-p 00000000 00:00 0 
+2abbb052b000-2abbb05ba000 r-xp 00000000 00:13 562045216                  /home/jsquyres/bogus/lib/libopen-rte.so.7.0.3
+2abbb05ba000-2abbb07ba000 ---p 0008f000 00:13 562045216                  /home/jsquyres/bogus/lib/libopen-rte.so.7.0.3
+2abbb07ba000-2abbb07c0000 rw-p 0008f000 00:13 562045216                  /home/jsquyres/bogus/lib/libopen-rte.so.7.0.3
+2abbb07c0000-2abbb07c1000 rw-p 00000000 00:00 0 
+2abbb07c1000-2abbb08b9000 r-xp 00000000 00:13 562045164                  /home/jsquyres/bogus/lib/libopen-pal.so.6.1.2
+2abbb08b9000-2abbb0ab8000 ---p 000f8000 00:13 562045164                  /home/jsquyres/bogus/lib/libopen-pal.so.6.1.2
+2abbb0ab8000-2abbb0ac2000 rw-p 000f7000 00:13 562045164                  /home/jsquyres/bogus/lib/libopen-pal.so.6.1.2
+2abbb0ac2000-2abbb0ac8000 rw-p 00000000 00:00 0 
+2abbb0adc000-2abbb0ae4000 r-xp 00000000 08:02 86495675                   /usr/lib64/libnuma.so.1
+2abbb0ae4000-2abbb0ce4000 ---p 00008000 08:02 86495675                   /usr/lib64/libnuma.so.1
+2abbb0ce4000-2abbb0ce5000 rw-p 00008000 08:02 86495675                   /usr/lib64/libnuma.so.1
+2abbb0ce5000-2abbb0f66000 r-xp 00000000 00:14 98942979                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libimf.so
+2abbb0f66000-2abbb1165000 ---p 00281000 00:14 98942979                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libimf.so
+2abbb1165000-2abbb11a8000 rw-p 00280000 00:14 98942979                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libimf.so
+2abbb11a8000-2abbb1b6c000 r-xp 00000000 00:14 98942991                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libsvml.so
+2abbb1b6c000-2abbb1d6c000 ---p 009c4000 00:14 98942991                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libsvml.so
+2abbb1d6c000-2abbb1da3000 rw-p 009c4000 00:14 98942991                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libsvml.so
+2abbb1da3000-2abbb1da8000 r-xp 00000000 00:14 98942985                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libirng.so
+2abbb1da8000-2abbb1fa8000 ---p 00005000 00:14 98942985                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libirng.so
+2abbb1fa8000-2abbb1faa000 rw-p 00005000 00:14 98942985                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libirng.so
+2abbb1faa000-2abbb1fbf000 r-xp 00000000 00:14 95182934                   /opt/intel/vtune_amplifier_xe_2013/lib64/libgcc_s.so.1
+2abbb1fbf000-2abbb20bf000 ---p 00015000 00:14 95182934                   /opt/intel/vtune_amplifier_xe_2013/lib64/libgcc_s.so.1
+2abbb20bf000-2abbb20c0000 rw-p 00015000 00:14 95182934                   /opt/intel/vtune_amplifier_xe_2013/lib64/libgcc_s.so.1
+2abbb20c0000-2abbb2112000 r-xp 00000000 00:14 98942981                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libintlc.so.5
+2abbb2112000-2abbb2312000 ---p 00052000 00:14 98942981                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libintlc.so.5
+2abbb2312000-2abbb2315000 rw-p 00052000 00:14 98942981                   /opt/intel/composer_xe_2013_sp1.3.174/compiler/lib/intel64/libintlc.so.5
+2abbb2315000-2abbb2358000 rw-p 00000000 00:00 0 
+2abbb2358000-2abbb235f000 r--s 00000000 08:02 86542296                   /usr/lib64/gconv/gconv-modules.cache
+2abbb235f000-2abbb2362000 r-xp 00000000 00:13 562045189                  /home/jsquyres/bogus/lib/openmpi/mca_shmem_mmap.so
+2abbb2362000-2abbb2561000 ---p 00003000 00:13 562045189                  /home/jsquyres/bogus/lib/openmpi/mca_shmem_mmap.so
+2abbb2561000-2abbb2562000 rw-p 00002000 00:13 562045189                  /home/jsquyres/bogus/lib/openmpi/mca_shmem_mmap.so
+2abbb2562000-2abbb2563000 r-xp 00000000 00:13 562045186                  /home/jsquyres/bogus/lib/openmpi/mca_sec_basic.so
+2abbb2563000-2abbb2762000 ---p 00001000 00:13 562045186                  /home/jsquyres/bogus/lib/openmpi/mca_sec_basic.so
+2abbb2762000-2abbb2763000 rw-p 00000000 00:13 562045186                  /home/jsquyres/bogus/lib/openmpi/mca_sec_basic.so
+2abbb2763000-2abbb2765000 r-xp 00000000 00:13 562045246                  /home/jsquyres/bogus/lib/openmpi/mca_ess_env.so
+2abbb2765000-2abbb2965000 ---p 00002000 00:13 562045246                  /home/jsquyres/bogus/lib/openmpi/mca_ess_env.so
+2abbb2965000-2abbb2966000 rw-p 00002000 00:13 562045246                  /home/jsquyres/bogus/lib/openmpi/mca_ess_env.so
+2abbb2966000-2abbb2968000 r-xp 00000000 00:13 562045320                  /home/jsquyres/bogus/lib/openmpi/mca_state_app.so
+2abbb2968000-2abbb2b67000 ---p 00002000 00:13 562045320                  /home/jsquyres/bogus/lib/openmpi/mca_state_app.so
+2abbb2b67000-2abbb2b68000 rw-p 00001000 00:13 562045320                  /home/jsquyres/bogus/lib/openmpi/mca_state_app.so
+2abbb2b68000-2abbb2b6a000 r-xp 00000000 00:13 562045238                  /home/jsquyres/bogus/lib/openmpi/mca_errmgr_default_app.so
+2abbb2b6a000-2abbb2d69000 ---p 00002000 00:13 562045238                  /home/jsquyres/bogus/lib/openmpi/mca_errmgr_default_app.so
+2abbb2d69000-2abbb2d6a000 rw-p 00001000 00:13 562045238                  /home/jsquyres/bogus/lib/openmpi/mca_errmgr_default_app.so
+2abbb2d6a000-2abbb2d6e000 r-xp 00000000 00:13 562045318                  /home/jsquyres/bogus/lib/openmpi/mca_routed_binomial.so
+2abbb2d6e000-2abbb2f6d000 ---p 00004000 00:13 562045318                  /home/jsquyres/bogus/lib/openmpi/mca_routed_binomial.so
+2abbb2f6d000-2abbb2f6e000 rw-p 00003000 00:13 562045318                  /home/jsquyres/bogus/lib/openmpi/mca_routed_binomial.so
+2abbb2f6e000-2abbb2f72000 r-xp 00000000 00:13 562045182                  /home/jsquyres/bogus/lib/openmpi/mca_db_hash.so
+2abbb2f72000-2abbb3172000 ---p 00004000 00:13 562045182                  /home/jsquyres/bogus/lib/openmpi/mca_db_hash.so
+2abbb3172000-2abbb3173000 rw-p 00004000 00:13 562045182                  /home/jsquyres/bogus/lib/openmpi/mca_db_hash.so
+2abbb3173000-2abbb3175000 r-xp 00000000 00:13 562045180                  /home/jsquyres/bogus/lib/openmpi/mca_db_print.so
+2abbb3175000-2abbb3374000 ---p 00002000 00:13 562045180                  /home/jsquyres/bogus/lib/openmpi/mca_db_print.so
+2abbb3374000-2abbb3375000 rw-p 00001000 00:13 562045180                  /home/jsquyres/bogus/lib/openmpi/mca_db_print.so
+2abbb3375000-2abbb338a000 r-xp 00000000 00:13 562045269                  /home/jsquyres/bogus/lib/openmpi/mca_oob_tcp.so
+2abbb338a000-2abbb358a000 ---p 00015000 00:13 562045269                  /home/jsquyres/bogus/lib/openmpi/mca_oob_tcp.so
+2abbb358a000-2abbb358b000 rw-p 00015000 00:13 562045269                  /home/jsquyres/bogus/lib/openmpi/mca_oob_tcp.so
+2abbb358b000-2abbb358f000 r-xp 00000000 00:13 562045310                  /home/jsquyres/bogus/lib/openmpi/mca_rml_oob.so
+2abbb358f000-2abbb378e000 ---p 00004000 00:13 562045310                  /home/jsquyres/bogus/lib/openmpi/mca_rml_oob.so
+2abbb378e000-2abbb378f000 rw-p 00003000 00:13 562045310                  /home/jsquyres/bogus/lib/openmpi/mca_rml_oob.so
+2abbb378f000-2abbb3791000 r-xp 00000000 00:13 562045253                  /home/jsquyres/bogus/lib/openmpi/mca_grpcomm_bad.so
+2abbb3791000-2abbb3991000 ---p 00002000 00:13 562045253                  /home/jsquyres/bogus/lib/openmpi/mca_grpcomm_bad.so
+2abbb3991000-2abbb3992000 rw-p 00002000 00:13 562045253                  /home/jsquyres/bogus/lib/openmpi/mca_grpcomm_bad.so
+2abbb3992000-2abbb3993000 ---p 00000000 00:00 0 
+2abbb3993000-2abbb3b93000 rw-p 00000000 00:00 0 
+2abbb3b93000-2abbb3b95000 r-xp 00000000 00:13 562045809                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_basic.so
+2abbb3b95000-2abbb3d95000 ---p 00002000 00:13 562045809                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_basic.so
+2abbb3d95000-2abbb3d96000 rw-p 00002000 00:13 562045809                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_basic.so
+2abbb3d96000-2abbb3d98000 r-xp 00000000 00:13 562045807                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_bucket.so
+2abbb3d98000-2abbb3f97000 ---p 00002000 00:13 562045807                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_bucket.so
+2abbb3f97000-2abbb3f98000 rw-p 00001000 00:13 562045807                  /home/jsquyres/bogus/lib/openmpi/mca_allocator_bucket.so
+2abbb4000000-2abbb4021000 rw-p 00000000 00:00 0 
+2abbb4021000-2abbb8000000 ---p 00000000 00:00 0 
+2abbb8000000-2abbb8004000 r-xp 00000000 00:13 562045897                  /home/jsquyres/bogus/lib/openmpi/mca_rcache_vma.so
+2abbb8004000-2abbb8203000 ---p 00004000 00:13 562045897                  /home/jsquyres/bogus/lib/openmpi/mca_rcache_vma.so
+2abbb8203000-2abbb8204000 rw-p 00003000 00:13 562045897                  /home/jsquyres/bogus/lib/openmpi/mca_rcache_vma.so
+2abbb8204000-2abbb8208000 r-xp 00000000 00:13 562045878                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_grdma.so
+2abbb8208000-2abbb8407000 ---p 00004000 00:13 562045878                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_grdma.so
+2abbb8407000-2abbb8408000 rw-p 00003000 00:13 562045878                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_grdma.so
+2abbb8408000-2abbb840a000 r-xp 00000000 00:13 562045880                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_sm.so
+2abbb840a000-2abbb8609000 ---p 00002000 00:13 562045880                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_sm.so
+2abbb8609000-2abbb860a000 rw-p 00001000 00:13 562045880                  /home/jsquyres/bogus/lib/openmpi/mca_mpool_sm.so
+2abbb860a000-2abbb860d000 r-xp 00000000 00:13 562045797                  /home/jsquyres/bogus/lib/libmca_common_sm.so.4.0.3
+2abbb860d000-2abbb880d000 ---p 00003000 00:13 562045797                  /home/jsquyres/bogus/lib/libmca_common_sm.so.4.0.3
+2abbb880d000-2abbb880e000 rw-p 00003000 00:13 562045797                  /home/jsquyres/bogus/lib/libmca_common_sm.so.4.0.3
+2abbb880e000-2abbb8812000 r-xp 00000000 00:13 562045816                  /home/jsquyres/bogus/lib/openmpi/mca_bml_r2.so
+2abbb8812000-2abbb8a11000 ---p 00004000 00:13 562045816                  /home/jsquyres/bogus/lib/openmpi/mca_bml_r2.so
+2abbb8a11000-2abbb8a12000 rw-p 00003000 00:13 562045816                  /home/jsquyres/bogus/lib/openmpi/mca_bml_r2.so
+2abbb8a12000-2abbb8a15000 r-xp 00000000 00:13 562045818                  /home/jsquyres/bogus/lib/openmpi/mca_btl_self.so
+2abbb8a15000-2abbb8c15000 ---p 00003000 00:13 562045818                  /home/jsquyres/bogus/lib/openmpi/mca_btl_self.so
+2abbb8c15000-2abbb8c16000 rw-p 00003000 00:13 562045818                  /home/jsquyres/bogus/lib/openmpi/mca_btl_self.so
+2abbb8c16000-2abbb8c3a000 r-xp 00000000 00:13 562045837                  /home/jsquyres/bogus/lib/openmpi/mca_btl_usnic.so
+2abbb8c3a000-2abbb8e39000 ---p 00024000 00:13 562045837                  /home/jsquyres/bogus/lib/openmpi/mca_btl_usnic.so
+2abbb8e39000-2abbb8e3c000 rw-p 00023000 00:13 562045837                  /home/jsquyres/bogus/lib/openmpi/mca_btl_usnic.so
+2abbb8e3c000-2abbb8e42000 rw-p 00000000 00:00 0 
+2abbb8e56000-2abbb8e5a000 r-xp 00000000 00:13 562045802                  /home/jsquyres/bogus/lib/libmca_common_verbs.so.0.2.2
+2abbb8e5a000-2abbb905a000 ---p 00004000 00:13 562045802                  /home/jsquyres/bogus/lib/libmca_common_verbs.so.0.2.2
+2abbb905a000-2abbb905b000 rw-p 00004000 00:13 562045802                  /home/jsquyres/bogus/lib/libmca_common_verbs.so.0.2.2
+2abbb905b000-2abbb905f000 r-xp 00000000 00:13 562045895                  /home/jsquyres/bogus/lib/openmpi/mca_pubsub_orte.so
+2abbb905f000-2abbb925e000 ---p 00004000 00:13 562045895                  /home/jsquyres/bogus/lib/openmpi/mca_pubsub_orte.so
+2abbb925e000-2abbb925f000 rw-p 00003000 00:13 562045895                  /home/jsquyres/bogus/lib/openmpi/mca_pubsub_orte.so
+2abbb925f000-2abbb9266000 r-xp 00000000 00:13 562045858                  /home/jsquyres/bogus/lib/openmpi/mca_dpm_orte.so
+2abbb9266000-2abbb9465000 ---p 00007000 00:13 562045858                  /home/jsquyres/bogus/lib/openmpi/mca_dpm_orte.so
+2abbb9465000-2abbb9466000 rw-p 00006000 00:13 562045858                  /home/jsquyres/bogus/lib/openmpi/mca_dpm_orte.so
+2abbb948a000-2abbb94a6000 r-xp 00000000 00:13 562045892                  /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so
+2abbb94a6000-2abbb96a5000 ---p 0001c000 00:13 562045892                  /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so
+2abbb96a5000-2abbb96a7000 rw-p 0001b000 00:13 562045892                  /home/jsquyres/bogus/lib/openmpi/mca_pml_ob1.so
+2abbb98af000-2abbb98bf000 r-xp 00000000 00:13 562045851                  /home/jsquyres/bogus/lib/openmpi/mca_coll_basic.so
+2abbb98bf000-2abbb9abf000 ---p 00010000 00:13 562045851                  /home/jsquyres/bogus/lib/openmpi/mca_coll_basic.so
+2abbb9abf000-2abbb9ac0000 rw-p 00010000 00:13 562045851                  /home/jsquyres/bogus/lib/openmpi/mca_coll_basic.so
+2abbb9ac0000-2abbb9ac7000 r-xp 00000000 00:13 562045855                  /home/jsquyres/bogus/lib/openmpi/mca_coll_hierarch.so
+2abbb9ac7000-2abbb9cc7000 ---p 00007000 00:13 562045855                  /home/jsquyres/bogus/lib/openmpi/mca_coll_hierarch.so
+2abbb9cc7000-2abbb9cc8000 rw-p 00007000 00:13 562045855                  /home/jsquyres/bogus/lib/openmpi/mca_coll_hierarch.so
+2abbb9cc8000-2abbb9ccc000 r-xp 00000000 00:13 562045853                  /home/jsquyres/bogus/lib/openmpi/mca_coll_inter.so
+2abbb9ccc000-2abbb9ecc000 ---p 00004000 00:13 562045853                  /home/jsquyres/bogus/lib/openmpi/mca_coll_inter.so
+2abbb9ecc000-2abbb9ecd000 rw-p 00004000 00:13 562045853                  /home/jsquyres/bogus/lib/openmpi/mca_coll_inter.so
+2abbb9ecd000-2abbb9eef000 r-xp 00000000 00:13 562045841                  /home/jsquyres/bogus/lib/openmpi/mca_coll_libnbc.so
+2abbb9eef000-2abbba0ef000 ---p 00022000 00:13 562045841                  /home/jsquyres/bogus/lib/openmpi/mca_coll_libnbc.so
+2abbba0ef000-2abbba0f0000 rw-p 00022000 00:13 562045841                  /home/jsquyres/bogus/lib/openmpi/mca_coll_libnbc.so
+2abbba0f0000-2abbba108000 r-xp 00000000 00:13 562045884                  /home/jsquyres/bogus/lib/openmpi/mca_osc_rdma.so
+2abbba108000-2abbba307000 ---p 00018000 00:13 562045884                  /home/jsquyres/bogus/lib/openmpi/mca_osc_rdma.so
+2abbba307000-2abbba309000 rw-p 00017000 00:13 562045884                  /home/jsquyres/bogus/lib/openmpi/mca_osc_rdma.so
+2abbba32d000-2abbba32f000 r-xp 00000000 00:13 562045843                  /home/jsquyres/bogus/lib/openmpi/mca_coll_self.so
+2abbba32f000-2abbba52f000 ---p 00002000 00:13 562045843                  /home/jsquyres/bogus/lib/openmpi/mca_coll_self.so
+2abbba52f000-2abbba530000 rw-p 00002000 00:13 562045843                  /home/jsquyres/bogus/lib/openmpi/mca_coll_self.so
+2abbba737000-2abbba75d000 r-xp 00000000 00:13 562045839                  /home/jsquyres/bogus/lib/openmpi/mca_coll_tuned.so
+2abbba75d000-2abbba95c000 ---p 00026000 00:13 562045839                  /home/jsquyres/bogus/lib/openmpi/mca_coll_tuned.so
+2abbba95c000-2abbba95e000 rw-p 00025000 00:13 562045839                  /home/jsquyres/bogus/lib/openmpi/mca_coll_tuned.so
+2abbba95e000-2abbba963000 r-xp 00000000 00:13 562045882                  /home/jsquyres/bogus/lib/openmpi/mca_osc_sm.so
+2abbba963000-2abbbab62000 ---p 00005000 00:13 562045882                  /home/jsquyres/bogus/lib/openmpi/mca_osc_sm.so
+2abbbab62000-2abbbab64000 rw-p 00004000 00:13 562045882                  /home/jsquyres/bogus/lib/openmpi/mca_osc_sm.so
+2abbbab78000-2abbbab7f000 r-xp 00000000 08:02 86496922                   /usr/lib64/libmthca-rdmav2.so
+2abbbab7f000-2abbbad7f000 ---p 00007000 08:02 86496922                   /usr/lib64/libmthca-rdmav2.so
+2abbbad7f000-2abbbad80000 rw-p 00007000 08:02 86496922                   /usr/lib64/libmthca-rdmav2.so
+2abbbad80000-2abbbad8d000 r-xp 00000000 08:02 86496998                   /usr/lib64/libusnic_verbs-rdmav2.so
+2abbbad8d000-2abbbaf8c000 ---p 0000d000 08:02 86496998                   /usr/lib64/libusnic_verbs-rdmav2.so
+2abbbaf8c000-2abbbaf8d000 rw-p 0000c000 08:02 86496998                   /usr/lib64/libusnic_verbs-rdmav2.so
+2abbbaf8d000-2abbbaf92000 r-xp 00000000 08:02 86492779                   /usr/lib64/libcxgb3-rdmav2.so
+2abbbaf92000-2abbbb191000 ---p 00005000 08:02 86492779                   /usr/lib64/libcxgb3-rdmav2.so
+2abbbb191000-2abbbb192000 rw-p 00004000 08:02 86492779                   /usr/lib64/libcxgb3-rdmav2.so
+2abbbb192000-2abbbb198000 r-xp 00000000 08:02 86492879                   /usr/lib64/libmlx4-rdmav2.so
+2abbbb198000-2abbbb397000 ---p 00006000 08:02 86492879                   /usr/lib64/libmlx4-rdmav2.so
+2abbbb397000-2abbbb398000 rw-p 00005000 08:02 86492879                   /usr/lib64/libmlx4-rdmav2.so
+2abbbb398000-2abbbb39b000 r-xp 00000000 08:02 86496910                   /usr/lib64/libipathverbs-rdmav2.so
+2abbbb39b000-2abbbb59b000 ---p 00003000 08:02 86496910                   /usr/lib64/libipathverbs-rdmav2.so
+2abbbb59b000-2abbbb59c000 rw-p 00003000 08:02 86496910                   /usr/lib64/libipathverbs-rdmav2.so
+2abbbb59c000-2abbbb59d000 ---p 00000000 00:00 0 
+2abbbb59d000-2abbbb79d000 rw-p 00000000 00:00 0 
+2abbbb79d000-2abbbb7a5000 rw-s c8200000 00:05 26109                      /dev/infiniband/uverbs1
+2abbbb7a5000-2abbbbde4000 rw-p 00000000 00:00 0 
+2abbbc000000-2abbbc021000 rw-p 00000000 00:00 0 
+2abbbc021000-2abbc0000000 ---p 00000000 00:00 0 
+2abbc0000000-2abbca5ae000 rw-p 00000000 00:00 0 
+2abbca5ae000-2abbca5b6000 rw-s c8500000 00:05 26108                      /dev/infiniband/uverbs0
+2abbca5b6000-2abbd51a3000 rw-p 00000000 00:00 0 
+7ffffffe8000-7ffffffff000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[mpi019:09659] *** Process received signal ***
+[mpi019:09659] Signal: Aborted (6)
+[mpi019:09659] Signal code:  (-6)
+[mpi019:09659] [ 0] /lib64/libpthread.so.0[0x32bb00f710]
+[mpi019:09659] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x32bac32925]
+[mpi019:09659] [ 2] /lib64/libc.so.6(abort+0x175)[0x32bac34105]
+[mpi019:09659] [ 3] /lib64/libc.so.6[0x32bac70837]
+[mpi019:09659] [ 4] /lib64/libc.so.6[0x32bac76166]
+[mpi019:09659] [ 5] /lib64/libc.so.6[0x32bac79f1f]
+[mpi019:09659] [ 6] /lib64/libc.so.6(__libc_malloc+0x71)[0x32bac7a991]
+[mpi019:09659] [ 7] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x816889)[0x2aaaab4f2889]
+[mpi019:09659] [ 8] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x499f2c)[0x2aaaab175f2c]
+[mpi019:09659] [ 9] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x49a235)[0x2aaaab176235]
+[mpi019:09659] [10] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81c3fd)[0x2aaaab4f83fd]
+[mpi019:09659] [11] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x51cdee)[0x2aaaab1f8dee]
+[mpi019:09659] [12] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99d022)[0x2aaaab679022]
+[mpi019:09659] [13] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x99e644)[0x2aaaab67a644]
+[mpi019:09659] [14] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0x14f)[0x2aaaab4ff7cf]
+[mpi019:09659] [15] /lib64/libpthread.so.0[0x32bb00f710]
+[mpi019:09659] [16] /lib64/libc.so.6(memcpy+0x310)[0x32bac89c60]
+[mpi019:09659] [17] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x651a12)[0x2aaaab32da12]
+[mpi019:09659] [18] /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(ompi_java_getReadPtrv+0x7f4)[0x2abbb001a1b4]
+[mpi019:09659] [19] /home/jsquyres/bogus/lib/libmpi_java.so.1.1.2(Java_mpi_Comm_allToAllv+0x109)[0x2abbb0011999]
+[mpi019:09659] [20] [0x2aaab0887d98]
+[mpi019:09659] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 11735 on node mpi007 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+===============================================================================
+End: Sat Jun 21 18:16:07 PDT 2014

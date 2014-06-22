@@ -1,0 +1,3 @@
+The tests in this directory run with jre1.7.0_60 Java binary with
+Open MPI 1.8.2 nightly tarball build compiled with the intel
+compiler suite.

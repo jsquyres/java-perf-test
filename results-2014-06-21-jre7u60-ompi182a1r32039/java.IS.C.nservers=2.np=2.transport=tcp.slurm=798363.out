@@ -1,0 +1,76 @@
+Running Java benchmark IS, class C, on 2 servers (np=2), tcp,self
+
+SLURM job ID: 798363
+
+Servers:
+mpi015
+mpi025
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 2 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.IS class=C
+
+Start: Sat Jun 21 18:15:41 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version IS CLASS=C np=2
+ Size:  134217728 Iterations:   10
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000003514889c0f, pid=24307, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89c0f]
+[error occurred during error reporting (printing problematic frame), id 0xb]
+
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.24307
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid24307.log
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000000363fe89c70, pid=29564, tid=46912514623232
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x89c70]
+[error occurred during error reporting (printing problematic frame), id 0xb]
+
+# Core dump written. Default location: /home/jsquyres/svn/ompi-tests/NPB_MPJ/core or core.29564
+#
+# An error report file with more information is saved as:
+# /home/jsquyres/svn/ompi-tests/NPB_MPJ/hs_err_pid29564.log
+[mpi025:29564] *** Process received signal ***
+[mpi025:29564] Signal: Aborted (6)
+[mpi025:29564] Signal code:  (-6)
+# [ timer expired, abort... ]
+[mpi025:29564] [ 0] /lib64/libpthread.so.0[0x364020f710]
+[mpi025:29564] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x363fe32925]
+[mpi025:29564] [ 2] /lib64/libc.so.6(abort+0x175)[0x363fe34105]
+[mpi025:29564] [ 3] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81c6f9)[0x2aaaab4f86f9]
+[mpi025:29564] [ 4] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x9551f6)[0x2aaaab6311f6]
+[mpi025:29564] [ 5] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81f7f8)[0x2aaaab4fb7f8]
+[mpi025:29564] [ 6] /lib64/libpthread.so.0[0x36402079d1]
+[mpi025:29564] [ 7] /lib64/libc.so.6(clone+0x6d)[0x363fee8b6d]
+[mpi025:29564] *** End of error message ***
+[mpi015:24307] *** Process received signal ***
+[mpi015:24307] Signal: Aborted (6)
+[mpi015:24307] Signal code:  (-6)
+# [ timer expired, abort... ]
+[mpi015:24307] [ 0] /lib64/libpthread.so.0[0x3514c0f710]
+[mpi015:24307] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3514832925]
+[mpi015:24307] [ 2] /lib64/libc.so.6(abort+0x175)[0x3514834105]
+[mpi015:24307] [ 3] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81c6f9)[0x2aaaab4f86f9]
+[mpi015:24307] [ 4] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x9551f6)[0x2aaaab6311f6]
+[mpi015:24307] [ 5] /home/jsquyres/git/java-perf-test/jre1.7.0_60/lib/amd64/server/libjvm.so(+0x81f7f8)[0x2aaaab4fb7f8]
+[mpi015:24307] [ 6] /lib64/libpthread.so.0[0x3514c079d1]
+[mpi015:24307] [ 7] /lib64/libc.so.6(clone+0x6d)[0x35148e8b6d]
+[mpi015:24307] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 29564 on node mpi025 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+===============================================================================
+End: Sat Jun 21 18:18:00 PDT 2014

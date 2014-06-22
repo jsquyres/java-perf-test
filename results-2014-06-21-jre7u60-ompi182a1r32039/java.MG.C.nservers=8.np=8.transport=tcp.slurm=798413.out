@@ -1,0 +1,52 @@
+Running Java benchmark MG, class C, on 8 servers (np=8), tcp,self
+
+SLURM job ID: 798413
+
+Servers:
+mpi007
+mpi021
+mpi020
+mpi016
+mpi022
+mpi008
+mpi019
+mpi009
+
+mpirun --mca btl_usnic_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl_tcp_if_include 10.10.0.0/16,10.2.0.0/16 --mca btl tcp,self --bind-to core --map-by node -np 8 /home/jsquyres/git/java-perf-test/jre1.7.0_60/bin/java -Xmx64g NPB_MPJ.MG class=C
+
+Start: Sat Jun 21 20:41:10 PDT 2014
+===============================================================================
+ Unofficial NAS Parallel Benchmarks Java version
+ MPJ Version MG CLASS=C np=8
+ No input file mg.input. Using compiled defaults
+ Size                : 512x512x512
+ Iterations          : 20
+ Number of processes : 8
+   iter 1
+   iter 5
+   iter 10
+   iter 15
+   iter 20
+ Initialization time: 34.889
+ Benchmark completed 
+ Verification successful 
+ L2 Norm is 5.706732285739241E-7
+ Error is   1.3302766644120336E-13
+MG.C: Verification Successful
+**** NAS Parallel Benchmarks Java-MPJ version (NPB-MPJ) MG ***** 
+* Class             = C                                        * 
+* Size              = 512 X 512 X 512                          * 
+* Iterations        = 20                                       * 
+* Time in seconds   = 29.278                                   * 
+* ACCTime           = 0.000                                    * 
+* Mops total        = 5317.732                                 * 
+* Operation type    = floating point                           * 
+* Verification      = Successful                               * 
+* Process requested = 8                                        * 
+*                                                              *
+* Please send all errors/feedbacks to:                         * 
+* Damian Alvarez Mallon                                        * 
+* dalvarezm@udc.es                                             * 
+**************************************************************** 
+===============================================================================
+End: Sat Jun 21 20:42:15 PDT 2014
